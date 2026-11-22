@@ -1,0 +1,18 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# Copyrighted or private material
+papers/
+learning module/
+_backup/
+
+# Report drafts and Office lock files
+*.docx
+~$*
+
+# OS / editor
+.vscode/
+.DS_Store
+Thumbs.db

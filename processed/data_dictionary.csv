@@ -1,0 +1,16 @@
+variable,description,source,frequency,role
+cpi_yoy,"Headline CPI inflation, YoY %",OpenDOSM cpi_headline_inflation (division = overall),M,Inflation target
+core_yoy,"Core CPI inflation, YoY %",OpenDOSM cpi_core_inflation (overall),M,Supporting
+ppi_index / ppi_yoy,Producer Price Index (2010 = 100) and YoY %,OpenDOSM ppi,M,Inflation predictor
+ipi_index / ipi_yoy,Industrial Production Index (2015 = 100) and YoY %,OpenDOSM ipi,M,GDP predictor
+u_rate,"Unemployment rate, %",OpenDOSM lfs_month,M,Both
+leading_index / coincident_index,Leading and Coincident Indexes,OpenDOSM economic_indicators,M,GDP predictor
+exports_rm_mil / imports_rm_mil,"Total exports and imports, RM million",OpenDOSM trade_sitc_1d (overall),M,GDP predictor
+usdmyr,"Ringgit per US dollar, monthly average of daily 1200 rate (rise = ringgit weaker)",data.gov.my exchangerates_daily_1200 (BNM),M,Both; scenario input
+neer_broad,"Nominal effective exchange rate, broad, 2020 = 100 (rise = ringgit stronger)",BIS WS_EER M.N.B.MY,M,Both
+brent_usd,"Brent crude oil, US$/bbl","World Bank Pink Sheet, Monthly Prices",M,Both; scenario input
+food_index_wb,"World Bank food price index, 2010 = 100","World Bank Pink Sheet, Monthly Indices",M,Inflation predictor
+opr,"Overnight Policy Rate, level at month end, %",BNM OPR Decisions & Statements,M (from events),Both
+*_yoy (derived),Year-on-year % change computed by the team,Derived,M / Q,Model input
+gdp_real_rm_mil / gdp_yoy,Real GDP at constant 2015 prices and YoY %,OpenDOSM gdp_qtr_real,Q,GDP target
+covid_dummy,1 for 2020 Q1 to 2021 Q4,Derived,Q,Structural break control

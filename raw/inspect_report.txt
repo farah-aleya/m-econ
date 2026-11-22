@@ -1,0 +1,177 @@
+M-ECON raw data inspection report  |  retrieved 2026-11-22 17:35
+
+======================================================================
+gdp_qtr_real
+source: https://storage.dosm.gov.my/gdp/gdp_qtr_real.parquet
+rows: 136  cols: ['series', 'date', 'value']
+dtypes: {'series': 'str', 'date': 'object', 'value': 'float64'}
+date range: 2015-01-01 to 2026-07-01
+head:
+  series        date       value
+0    abs  2015-01-01  282255.302
+1    abs  2015-04-01  288975.211
+2    abs  2015-07-01  297965.000
+tail:
+         series        date  value
+133  growth_qoq  2026-01-01   -4.4
+134  growth_qoq  2026-04-01    1.9
+135  growth_qoq  2026-07-01    4.8
+
+======================================================================
+cpi_headline_inflation
+source: https://api.data.gov.my/data-catalogue?id=cpi_headline_inflation
+rows: 7854  cols: ['date', 'division', 'inflation_mom', 'inflation_yoy']
+dtypes: {'date': 'str', 'division': 'str', 'inflation_mom': 'float64', 'inflation_yoy': 'float64'}
+date range: 1980-02-01 to 2026-10-01
+head:
+         date division  inflation_mom  inflation_yoy
+0  1980-02-01  overall            0.5            NaN
+1  1980-03-01  overall            0.0            NaN
+2  1980-04-01  overall           -0.5            NaN
+tail:
+            date division  inflation_mom  inflation_yoy
+7851  2026-08-01       13            0.5            3.2
+7852  2026-09-01       13            0.4            2.8
+7853  2026-10-01       13           -0.1            1.2
+
+======================================================================
+cpi_core_inflation
+source: https://api.data.gov.my/data-catalogue?id=cpi_core_inflation
+rows: 1470  cols: ['date', 'division', 'inflation_mom', 'inflation_yoy']
+dtypes: {'date': 'str', 'division': 'str', 'inflation_mom': 'float64', 'inflation_yoy': 'float64'}
+date range: 2018-02-01 to 2026-10-01
+head:
+         date division  inflation_mom  inflation_yoy
+0  2018-02-01  overall            0.2            NaN
+1  2018-03-01  overall            0.0            NaN
+2  2018-04-01  overall            0.1            NaN
+tail:
+            date division  inflation_mom  inflation_yoy
+1467  2026-08-01       13            0.5            3.2
+1468  2026-09-01       13            0.4            2.8
+1469  2026-10-01       13           -0.1            1.2
+
+======================================================================
+ppi
+source: https://storage.dosm.gov.my/ppi/ppi.parquet
+rows: 590  cols: ['series', 'date', 'index', 'index_sa']
+dtypes: {'series': 'str', 'date': 'datetime64[ns]', 'index': 'float64', 'index_sa': 'float64'}
+date range: 2010-01-01 to 2026-09-01
+head:
+  series       date  index  index_sa
+0    abs 2010-01-01   98.4       NaN
+1    abs 2010-02-01   98.4       NaN
+2    abs 2010-03-01   99.9       NaN
+tail:
+         series       date  index  index_sa
+587  growth_mom 2026-07-01  0.717     0.557
+588  growth_mom 2026-08-01  1.028     1.504
+589  growth_mom 2026-09-01  1.643     2.028
+
+======================================================================
+ipi
+source: https://storage.dosm.gov.my/ipi/ipi.parquet
+rows: 410  cols: ['series', 'date', 'index', 'index_sa']
+dtypes: {'series': 'str', 'date': 'datetime64[ns]', 'index': 'float64', 'index_sa': 'float64'}
+date range: 2015-01-01 to 2026-09-01
+head:
+  series       date    index  index_sa
+0    abs 2015-01-01  101.029   101.011
+1    abs 2015-02-01   90.812    98.808
+2    abs 2015-03-01  101.660    98.567
+tail:
+         series       date  index  index_sa
+407  growth_mom 2026-07-01 -1.971    -0.104
+408  growth_mom 2026-08-01  2.622     0.535
+409  growth_mom 2026-09-01  1.282     1.188
+
+======================================================================
+lfs_month
+source: https://storage.dosm.gov.my/labour/lfs_month.parquet
+rows: 201  cols: ['date', 'lf', 'lf_employed', 'lf_unemployed', 'lf_outside', 'p_rate', 'ep_ratio', 'u_rate']
+dtypes: {'date': 'object', 'lf': 'float64', 'lf_employed': 'float64', 'lf_unemployed': 'float64', 'lf_outside': 'float64', 'p_rate': 'float64', 'ep_ratio': 'float64', 'u_rate': 'float64'}
+date range: 2010-01-01 to 2026-09-01
+head:
+         date       lf  lf_employed  lf_unemployed  lf_outside  p_rate  ep_ratio  u_rate
+0  2010-01-01  12367.9      11931.2          436.7      6927.5    64.1      61.8     3.5
+1  2010-02-01  12059.8      11632.3          427.4      7225.1    62.5      60.3     3.5
+2  2010-03-01  12324.2      11895.9          428.3      6993.0    63.8      61.6     3.5
+tail:
+           date       lf  lf_employed  lf_unemployed  lf_outside  p_rate  ep_ratio  u_rate
+198  2026-07-01  17365.9      16845.6          520.3      7110.5    70.9      68.8     3.0
+199  2026-08-01  17386.0      16874.4          511.6      7106.0    71.0      68.9     2.9
+200  2026-09-01  17402.7      16889.5          513.2      7104.0    71.0      68.9     2.9
+
+======================================================================
+exchangerates
+source: https://storage.data.gov.my/finsector/exchangerates.parquet
+rows: 8096  cols: ['date', 'myr_usd', 'myr_rmb', 'myr_sgd', 'myr_eur', 'myr_jpy', 'myr_twd', 'myr_thb', 'myr_idr', 'myr_hkd', 'myr_krw', 'myr_vnd', 'myr_inr', 'myr_aud', 'myr_php', 'myr_aed', 'myr_sar', 'myr_try', 'myr_gbp', 'myr_brl', 'myr_mxn', 'myr_bdt', 'myr_chf', 'myr_cad', 'myr_rub']
+dtypes: {'date': 'object', 'myr_usd': 'float64', 'myr_rmb': 'float64', 'myr_sgd': 'float64', 'myr_eur': 'float64', 'myr_jpy': 'float64', 'myr_twd': 'float64', 'myr_thb': 'float64', 'myr_idr': 'float64', 'myr_hkd': 'float64', 'myr_krw': 'float64', 'myr_vnd': 'float64', 'myr_inr': 'float64', 'myr_aud': 'float64', 'myr_php': 'float64', 'myr_aed': 'float64', 'myr_sar': 'float64', 'myr_try': 'float64', 'myr_gbp': 'float64', 'myr_brl': 'float64', 'myr_mxn': 'float64', 'myr_bdt': 'float64', 'myr_chf': 'float64', 'myr_cad': 'float64', 'myr_rub': 'float64'}
+date range: 2003-12-01 to 2026-01-29
+head:
+         date   myr_usd   myr_rmb   myr_sgd   myr_eur    myr_jpy   myr_twd    myr_thb      myr_idr   myr_hkd     myr_krw      myr_vnd    myr_inr   myr_aud    myr_php   myr_aed   myr_sar   myr_try   myr_gbp   myr_brl   myr_mxn    myr_bdt   myr_chf   myr_cad   myr_rub
+0  2003-12-01  0.263380  2.177413  0.453461  0.220125  28.753161  8.359132  10.506216  2238.306086  2.045143  315.634231  3980.457301  12.039086  0.362847  14.609672  0.966999  0.987621  0.353535  0.153253  0.769859  2.991467  14.910451  0.341893  0.343500  7.822377
+1  2003-12-02  0.263359  2.177241  0.452977  0.217850  28.635010  8.359132  10.494587  2234.889529  2.043507  314.713839  3970.134833  12.016802  0.362847  14.608516  0.966922  0.987543  0.353535  0.152203  0.771905  2.973322  14.934028  0.338996  0.341471  7.819125
+2  2003-12-03  0.263838  2.181178  0.452773  0.217635  28.573691  8.359132  10.502612  2234.156621  2.047491  314.627198  3984.486323  12.017835  0.362847  14.635112  0.968682  0.989341  0.353535  0.152675  0.773310  2.966862  14.980212  0.339085  0.343016  7.833360
+tail:
+            date   myr_usd   myr_rmb   myr_sgd   myr_eur    myr_jpy   myr_twd   myr_thb      myr_idr   myr_hkd     myr_krw      myr_vnd    myr_inr   myr_aud    myr_php   myr_aed   myr_sar    myr_try   myr_gbp   myr_brl   myr_mxn    myr_bdt   myr_chf   myr_cad    myr_rub
+8093  2026-01-27  0.252334  1.645380  0.300509  0.199219  36.516265  7.438897  7.381994  3959.304242  1.844827  340.939294  6194.486934  21.699537  0.342172  13.970187  0.868686  0.886184  10.264238  0.172987  1.249048  4.106329  28.545704  0.183897  0.324429  18.105113
+8094  2026-01-28  0.253229  1.645451  0.298285  0.196879  36.070743  7.360771  7.313380  3945.273535  1.845525  338.935279  6182.420212  21.657234  0.338206  13.888560  0.868686  0.886262  10.271998  0.171149  1.226452  4.060688  28.518708  0.180575  0.321578  18.039666
+8095  2026-01-29  0.254777  1.643795  0.299567  0.198225  36.186915  7.431444  7.418668  3970.424553  1.846729  339.533890  6139.831784  21.732165  0.337892  13.950786  0.868970  0.887354  10.269111  0.171721  1.234331  4.088664  28.898615  0.181663  0.320289  17.967585
+
+======================================================================
+economic_indicators
+source: https://api.data.gov.my/data-catalogue?id=economic_indicators
+rows: 428  cols: ['date', 'lagging', 'leading', 'coincident', 'leading_diffusion', 'coincident_diffusion']
+dtypes: {'date': 'str', 'lagging': 'float64', 'leading': 'float64', 'coincident': 'float64', 'leading_diffusion': 'float64', 'coincident_diffusion': 'float64'}
+date range: 1991-01-01 to 2026-08-01
+head:
+         date  lagging  leading  coincident  leading_diffusion  coincident_diffusion
+0  1991-01-01     40.2     56.6        44.6               33.3                  80.0
+1  1991-02-01     40.5     57.3        45.0               50.0                  80.0
+2  1991-03-01     40.4     57.5        44.6               83.3                  80.0
+tail:
+           date  lagging  leading  coincident  leading_diffusion  coincident_diffusion
+425  2026-06-01   153.40    115.0       131.6               71.4                 100.0
+426  2026-07-01   151.50    115.7       131.5               71.4                  66.7
+427  2026-08-01   151.49    115.9       131.4               85.7                  66.7
+
+======================================================================
+trade_sitc_1d
+source: https://storage.dosm.gov.my/trade/trade_sitc_1d.parquet
+rows: 4851  cols: ['date', 'section', 'exports', 'imports']
+dtypes: {'date': 'datetime64[ns]', 'section': 'str', 'exports': 'int64', 'imports': 'int64'}
+date range: 1990-01-01 to 2026-09-01
+head:
+        date  section     exports     imports
+0 1990-01-01  overall  6030232066  5370020328
+1 1990-02-01  overall  5378513116  5297826203
+2 1990-03-01  overall  6433553466  6472339555
+tail:
+           date section     exports     imports
+4848 2026-07-01       9  1178394586  2704268734
+4849 2026-08-01       9  2406598520  1656122402
+4850 2026-09-01       9  3014581520  1428011656
+
+======================================================================
+interestrates
+source: https://storage.data.gov.my/finsector/interestrates.parquet
+rows: 320  cols: ['date', 'fdr_1mo', 'fdr_3mo', 'fdr_6mo', 'fdr_9mo', 'fdr_12mo', 'wafdr_1mo', 'wafdr_3mo', 'wafdr_6mo', 'wafdr_9mo', 'wafdr_12mo', 'sr', 'wasr', 'br', 'wabr', 'blr', 'wablr', 'alr', 'walr', 'ib_fdr_1mo', 'ib_fdr_3mo', 'ib_fdr_6mo', 'ib_fdr_9mo', 'ib_fdr_12mo', 'ib_alr']
+dtypes: {'date': 'object', 'fdr_1mo': 'float64', 'fdr_3mo': 'float64', 'fdr_6mo': 'float64', 'fdr_9mo': 'float64', 'fdr_12mo': 'float64', 'wafdr_1mo': 'float64', 'wafdr_3mo': 'float64', 'wafdr_6mo': 'float64', 'wafdr_9mo': 'float64', 'wafdr_12mo': 'float64', 'sr': 'float64', 'wasr': 'float64', 'br': 'float64', 'wabr': 'float64', 'blr': 'float64', 'wablr': 'float64', 'alr': 'float64', 'walr': 'float64', 'ib_fdr_1mo': 'float64', 'ib_fdr_3mo': 'float64', 'ib_fdr_6mo': 'float64', 'ib_fdr_9mo': 'float64', 'ib_fdr_12mo': 'float64', 'ib_alr': 'float64'}
+date range: 1997-01-01 to 2023-08-01
+head:
+         date  fdr_1mo  fdr_3mo  fdr_6mo  fdr_9mo  fdr_12mo  wafdr_1mo  wafdr_3mo  wafdr_6mo  wafdr_9mo  wafdr_12mo    sr  wasr  br  wabr   blr  wablr    alr  walr  ib_fdr_1mo  ib_fdr_3mo  ib_fdr_6mo  ib_fdr_9mo  ib_fdr_12mo  ib_alr
+0  1997-01-01     7.16     7.22     7.24     7.24      7.26        NaN        NaN        NaN        NaN         NaN  4.12   NaN NaN   NaN  9.19    NaN  10.18   NaN        7.31        7.31        7.32        7.43         7.30    10.7
+1  1997-02-01     7.14     7.22     7.23     7.23      7.25        NaN        NaN        NaN        NaN         NaN  4.14   NaN NaN   NaN  9.20    NaN  10.13   NaN        7.31        7.33        7.33        7.43         7.32    10.7
+2  1997-03-01     7.20     7.24     7.24     7.24      7.25        NaN        NaN        NaN        NaN         NaN  4.16   NaN NaN   NaN  9.24    NaN  10.14   NaN        7.29        7.29        7.33        7.32         7.32    10.6
+tail:
+           date   fdr_1mo  fdr_3mo   fdr_6mo   fdr_9mo  fdr_12mo  wafdr_1mo  wafdr_3mo  wafdr_6mo  wafdr_9mo  wafdr_12mo        sr      wasr        br      wabr       blr     wablr       alr      walr  ib_fdr_1mo  ib_fdr_3mo  ib_fdr_6mo  ib_fdr_9mo  ib_fdr_12mo    ib_alr
+317  2023-06-01  2.629483  2.73125  2.785417  2.835417  2.889167   2.517838   2.651057   2.769243   2.824865    2.864039  0.938530  0.432690  3.712778  3.668631  6.682609  6.753160  5.369756  5.080549    3.272100    3.472871    3.522314    3.664220     3.680000  6.780856
+318  2023-07-01  2.726087  2.71250  2.802083  2.936250  2.893333   2.551054   2.659642   2.787557   2.831448    2.877641  0.956005  0.435365  3.712778  3.668978  6.682609  6.753818  5.462031  5.074224    3.251286    3.402029    3.640986    3.570000     3.683333  6.880633
+319  2023-08-01  2.726522  2.71125  2.767500  2.823750  2.857917   2.530727   2.622288   2.685477   2.693647    2.751988  0.953290  0.435772  3.712778  3.668454  6.682609  6.753489  5.425073  5.100198    3.266514    3.469900    3.666457    4.181825     3.541667  6.887467
+
+manual file pinksheet_monthly.xlsx: not found yet
+
+manual file bis_neer_malaysia.csv: not found yet
+
+manual file opr_decisions.csv: not found yet
