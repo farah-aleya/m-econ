@@ -13,13 +13,10 @@ M-ECON uses official Malaysian and global data to:
 All results feed a Power BI dashboard.
 
 ## Team
-
-| Name | Role |
-|---|---|
-| Nur Farah Aleya | Data engineering and modelling |
-| Ilhan Zikri bin Zul Azlin | Power BI dashboard |
-| Anuar Afiq bin Arfahairy | Written report |
-| Siti Zafirah binti Zailan | Video |
+1. Nur Farah Aleya 
+2. Ilhan Zikri 
+3. Anuar Afiq 
+4. Siti Zafirah
 
 Advisor: Dr. Ganesh Kumar, Department of Computing, Universiti Teknologi PETRONAS.
 
