@@ -1,0 +1,31 @@
+=== BNM MONETARY POLICY STATEMENT TONE ===
+Statements scored: 102 (Jan 2010 to Nov 2026); median length 419 words
+Tone = (tightening - easing phrases) / total, from -1 (easing) to +1 (tightening)
+
+   Mean tone at hike meetings: -0.32 (n = 11)
+   Mean tone at hold meetings: -0.77 (n = 84)
+   Mean tone at cut  meetings: -0.84 (n = 7)
+
+   Mean tone one meeting BEFORE a hike: -0.41 (n = 11)
+   Mean tone one meeting BEFORE a hold: -0.75 (n = 83)
+   Mean tone one meeting BEFORE a cut : -0.94 (n = 7)
+   Spearman correlation, tone vs next OPR change: +0.45 (p = 0.000, n = 101)
+   Raw tone: mean -0.72, sd 0.27 (word list leans to easing words, so use relative tone)
+
+Relative tone (above or below BNM's average wording) before the next decision:
+   [full-sample average] direction right before 100% of 18 rate changes
+      above average (39): next = 11 hikes, 28 holds, 0 cuts
+      below average (62): next = 7 cuts, 55 holds, 0 hikes
+   [past statements only, real time] direction right before 93% of 14 rate changes
+      above average (37): next = 7 hikes, 29 holds, 1 cuts
+      below average (56): next = 6 cuts, 50 holds, 0 hikes
+   Base rate: 82% of decisions are holds, so tone shows the direction of the next move, not its timing.
+
+   Tone vs CPI inflation 0 months later (excl. 2020-21): r = +0.24 (p = 0.001)
+   Tone vs CPI inflation 3 months later (excl. 2020-21): r = +0.15 (p = 0.041)
+   Tone vs CPI inflation 6 months later (excl. 2020-21): r = -0.01 (p = 0.872)
+   Tone vs GDP growth, same quarter (excl. 2020-21): r = +0.27 (p = 0.045)
+
+Latest statement (05 Nov 2026): tone -0.43 (relative +1.10 sd), 2 tightening vs 5 easing phrases; OPR 2.75%
+Most frequent tightening phrases: upside risk (24), cost pressure (21), financial imbalance (18), tighten (18), inflationary pressure (17), normalis (15)
+Most frequent easing phrases: moderat (209), uncertaint (108), weak (107), downside risk (102), supportive (89), accommodative (67)
