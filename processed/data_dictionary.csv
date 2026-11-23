@@ -14,3 +14,5 @@ opr,"Overnight Policy Rate, level at month end, %",BNM OPR Decisions & Statement
 *_yoy (derived),Year-on-year % change computed by the team,Derived,M / Q,Model input
 gdp_real_rm_mil / gdp_yoy,Real GDP at constant 2015 prices and YoY %,OpenDOSM gdp_qtr_real,Q,GDP target
 covid_dummy,1 for 2020 Q1 to 2021 Q4,Derived,Q,Structural break control
+fuel_ron95_market / fuel_ron97 / fuel_diesel_peninsular / fuel_diesel_east,"Pump prices, RM per litre, monthly average of weekly prices (RON95 market price is the unsubsidised price from 30 Sep 2025)",data.gov.my fuelprice,M (from weekly),"Context only, not a model input"
+fuel_ron95_budi95 / fuel_ron95_skps / fuel_diesel_skds / fuel_diesel_budi,"Subsidised pump prices under BUDI95, SKPS, SKDS and BUDI Diesel, RM per litre",data.gov.my fuelprice,M (from weekly),"Context only, not a model input"

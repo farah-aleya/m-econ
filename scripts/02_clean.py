@@ -5,7 +5,8 @@ Inputs : raw/  (from 01_download.py + manual files)
 Outputs: processed/monthly_master.csv, processed/quarterly_master.csv,
          processed/missing_audit.csv, processed/stationarity.csv,
          processed/data_dictionary.csv, processed/run_log.txt
-         outputs/powerbi_monthly.csv, outputs/powerbi_quarterly.csv
+         processed/fuel_monthly.csv (context only, not a model input)
+         outputs/powerbi_monthly.csv, outputs/powerbi_quarterly.csv, outputs/powerbi_events.csv
 """
 import io
 import re
@@ -150,6 +151,27 @@ monthly.index.name = "date"
 monthly.round(4).to_csv(PROC / "monthly_master.csv")
 log(f"monthly_master: {monthly.shape}, {monthly.index.min().date()} to {monthly.index.max().date()}")
 
+# ------------------------------------------------------------------ fuel prices (context only)
+# Source: data.gov.my fuelprice (weekly, from 30 Mar 2017). Kept OUT of monthly_master so it never
+# enters the models (it would cut the inflation sample to 2018+). Used for the dashboard and report.
+FUEL_FILE = RAW / "fuelprice.csv"
+fuel_m = None
+if FUEL_FILE.exists():
+    fp = pd.read_csv(FUEL_FILE, parse_dates=["date"])
+    fp = fp[fp["series_type"] == "level"].drop(columns="series_type").set_index("date").sort_index()
+    fuel_cols = {"ron95": "fuel_ron95_market", "ron97": "fuel_ron97", "diesel": "fuel_diesel_peninsular",
+                 "diesel_eastmsia": "fuel_diesel_east", "ron95_budi95": "fuel_ron95_budi95",
+                 "ron95_skps": "fuel_ron95_skps", "diesel_skds": "fuel_diesel_skds", "diesel_budi": "fuel_diesel_budi"}
+    fp = fp[[c for c in fuel_cols if c in fp.columns]].rename(columns=fuel_cols).astype(float)
+    fuel_m = fp.resample("MS").mean().loc["2017-04-01":END]   # Mar 2017 has one week only, so start Apr
+    fuel_m["fuel_ron95_market_yoy"] = fuel_m["fuel_ron95_market"].pct_change(12, fill_method=None) * 100
+    fuel_m["fuel_diesel_peninsular_yoy"] = fuel_m["fuel_diesel_peninsular"].pct_change(12, fill_method=None) * 100
+    fuel_m.index.name = "date"
+    fuel_m.round(4).to_csv(PROC / "fuel_monthly.csv")
+    log(f"fuel_monthly: {fuel_m.shape}, {fuel_m.index.min().date()} to {fuel_m.index.max().date()} (context only)")
+else:
+    log("raw/fuelprice.csv not found: fuel prices skipped")
+
 # ------------------------------------------------------------------ quarterly master
 gdp = rp("gdp_qtr_real"); gdp["date"] = ms(gdp["date"])
 q = pd.DataFrame({
@@ -226,6 +248,8 @@ DD = [
  ("*_yoy (derived)", "Year-on-year % change computed by the team", "Derived", "M / Q", "Model input"),
  ("gdp_real_rm_mil / gdp_yoy", "Real GDP at constant 2015 prices and YoY %", "OpenDOSM gdp_qtr_real", "Q", "GDP target"),
  ("covid_dummy", "1 for 2020 Q1 to 2021 Q4", "Derived", "Q", "Structural break control"),
+ ("fuel_ron95_market / fuel_ron97 / fuel_diesel_peninsular / fuel_diesel_east", "Pump prices, RM per litre, monthly average of weekly prices (RON95 market price is the unsubsidised price from 30 Sep 2025)", "data.gov.my fuelprice", "M (from weekly)", "Context only, not a model input"),
+ ("fuel_ron95_budi95 / fuel_ron95_skps / fuel_diesel_skds / fuel_diesel_budi", "Subsidised pump prices under BUDI95, SKPS, SKDS and BUDI Diesel, RM per litre", "data.gov.my fuelprice", "M (from weekly)", "Context only, not a model input"),
 ]
 pd.DataFrame(DD, columns=["variable", "description", "source", "frequency", "role"]).to_csv(PROC / "data_dictionary.csv", index=False)
 
@@ -234,8 +258,23 @@ def to_long(df, freq):
     out = df.reset_index().melt(id_vars="date", var_name="variable", value_name="value").dropna()
     out["frequency"] = freq
     return out
-to_long(monthly, "M").to_csv(OUT / "powerbi_monthly.csv", index=False)
+pbi_m = monthly.join(fuel_m, how="left") if fuel_m is not None else monthly
+to_long(pbi_m, "M").to_csv(OUT / "powerbi_monthly.csv", index=False)
 to_long(quarterly, "Q").to_csv(OUT / "powerbi_quarterly.csv", index=False)
+
+# policy and shock events for dashboard annotations
+EVENTS = [
+ ("2014-07-01", "Oil price fall begins (Brent from US$112 in Jun 2014)", "Global shock"),
+ ("2015-04-01", "GST introduced at 6%", "Tax"),
+ ("2017-03-30", "Weekly fuel pricing data begins", "Fuel"),
+ ("2018-06-01", "GST set to 0% (replaced by SST from 1 Sep 2018)", "Tax"),
+ ("2018-09-01", "SST introduced", "Tax"),
+ ("2020-03-18", "Movement Control Order (COVID-19)", "COVID"),
+ ("2024-06-10", "Diesel subsidy rationalisation (Peninsular)", "Fuel"),
+ ("2025-07-01", "SST expansion", "Tax"),
+ ("2025-09-30", "RON95 targeted subsidy (BUDI95) begins", "Fuel"),
+]
+pd.DataFrame(EVENTS, columns=["date", "event", "category"]).to_csv(OUT / "powerbi_events.csv", index=False)
 
 (PROC / "run_log.txt").write_text("\n".join(LOG), encoding="utf-8")
 print("\nDone. See processed/ and outputs/.")

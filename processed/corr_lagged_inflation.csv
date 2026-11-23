@@ -1,0 +1,111 @@
+pipeline,sample,predictor,label,group,lag,n,pearson_r,pearson_p,spearman_rho,spearman_p
+inflation,full,ppi_yoy,PPI,Domestic,0,189,0.489,0.0,0.518,0.0
+inflation,full,ppi_yoy,PPI,Domestic,1,189,0.513,0.0,0.545,0.0
+inflation,full,ppi_yoy,PPI,Domestic,3,187,0.446,0.0,0.482,0.0
+inflation,full,ppi_yoy,PPI,Domestic,6,184,0.316,0.0,0.299,0.0
+inflation,full,ppi_yoy,PPI,Domestic,12,178,0.037,0.6264,-0.108,0.1521
+inflation,full,ipi_yoy,Industrial production,Domestic,0,129,0.532,0.0,0.45,0.0
+inflation,full,ipi_yoy,Industrial production,Domestic,1,129,0.523,0.0,0.482,0.0
+inflation,full,ipi_yoy,Industrial production,Domestic,3,127,0.329,0.0002,0.43,0.0
+inflation,full,ipi_yoy,Industrial production,Domestic,6,124,0.357,0.0,0.364,0.0
+inflation,full,ipi_yoy,Industrial production,Domestic,12,118,-0.086,0.3549,-0.01,0.911
+inflation,full,u_rate,Unemployment rate,Domestic,0,201,-0.312,0.0,0.002,0.9808
+inflation,full,u_rate,Unemployment rate,Domestic,1,201,-0.253,0.0003,0.025,0.7258
+inflation,full,u_rate,Unemployment rate,Domestic,3,199,-0.107,0.1333,0.072,0.3114
+inflation,full,u_rate,Unemployment rate,Domestic,6,196,0.03,0.6782,0.126,0.0794
+inflation,full,u_rate,Unemployment rate,Domestic,12,190,0.288,0.0001,0.2,0.0056
+inflation,full,opr,OPR,Domestic,0,202,0.154,0.0286,-0.018,0.7943
+inflation,full,opr,OPR,Domestic,1,201,0.09,0.2015,-0.08,0.2598
+inflation,full,opr,OPR,Domestic,3,199,-0.031,0.66,-0.178,0.0119
+inflation,full,opr,OPR,Domestic,6,196,-0.214,0.0026,-0.318,0.0
+inflation,full,opr,OPR,Domestic,12,190,-0.368,0.0,-0.35,0.0
+inflation,full,leading_index_yoy,Leading Index,Domestic,0,200,-0.054,0.447,0.011,0.8761
+inflation,full,leading_index_yoy,Leading Index,Domestic,1,200,0.056,0.4313,0.064,0.3701
+inflation,full,leading_index_yoy,Leading Index,Domestic,3,199,0.038,0.5902,0.085,0.2331
+inflation,full,leading_index_yoy,Leading Index,Domestic,6,196,0.122,0.0883,0.144,0.0435
+inflation,full,leading_index_yoy,Leading Index,Domestic,12,190,0.02,0.7881,0.033,0.6496
+inflation,full,exports_rm_mil_yoy,Exports,Domestic,0,201,0.395,0.0,0.385,0.0
+inflation,full,exports_rm_mil_yoy,Exports,Domestic,1,201,0.407,0.0,0.417,0.0
+inflation,full,exports_rm_mil_yoy,Exports,Domestic,3,199,0.345,0.0,0.412,0.0
+inflation,full,exports_rm_mil_yoy,Exports,Domestic,6,196,0.35,0.0,0.348,0.0
+inflation,full,exports_rm_mil_yoy,Exports,Domestic,12,190,0.061,0.4022,-0.004,0.9553
+inflation,full,imports_rm_mil_yoy,Imports,Domestic,0,201,0.432,0.0,0.391,0.0
+inflation,full,imports_rm_mil_yoy,Imports,Domestic,1,201,0.438,0.0,0.432,0.0
+inflation,full,imports_rm_mil_yoy,Imports,Domestic,3,199,0.395,0.0,0.424,0.0
+inflation,full,imports_rm_mil_yoy,Imports,Domestic,6,196,0.369,0.0,0.359,0.0
+inflation,full,imports_rm_mil_yoy,Imports,Domestic,12,190,0.158,0.0295,0.111,0.1277
+inflation,full,usdmyr_yoy,USD/MYR,External,0,202,0.199,0.0046,0.281,0.0
+inflation,full,usdmyr_yoy,USD/MYR,External,1,201,0.195,0.0055,0.28,0.0001
+inflation,full,usdmyr_yoy,USD/MYR,External,3,199,0.198,0.005,0.259,0.0002
+inflation,full,usdmyr_yoy,USD/MYR,External,6,196,0.14,0.0497,0.185,0.0093
+inflation,full,usdmyr_yoy,USD/MYR,External,12,190,-0.001,0.9858,-0.026,0.7248
+inflation,full,neer_broad_yoy,NEER (broad),External,0,202,-0.202,0.0039,-0.276,0.0001
+inflation,full,neer_broad_yoy,NEER (broad),External,1,201,-0.204,0.0037,-0.282,0.0001
+inflation,full,neer_broad_yoy,NEER (broad),External,3,199,-0.216,0.0022,-0.292,0.0
+inflation,full,neer_broad_yoy,NEER (broad),External,6,196,-0.153,0.0321,-0.212,0.0028
+inflation,full,neer_broad_yoy,NEER (broad),External,12,190,-0.021,0.7758,-0.008,0.9093
+inflation,full,brent_usd_yoy,Brent crude,External,0,202,0.353,0.0,0.315,0.0
+inflation,full,brent_usd_yoy,Brent crude,External,1,201,0.406,0.0,0.369,0.0
+inflation,full,brent_usd_yoy,Brent crude,External,3,199,0.3,0.0,0.345,0.0
+inflation,full,brent_usd_yoy,Brent crude,External,6,196,0.237,0.0008,0.255,0.0003
+inflation,full,brent_usd_yoy,Brent crude,External,12,190,0.078,0.2871,-0.006,0.936
+inflation,full,food_index_wb_yoy,World food prices,External,0,202,0.081,0.2526,0.018,0.8013
+inflation,full,food_index_wb_yoy,World food prices,External,1,201,0.119,0.0924,0.05,0.4786
+inflation,full,food_index_wb_yoy,World food prices,External,3,199,0.182,0.01,0.124,0.0806
+inflation,full,food_index_wb_yoy,World food prices,External,6,196,0.25,0.0004,0.25,0.0004
+inflation,full,food_index_wb_yoy,World food prices,External,12,190,0.245,0.0007,0.254,0.0004
+inflation,ex-COVID,ppi_yoy,PPI,Domestic,0,165,0.473,0.0,0.477,0.0
+inflation,ex-COVID,ppi_yoy,PPI,Domestic,1,165,0.516,0.0,0.508,0.0
+inflation,ex-COVID,ppi_yoy,PPI,Domestic,3,163,0.49,0.0,0.464,0.0
+inflation,ex-COVID,ppi_yoy,PPI,Domestic,6,160,0.341,0.0,0.297,0.0001
+inflation,ex-COVID,ppi_yoy,PPI,Domestic,12,154,0.015,0.8573,-0.083,0.3079
+inflation,ex-COVID,ipi_yoy,Industrial production,Domestic,0,105,0.352,0.0002,0.332,0.0005
+inflation,ex-COVID,ipi_yoy,Industrial production,Domestic,1,105,0.405,0.0,0.38,0.0001
+inflation,ex-COVID,ipi_yoy,Industrial production,Domestic,3,103,0.424,0.0,0.446,0.0
+inflation,ex-COVID,ipi_yoy,Industrial production,Domestic,6,100,0.35,0.0004,0.356,0.0003
+inflation,ex-COVID,ipi_yoy,Industrial production,Domestic,12,94,0.025,0.8098,0.034,0.7462
+inflation,ex-COVID,u_rate,Unemployment rate,Domestic,0,177,0.132,0.0801,0.144,0.0564
+inflation,ex-COVID,u_rate,Unemployment rate,Domestic,1,177,0.151,0.0444,0.154,0.0406
+inflation,ex-COVID,u_rate,Unemployment rate,Domestic,3,175,0.203,0.0072,0.168,0.0262
+inflation,ex-COVID,u_rate,Unemployment rate,Domestic,6,172,0.237,0.0017,0.18,0.0182
+inflation,ex-COVID,u_rate,Unemployment rate,Domestic,12,166,0.264,0.0006,0.158,0.0427
+inflation,ex-COVID,opr,OPR,Domestic,0,178,-0.16,0.0326,-0.162,0.0309
+inflation,ex-COVID,opr,OPR,Domestic,1,177,-0.219,0.0035,-0.232,0.0019
+inflation,ex-COVID,opr,OPR,Domestic,3,175,-0.305,0.0,-0.32,0.0
+inflation,ex-COVID,opr,OPR,Domestic,6,172,-0.399,0.0,-0.43,0.0
+inflation,ex-COVID,opr,OPR,Domestic,12,166,-0.38,0.0,-0.32,0.0
+inflation,ex-COVID,leading_index_yoy,Leading Index,Domestic,0,176,0.126,0.0947,0.122,0.1066
+inflation,ex-COVID,leading_index_yoy,Leading Index,Domestic,1,176,0.172,0.0228,0.162,0.0315
+inflation,ex-COVID,leading_index_yoy,Leading Index,Domestic,3,175,0.171,0.0234,0.17,0.0247
+inflation,ex-COVID,leading_index_yoy,Leading Index,Domestic,6,172,0.128,0.0931,0.144,0.0597
+inflation,ex-COVID,leading_index_yoy,Leading Index,Domestic,12,166,-0.061,0.4318,-0.042,0.5938
+inflation,ex-COVID,exports_rm_mil_yoy,Exports,Domestic,0,177,0.316,0.0,0.356,0.0
+inflation,ex-COVID,exports_rm_mil_yoy,Exports,Domestic,1,177,0.327,0.0,0.374,0.0
+inflation,ex-COVID,exports_rm_mil_yoy,Exports,Domestic,3,175,0.328,0.0,0.373,0.0
+inflation,ex-COVID,exports_rm_mil_yoy,Exports,Domestic,6,172,0.268,0.0004,0.283,0.0002
+inflation,ex-COVID,exports_rm_mil_yoy,Exports,Domestic,12,166,0.0,0.9998,-0.079,0.3126
+inflation,ex-COVID,imports_rm_mil_yoy,Imports,Domestic,0,177,0.299,0.0001,0.279,0.0002
+inflation,ex-COVID,imports_rm_mil_yoy,Imports,Domestic,1,177,0.335,0.0,0.324,0.0
+inflation,ex-COVID,imports_rm_mil_yoy,Imports,Domestic,3,175,0.34,0.0,0.337,0.0
+inflation,ex-COVID,imports_rm_mil_yoy,Imports,Domestic,6,172,0.308,0.0,0.301,0.0001
+inflation,ex-COVID,imports_rm_mil_yoy,Imports,Domestic,12,166,0.105,0.1765,0.073,0.3529
+inflation,ex-COVID,usdmyr_yoy,USD/MYR,External,0,178,0.301,0.0,0.347,0.0
+inflation,ex-COVID,usdmyr_yoy,USD/MYR,External,1,177,0.313,0.0,0.356,0.0
+inflation,ex-COVID,usdmyr_yoy,USD/MYR,External,3,175,0.305,0.0,0.333,0.0
+inflation,ex-COVID,usdmyr_yoy,USD/MYR,External,6,172,0.231,0.0023,0.264,0.0005
+inflation,ex-COVID,usdmyr_yoy,USD/MYR,External,12,166,0.018,0.8142,-0.005,0.9533
+inflation,ex-COVID,neer_broad_yoy,NEER (broad),External,0,178,-0.358,0.0,-0.384,0.0
+inflation,ex-COVID,neer_broad_yoy,NEER (broad),External,1,177,-0.356,0.0,-0.383,0.0
+inflation,ex-COVID,neer_broad_yoy,NEER (broad),External,3,175,-0.327,0.0,-0.351,0.0
+inflation,ex-COVID,neer_broad_yoy,NEER (broad),External,6,172,-0.225,0.003,-0.25,0.001
+inflation,ex-COVID,neer_broad_yoy,NEER (broad),External,12,166,-0.014,0.8563,0.033,0.6764
+inflation,ex-COVID,brent_usd_yoy,Brent crude,External,0,178,0.131,0.082,0.174,0.02
+inflation,ex-COVID,brent_usd_yoy,Brent crude,External,1,177,0.2,0.0076,0.232,0.0019
+inflation,ex-COVID,brent_usd_yoy,Brent crude,External,3,175,0.196,0.0094,0.256,0.0006
+inflation,ex-COVID,brent_usd_yoy,Brent crude,External,6,172,0.137,0.073,0.197,0.0095
+inflation,ex-COVID,brent_usd_yoy,Brent crude,External,12,166,0.077,0.3216,0.002,0.9767
+inflation,ex-COVID,food_index_wb_yoy,World food prices,External,0,178,0.136,0.0703,0.039,0.6008
+inflation,ex-COVID,food_index_wb_yoy,World food prices,External,1,177,0.179,0.0173,0.067,0.3731
+inflation,ex-COVID,food_index_wb_yoy,World food prices,External,3,175,0.27,0.0003,0.14,0.0642
+inflation,ex-COVID,food_index_wb_yoy,World food prices,External,6,172,0.325,0.0,0.265,0.0004
+inflation,ex-COVID,food_index_wb_yoy,World food prices,External,12,166,0.253,0.001,0.234,0.0024

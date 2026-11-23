@@ -1,0 +1,24 @@
+pipeline,predictor,label,vif
+inflation,ppi_yoy,PPI,10.64
+inflation,ipi_yoy,Industrial production,4.22
+inflation,u_rate,Unemployment rate,8.36
+inflation,opr,OPR,6.42
+inflation,leading_index_yoy,Leading Index,2.38
+inflation,exports_rm_mil_yoy,Exports,7.09
+inflation,imports_rm_mil_yoy,Imports,5.24
+inflation,usdmyr_yoy,USD/MYR,5.37
+inflation,neer_broad_yoy,NEER (broad),5.09
+inflation,brent_usd_yoy,Brent crude,7.63
+inflation,food_index_wb_yoy,World food prices,6.07
+gdp,cpi_yoy,CPI inflation,3.61
+gdp,ppi_index_yoy,PPI,18.14
+gdp,ipi_index_yoy,Industrial production,6.57
+gdp,u_rate,Unemployment rate,12.41
+gdp,opr,OPR,7.57
+gdp,leading_index_yoy,Leading Index,3.03
+gdp,exports_rm_mil_yoy,Exports,10.46
+gdp,imports_rm_mil_yoy,Imports,11.38
+gdp,usdmyr_yoy,USD/MYR,6.99
+gdp,neer_broad_yoy,NEER (broad),5.92
+gdp,brent_usd_yoy,Brent crude,11.94
+gdp,food_index_wb_yoy,World food prices,9.3
