@@ -178,6 +178,45 @@ q = pd.DataFrame({
     "gdp_real_rm_mil": gdp[gdp.series == "abs"].set_index("date")["value"],
     "gdp_yoy": gdp[gdp.series == "growth_yoy"].set_index("date")["value"],
 })
+q["gdp_yoy_source"] = "OpenDOSM gdp_qtr_real (2015 prices)"
+
+# Back-extend GDP growth with DOSM's older quarterly series at constant 2010 prices
+# (StatsDW: "GDP by Kind of Economic Activity at Constant Prices, Quarterly"), exported to
+# raw/Quarterly National Accounts_tablegraph.xlsx. YoY growth is spliced, never the levels:
+# 2010-base growth is used only for quarters before the 2015-base growth series starts (2016 Q1).
+QNA_FILE = RAW / "Quarterly National Accounts_tablegraph.xlsx"
+def statsdw_gdp(path):
+    x = pd.read_excel(path, header=None)
+    hdr = next(i for i in range(len(x)) if str(x.iloc[i, 2]).strip() == "Year")
+    years = pd.to_numeric(x.iloc[hdr, 3:], errors="coerce").ffill().astype(int).values
+    qtrs = x.iloc[hdr + 1, 3:].astype(str).str.strip().values
+    idx = pd.PeriodIndex([f"{y}{qq}" for y, qq in zip(years, qtrs)], freq="Q").to_timestamp()
+    base = x[0].ffill()
+    out = {}
+    for i in x.index[x[2].astype(str).str.contains("GDP at purchasers", na=False)]:
+        b = str(base[i]).strip()
+        out[b] = pd.Series(pd.to_numeric(x.iloc[i, 3:], errors="coerce").values, index=idx).dropna()
+    return out
+if QNA_FILE.exists():
+    old = statsdw_gdp(QNA_FILE)
+    if "2010" in old:
+        g10 = old["2010"]
+        yoy10 = (g10.pct_change(4, fill_method=None) * 100).dropna()
+        first15 = q["gdp_yoy"].dropna().index.min()
+        if "2015" in old:      # check the two bases agree where they overlap
+            yoy15 = (old["2015"].pct_change(4, fill_method=None) * 100)
+            ov = pd.concat([yoy10, yoy15], axis=1, keys=["b2010", "b2015"]).dropna()
+            log(f"GDP splice check: {len(ov)} overlapping quarters, mean abs gap = "
+                f"{(ov.b2010 - ov.b2015).abs().mean():.2f} pp")
+        ext = yoy10[yoy10.index < first15].round(1)
+        q = q.reindex(q.index.union(ext.index)).sort_index()
+        fill = q["gdp_yoy"].isna() & q.index.isin(ext.index)
+        q.loc[fill, "gdp_yoy"] = ext.reindex(q.index)[fill]
+        q.loc[fill, "gdp_yoy_source"] = "DOSM StatsDW quarterly GDP (2010 prices)"
+        log(f"GDP growth back-extended with 2010-base series: {ext.index.min().date()} to {ext.index.max().date()} "
+            f"({len(ext)} quarters)")
+else:
+    log("StatsDW GDP file not found: GDP growth starts 2016 Q1")
 full = pd.DataFrame(m).sort_index()
 mean_cols = ["cpi_yoy", "core_yoy", "ppi_index", "ipi_index", "u_rate", "leading_index", "coincident_index",
              "usdmyr", "neer_broad", "brent_usd", "food_index_wb", "opr"]
@@ -186,7 +225,7 @@ qm = full[mean_cols].resample("QS").mean().join(full[sum_cols].resample("QS").su
 for c in ["ppi_index", "ipi_index", "leading_index", "coincident_index", "usdmyr", "neer_broad",
           "brent_usd", "food_index_wb", "exports_rm_mil", "imports_rm_mil"]:
     qm[f"{c}_yoy"] = qm[c].pct_change(4, fill_method=None) * 100
-quarterly = q.join(qm, how="left").loc["2016-01-01":]
+quarterly = q.join(qm, how="left").loc[q["gdp_yoy"].first_valid_index():]
 quarterly.index.name = "date"
 quarterly["covid_dummy"] = ((quarterly.index >= "2020-01-01") & (quarterly.index <= "2021-12-01")).astype(int)
 quarterly.round(4).to_csv(PROC / "quarterly_master.csv")
@@ -246,7 +285,8 @@ DD = [
  ("food_index_wb", "World Bank food price index, 2010 = 100", "World Bank Pink Sheet, Monthly Indices", "M", "Inflation predictor"),
  ("opr", "Overnight Policy Rate, level at month end, %", "BNM OPR Decisions & Statements", "M (from events)", "Both"),
  ("*_yoy (derived)", "Year-on-year % change computed by the team", "Derived", "M / Q", "Model input"),
- ("gdp_real_rm_mil / gdp_yoy", "Real GDP at constant 2015 prices and YoY %", "OpenDOSM gdp_qtr_real", "Q", "GDP target"),
+ ("gdp_real_rm_mil / gdp_yoy", "Real GDP at constant 2015 prices and YoY %; YoY before 2016 Q1 from the 2010-base series", "OpenDOSM gdp_qtr_real; DOSM StatsDW (2010 prices) before 2016", "Q", "GDP target"),
+ ("gdp_yoy_source", "Which official series each GDP growth value comes from", "Derived", "Q", "Audit trail"),
  ("covid_dummy", "1 for 2020 Q1 to 2021 Q4", "Derived", "Q", "Structural break control"),
  ("fuel_ron95_market / fuel_ron97 / fuel_diesel_peninsular / fuel_diesel_east", "Pump prices, RM per litre, monthly average of weekly prices (RON95 market price is the unsubsidised price from 30 Sep 2025)", "data.gov.my fuelprice", "M (from weekly)", "Context only, not a model input"),
  ("fuel_ron95_budi95 / fuel_ron95_skps / fuel_diesel_skds / fuel_diesel_budi", "Subsidised pump prices under BUDI95, SKPS, SKDS and BUDI Diesel, RM per litre", "data.gov.my fuelprice", "M (from weekly)", "Context only, not a model input"),
@@ -260,7 +300,7 @@ def to_long(df, freq):
     return out
 pbi_m = monthly.join(fuel_m, how="left") if fuel_m is not None else monthly
 to_long(pbi_m, "M").to_csv(OUT / "powerbi_monthly.csv", index=False)
-to_long(quarterly, "Q").to_csv(OUT / "powerbi_quarterly.csv", index=False)
+to_long(quarterly.drop(columns="gdp_yoy_source"), "Q").to_csv(OUT / "powerbi_quarterly.csv", index=False)
 
 # policy and shock events for dashboard annotations
 EVENTS = [

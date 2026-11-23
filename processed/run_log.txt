@@ -2,7 +2,9 @@ daily_1200 columns: ['date', 'rate_type', 'USD', 'EUR', 'JPY', 'GBP', 'SGD', 'AU
 USD/MYR source: data.gov.my exchangerates_daily_1200; last month 2026-11-01
 monthly_master: (202, 25), 2010-01-01 to 2026-10-01
 fuel_monthly: (115, 10), 2017-04-01 to 2026-10-01 (context only)
-quarterly_master: (43, 27), 2016-01-01 to 2026-07-01
+GDP splice check: 8 overlapping quarters, mean abs gap = 0.15 pp
+GDP growth back-extended with 2010-base series: 2011-01-01 to 2015-10-01 (20 quarters)
+quarterly_master: (63, 28), 2011-01-01 to 2026-07-01
 GDP YoY last 3 quarters: date | 2026-01-01    5.4 | 2026-04-01    6.0 | 2026-07-01    5.5 | Freq: QS-JAN
 No internal gaps in any series
-Stationarity verdicts: {'mixed': 18, 'stationary': 11}
+Stationarity verdicts: {'mixed': 16, 'stationary': 13}
