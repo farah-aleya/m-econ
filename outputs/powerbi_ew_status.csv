@@ -1,0 +1,3 @@
+signal,as_of,indicators_on,status,rule
+Cost pressure,2026-09-01,2,ON,ON when at least 2 of 3 indicators are outside their usual 5-year range
+Growth slowdown,2026-08-01,0,OFF,ON when at least 2 of 3 indicators are outside their usual 5-year range

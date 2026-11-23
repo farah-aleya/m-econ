@@ -1,0 +1,6 @@
+episode,signal,window,hit,first_signal,lead_time,months_on,months_in_window,false_alarm_rate_pct
+2014 to 2015 oil fall,growth slowdown,Jul 2014 to Dec 2015,Yes,May 2015,10 months after start,1,24,4.5
+2017 producer price spike,cost pressure,Dec 2016 to Jun 2017,Yes,Dec 2016,at start,6,13,1.5
+2020 to 2021 COVID-19,growth slowdown,Mar 2020 to Dec 2020,Yes,Sep 2019,6 months before,5,16,4.5
+2021 to 2022 commodity surge,cost pressure,Jun 2021 to Sep 2022,Yes,Apr 2021,2 months before,7,22,1.5
+2026 oil shock,cost pressure,Mar 2026 to Oct 2026,Yes,Sep 2026,6 months after start,1,14,1.5

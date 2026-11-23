@@ -1,0 +1,24 @@
+variable,label,unit,role,group
+gdp_yoy,Real GDP growth,% YoY,Target,Domestic
+cpi_yoy,CPI inflation,% YoY,Target,Domestic
+core_yoy,Core inflation,% YoY,Context,Domestic
+ppi_yoy,Producer prices (PPI),% YoY,Predictor,Domestic
+ppi_index_yoy,Producer prices (PPI),% YoY,Predictor,Domestic
+ipi_yoy,Industrial production,% YoY,Predictor,Domestic
+ipi_index_yoy,Industrial production,% YoY,Predictor,Domestic
+u_rate,Unemployment rate,%,Predictor,Domestic
+opr,Overnight Policy Rate,%,Predictor,Domestic
+exports_rm_mil_yoy,Exports,% YoY,Predictor,Domestic
+imports_rm_mil_yoy,Imports,% YoY,Predictor,Domestic
+leading_index_yoy,Leading Index,% YoY,Predictor,Domestic
+coincident_index_yoy,Coincident Index,% YoY,Predictor,Domestic
+usdmyr,USD/MYR,RM per US$,Predictor,External
+usdmyr_yoy,USD/MYR,% YoY,Predictor,External
+neer_broad_yoy,Ringgit NEER,% YoY,Predictor,External
+brent_usd,Brent crude,US$ per barrel,Predictor,External
+brent_usd_yoy,Brent crude,% YoY,Predictor,External
+food_index_wb_yoy,World food prices,% YoY,Predictor,External
+fuel_ron95_market,RON95 market price,RM per litre,Context,Domestic
+fuel_ron95_budi95,RON95 BUDI95 price,RM per litre,Context,Domestic
+fuel_diesel_peninsular,Diesel (Peninsular),RM per litre,Context,Domestic
+fuel_diesel_budi,Diesel BUDI price,RM per litre,Context,Domestic

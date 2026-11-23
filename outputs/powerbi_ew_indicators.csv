@@ -1,0 +1,925 @@
+date,code,flag,source,signal,indicator,status
+2014-01-01,brent_high,0.0,brent_usd_yoy,Cost pressure,Brent crude high,Normal
+2014-02-01,brent_high,0.0,brent_usd_yoy,Cost pressure,Brent crude high,Normal
+2014-03-01,brent_high,0.0,brent_usd_yoy,Cost pressure,Brent crude high,Normal
+2014-04-01,brent_high,0.0,brent_usd_yoy,Cost pressure,Brent crude high,Normal
+2014-05-01,brent_high,0.0,brent_usd_yoy,Cost pressure,Brent crude high,Normal
+2014-06-01,brent_high,0.0,brent_usd_yoy,Cost pressure,Brent crude high,Normal
+2014-07-01,brent_high,0.0,brent_usd_yoy,Cost pressure,Brent crude high,Normal
+2014-08-01,brent_high,0.0,brent_usd_yoy,Cost pressure,Brent crude high,Normal
+2014-09-01,brent_high,0.0,brent_usd_yoy,Cost pressure,Brent crude high,Normal
+2014-10-01,brent_high,0.0,brent_usd_yoy,Cost pressure,Brent crude high,Normal
+2014-11-01,brent_high,0.0,brent_usd_yoy,Cost pressure,Brent crude high,Normal
+2014-12-01,brent_high,0.0,brent_usd_yoy,Cost pressure,Brent crude high,Normal
+2015-01-01,brent_high,0.0,brent_usd_yoy,Cost pressure,Brent crude high,Normal
+2015-02-01,brent_high,0.0,brent_usd_yoy,Cost pressure,Brent crude high,Normal
+2015-03-01,brent_high,0.0,brent_usd_yoy,Cost pressure,Brent crude high,Normal
+2015-04-01,brent_high,0.0,brent_usd_yoy,Cost pressure,Brent crude high,Normal
+2015-05-01,brent_high,0.0,brent_usd_yoy,Cost pressure,Brent crude high,Normal
+2015-06-01,brent_high,0.0,brent_usd_yoy,Cost pressure,Brent crude high,Normal
+2015-07-01,brent_high,0.0,brent_usd_yoy,Cost pressure,Brent crude high,Normal
+2015-08-01,brent_high,0.0,brent_usd_yoy,Cost pressure,Brent crude high,Normal
+2015-09-01,brent_high,0.0,brent_usd_yoy,Cost pressure,Brent crude high,Normal
+2015-10-01,brent_high,0.0,brent_usd_yoy,Cost pressure,Brent crude high,Normal
+2015-11-01,brent_high,0.0,brent_usd_yoy,Cost pressure,Brent crude high,Normal
+2015-12-01,brent_high,0.0,brent_usd_yoy,Cost pressure,Brent crude high,Normal
+2016-01-01,brent_high,0.0,brent_usd_yoy,Cost pressure,Brent crude high,Normal
+2016-02-01,brent_high,0.0,brent_usd_yoy,Cost pressure,Brent crude high,Normal
+2016-03-01,brent_high,0.0,brent_usd_yoy,Cost pressure,Brent crude high,Normal
+2016-04-01,brent_high,0.0,brent_usd_yoy,Cost pressure,Brent crude high,Normal
+2016-05-01,brent_high,0.0,brent_usd_yoy,Cost pressure,Brent crude high,Normal
+2016-06-01,brent_high,0.0,brent_usd_yoy,Cost pressure,Brent crude high,Normal
+2016-07-01,brent_high,0.0,brent_usd_yoy,Cost pressure,Brent crude high,Normal
+2016-08-01,brent_high,0.0,brent_usd_yoy,Cost pressure,Brent crude high,Normal
+2016-09-01,brent_high,0.0,brent_usd_yoy,Cost pressure,Brent crude high,Normal
+2016-10-01,brent_high,0.0,brent_usd_yoy,Cost pressure,Brent crude high,Normal
+2016-11-01,brent_high,0.0,brent_usd_yoy,Cost pressure,Brent crude high,Normal
+2016-12-01,brent_high,1.0,brent_usd_yoy,Cost pressure,Brent crude high,Above usual range
+2017-01-01,brent_high,1.0,brent_usd_yoy,Cost pressure,Brent crude high,Above usual range
+2017-02-01,brent_high,1.0,brent_usd_yoy,Cost pressure,Brent crude high,Above usual range
+2017-03-01,brent_high,1.0,brent_usd_yoy,Cost pressure,Brent crude high,Above usual range
+2017-04-01,brent_high,1.0,brent_usd_yoy,Cost pressure,Brent crude high,Above usual range
+2017-05-01,brent_high,1.0,brent_usd_yoy,Cost pressure,Brent crude high,Above usual range
+2017-06-01,brent_high,0.0,brent_usd_yoy,Cost pressure,Brent crude high,Normal
+2017-07-01,brent_high,0.0,brent_usd_yoy,Cost pressure,Brent crude high,Normal
+2017-08-01,brent_high,1.0,brent_usd_yoy,Cost pressure,Brent crude high,Above usual range
+2017-09-01,brent_high,1.0,brent_usd_yoy,Cost pressure,Brent crude high,Above usual range
+2017-10-01,brent_high,1.0,brent_usd_yoy,Cost pressure,Brent crude high,Above usual range
+2017-11-01,brent_high,1.0,brent_usd_yoy,Cost pressure,Brent crude high,Above usual range
+2017-12-01,brent_high,0.0,brent_usd_yoy,Cost pressure,Brent crude high,Normal
+2018-01-01,brent_high,1.0,brent_usd_yoy,Cost pressure,Brent crude high,Above usual range
+2018-02-01,brent_high,0.0,brent_usd_yoy,Cost pressure,Brent crude high,Normal
+2018-03-01,brent_high,1.0,brent_usd_yoy,Cost pressure,Brent crude high,Above usual range
+2018-04-01,brent_high,1.0,brent_usd_yoy,Cost pressure,Brent crude high,Above usual range
+2018-05-01,brent_high,1.0,brent_usd_yoy,Cost pressure,Brent crude high,Above usual range
+2018-06-01,brent_high,1.0,brent_usd_yoy,Cost pressure,Brent crude high,Above usual range
+2018-07-01,brent_high,1.0,brent_usd_yoy,Cost pressure,Brent crude high,Above usual range
+2018-08-01,brent_high,1.0,brent_usd_yoy,Cost pressure,Brent crude high,Above usual range
+2018-09-01,brent_high,1.0,brent_usd_yoy,Cost pressure,Brent crude high,Above usual range
+2018-10-01,brent_high,0.0,brent_usd_yoy,Cost pressure,Brent crude high,Normal
+2018-11-01,brent_high,0.0,brent_usd_yoy,Cost pressure,Brent crude high,Normal
+2018-12-01,brent_high,0.0,brent_usd_yoy,Cost pressure,Brent crude high,Normal
+2019-01-01,brent_high,0.0,brent_usd_yoy,Cost pressure,Brent crude high,Normal
+2019-02-01,brent_high,0.0,brent_usd_yoy,Cost pressure,Brent crude high,Normal
+2019-03-01,brent_high,0.0,brent_usd_yoy,Cost pressure,Brent crude high,Normal
+2019-04-01,brent_high,0.0,brent_usd_yoy,Cost pressure,Brent crude high,Normal
+2019-05-01,brent_high,0.0,brent_usd_yoy,Cost pressure,Brent crude high,Normal
+2019-06-01,brent_high,0.0,brent_usd_yoy,Cost pressure,Brent crude high,Normal
+2019-07-01,brent_high,0.0,brent_usd_yoy,Cost pressure,Brent crude high,Normal
+2019-08-01,brent_high,0.0,brent_usd_yoy,Cost pressure,Brent crude high,Normal
+2019-09-01,brent_high,0.0,brent_usd_yoy,Cost pressure,Brent crude high,Normal
+2019-10-01,brent_high,0.0,brent_usd_yoy,Cost pressure,Brent crude high,Normal
+2019-11-01,brent_high,0.0,brent_usd_yoy,Cost pressure,Brent crude high,Normal
+2019-12-01,brent_high,0.0,brent_usd_yoy,Cost pressure,Brent crude high,Normal
+2020-01-01,brent_high,0.0,brent_usd_yoy,Cost pressure,Brent crude high,Normal
+2020-02-01,brent_high,0.0,brent_usd_yoy,Cost pressure,Brent crude high,Normal
+2020-03-01,brent_high,0.0,brent_usd_yoy,Cost pressure,Brent crude high,Normal
+2020-04-01,brent_high,0.0,brent_usd_yoy,Cost pressure,Brent crude high,Normal
+2020-05-01,brent_high,0.0,brent_usd_yoy,Cost pressure,Brent crude high,Normal
+2020-06-01,brent_high,0.0,brent_usd_yoy,Cost pressure,Brent crude high,Normal
+2020-07-01,brent_high,0.0,brent_usd_yoy,Cost pressure,Brent crude high,Normal
+2020-08-01,brent_high,0.0,brent_usd_yoy,Cost pressure,Brent crude high,Normal
+2020-09-01,brent_high,0.0,brent_usd_yoy,Cost pressure,Brent crude high,Normal
+2020-10-01,brent_high,0.0,brent_usd_yoy,Cost pressure,Brent crude high,Normal
+2020-11-01,brent_high,0.0,brent_usd_yoy,Cost pressure,Brent crude high,Normal
+2020-12-01,brent_high,0.0,brent_usd_yoy,Cost pressure,Brent crude high,Normal
+2021-01-01,brent_high,0.0,brent_usd_yoy,Cost pressure,Brent crude high,Normal
+2021-02-01,brent_high,0.0,brent_usd_yoy,Cost pressure,Brent crude high,Normal
+2021-03-01,brent_high,1.0,brent_usd_yoy,Cost pressure,Brent crude high,Above usual range
+2021-04-01,brent_high,1.0,brent_usd_yoy,Cost pressure,Brent crude high,Above usual range
+2021-05-01,brent_high,1.0,brent_usd_yoy,Cost pressure,Brent crude high,Above usual range
+2021-06-01,brent_high,1.0,brent_usd_yoy,Cost pressure,Brent crude high,Above usual range
+2021-07-01,brent_high,1.0,brent_usd_yoy,Cost pressure,Brent crude high,Above usual range
+2021-08-01,brent_high,0.0,brent_usd_yoy,Cost pressure,Brent crude high,Normal
+2021-09-01,brent_high,1.0,brent_usd_yoy,Cost pressure,Brent crude high,Above usual range
+2021-10-01,brent_high,1.0,brent_usd_yoy,Cost pressure,Brent crude high,Above usual range
+2021-11-01,brent_high,1.0,brent_usd_yoy,Cost pressure,Brent crude high,Above usual range
+2021-12-01,brent_high,0.0,brent_usd_yoy,Cost pressure,Brent crude high,Normal
+2022-01-01,brent_high,0.0,brent_usd_yoy,Cost pressure,Brent crude high,Normal
+2022-02-01,brent_high,0.0,brent_usd_yoy,Cost pressure,Brent crude high,Normal
+2022-03-01,brent_high,0.0,brent_usd_yoy,Cost pressure,Brent crude high,Normal
+2022-04-01,brent_high,0.0,brent_usd_yoy,Cost pressure,Brent crude high,Normal
+2022-05-01,brent_high,0.0,brent_usd_yoy,Cost pressure,Brent crude high,Normal
+2022-06-01,brent_high,0.0,brent_usd_yoy,Cost pressure,Brent crude high,Normal
+2022-07-01,brent_high,0.0,brent_usd_yoy,Cost pressure,Brent crude high,Normal
+2022-08-01,brent_high,0.0,brent_usd_yoy,Cost pressure,Brent crude high,Normal
+2022-09-01,brent_high,0.0,brent_usd_yoy,Cost pressure,Brent crude high,Normal
+2022-10-01,brent_high,0.0,brent_usd_yoy,Cost pressure,Brent crude high,Normal
+2022-11-01,brent_high,0.0,brent_usd_yoy,Cost pressure,Brent crude high,Normal
+2022-12-01,brent_high,0.0,brent_usd_yoy,Cost pressure,Brent crude high,Normal
+2023-01-01,brent_high,0.0,brent_usd_yoy,Cost pressure,Brent crude high,Normal
+2023-02-01,brent_high,0.0,brent_usd_yoy,Cost pressure,Brent crude high,Normal
+2023-03-01,brent_high,0.0,brent_usd_yoy,Cost pressure,Brent crude high,Normal
+2023-04-01,brent_high,0.0,brent_usd_yoy,Cost pressure,Brent crude high,Normal
+2023-05-01,brent_high,0.0,brent_usd_yoy,Cost pressure,Brent crude high,Normal
+2023-06-01,brent_high,0.0,brent_usd_yoy,Cost pressure,Brent crude high,Normal
+2023-07-01,brent_high,0.0,brent_usd_yoy,Cost pressure,Brent crude high,Normal
+2023-08-01,brent_high,0.0,brent_usd_yoy,Cost pressure,Brent crude high,Normal
+2023-09-01,brent_high,0.0,brent_usd_yoy,Cost pressure,Brent crude high,Normal
+2023-10-01,brent_high,0.0,brent_usd_yoy,Cost pressure,Brent crude high,Normal
+2023-11-01,brent_high,0.0,brent_usd_yoy,Cost pressure,Brent crude high,Normal
+2023-12-01,brent_high,0.0,brent_usd_yoy,Cost pressure,Brent crude high,Normal
+2024-01-01,brent_high,0.0,brent_usd_yoy,Cost pressure,Brent crude high,Normal
+2024-02-01,brent_high,0.0,brent_usd_yoy,Cost pressure,Brent crude high,Normal
+2024-03-01,brent_high,0.0,brent_usd_yoy,Cost pressure,Brent crude high,Normal
+2024-04-01,brent_high,0.0,brent_usd_yoy,Cost pressure,Brent crude high,Normal
+2024-05-01,brent_high,0.0,brent_usd_yoy,Cost pressure,Brent crude high,Normal
+2024-06-01,brent_high,0.0,brent_usd_yoy,Cost pressure,Brent crude high,Normal
+2024-07-01,brent_high,0.0,brent_usd_yoy,Cost pressure,Brent crude high,Normal
+2024-08-01,brent_high,0.0,brent_usd_yoy,Cost pressure,Brent crude high,Normal
+2024-09-01,brent_high,0.0,brent_usd_yoy,Cost pressure,Brent crude high,Normal
+2024-10-01,brent_high,0.0,brent_usd_yoy,Cost pressure,Brent crude high,Normal
+2024-11-01,brent_high,0.0,brent_usd_yoy,Cost pressure,Brent crude high,Normal
+2024-12-01,brent_high,0.0,brent_usd_yoy,Cost pressure,Brent crude high,Normal
+2025-01-01,brent_high,0.0,brent_usd_yoy,Cost pressure,Brent crude high,Normal
+2025-02-01,brent_high,0.0,brent_usd_yoy,Cost pressure,Brent crude high,Normal
+2025-03-01,brent_high,0.0,brent_usd_yoy,Cost pressure,Brent crude high,Normal
+2025-04-01,brent_high,0.0,brent_usd_yoy,Cost pressure,Brent crude high,Normal
+2025-05-01,brent_high,0.0,brent_usd_yoy,Cost pressure,Brent crude high,Normal
+2025-06-01,brent_high,0.0,brent_usd_yoy,Cost pressure,Brent crude high,Normal
+2025-07-01,brent_high,0.0,brent_usd_yoy,Cost pressure,Brent crude high,Normal
+2025-08-01,brent_high,0.0,brent_usd_yoy,Cost pressure,Brent crude high,Normal
+2025-09-01,brent_high,0.0,brent_usd_yoy,Cost pressure,Brent crude high,Normal
+2025-10-01,brent_high,0.0,brent_usd_yoy,Cost pressure,Brent crude high,Normal
+2025-11-01,brent_high,0.0,brent_usd_yoy,Cost pressure,Brent crude high,Normal
+2025-12-01,brent_high,0.0,brent_usd_yoy,Cost pressure,Brent crude high,Normal
+2026-01-01,brent_high,0.0,brent_usd_yoy,Cost pressure,Brent crude high,Normal
+2026-02-01,brent_high,0.0,brent_usd_yoy,Cost pressure,Brent crude high,Normal
+2026-03-01,brent_high,0.0,brent_usd_yoy,Cost pressure,Brent crude high,Normal
+2026-04-01,brent_high,1.0,brent_usd_yoy,Cost pressure,Brent crude high,Above usual range
+2026-05-01,brent_high,0.0,brent_usd_yoy,Cost pressure,Brent crude high,Normal
+2026-06-01,brent_high,0.0,brent_usd_yoy,Cost pressure,Brent crude high,Normal
+2026-07-01,brent_high,0.0,brent_usd_yoy,Cost pressure,Brent crude high,Normal
+2026-08-01,brent_high,0.0,brent_usd_yoy,Cost pressure,Brent crude high,Normal
+2026-09-01,brent_high,1.0,brent_usd_yoy,Cost pressure,Brent crude high,Above usual range
+2026-10-01,brent_high,1.0,brent_usd_yoy,Cost pressure,Brent crude high,Above usual range
+2014-01-01,ppi_high,0.0,ppi_yoy,Cost pressure,Producer prices high,Normal
+2014-02-01,ppi_high,0.0,ppi_yoy,Cost pressure,Producer prices high,Normal
+2014-03-01,ppi_high,0.0,ppi_yoy,Cost pressure,Producer prices high,Normal
+2014-04-01,ppi_high,0.0,ppi_yoy,Cost pressure,Producer prices high,Normal
+2014-05-01,ppi_high,0.0,ppi_yoy,Cost pressure,Producer prices high,Normal
+2014-06-01,ppi_high,0.0,ppi_yoy,Cost pressure,Producer prices high,Normal
+2014-07-01,ppi_high,0.0,ppi_yoy,Cost pressure,Producer prices high,Normal
+2014-08-01,ppi_high,0.0,ppi_yoy,Cost pressure,Producer prices high,Normal
+2014-09-01,ppi_high,0.0,ppi_yoy,Cost pressure,Producer prices high,Normal
+2014-10-01,ppi_high,0.0,ppi_yoy,Cost pressure,Producer prices high,Normal
+2014-11-01,ppi_high,0.0,ppi_yoy,Cost pressure,Producer prices high,Normal
+2014-12-01,ppi_high,0.0,ppi_yoy,Cost pressure,Producer prices high,Normal
+2015-01-01,ppi_high,0.0,ppi_yoy,Cost pressure,Producer prices high,Normal
+2015-02-01,ppi_high,0.0,ppi_yoy,Cost pressure,Producer prices high,Normal
+2015-03-01,ppi_high,0.0,ppi_yoy,Cost pressure,Producer prices high,Normal
+2015-04-01,ppi_high,0.0,ppi_yoy,Cost pressure,Producer prices high,Normal
+2015-05-01,ppi_high,0.0,ppi_yoy,Cost pressure,Producer prices high,Normal
+2015-06-01,ppi_high,0.0,ppi_yoy,Cost pressure,Producer prices high,Normal
+2015-07-01,ppi_high,0.0,ppi_yoy,Cost pressure,Producer prices high,Normal
+2015-08-01,ppi_high,0.0,ppi_yoy,Cost pressure,Producer prices high,Normal
+2015-09-01,ppi_high,0.0,ppi_yoy,Cost pressure,Producer prices high,Normal
+2015-10-01,ppi_high,0.0,ppi_yoy,Cost pressure,Producer prices high,Normal
+2015-11-01,ppi_high,0.0,ppi_yoy,Cost pressure,Producer prices high,Normal
+2015-12-01,ppi_high,0.0,ppi_yoy,Cost pressure,Producer prices high,Normal
+2016-01-01,ppi_high,0.0,ppi_yoy,Cost pressure,Producer prices high,Normal
+2016-02-01,ppi_high,0.0,ppi_yoy,Cost pressure,Producer prices high,Normal
+2016-03-01,ppi_high,0.0,ppi_yoy,Cost pressure,Producer prices high,Normal
+2016-04-01,ppi_high,0.0,ppi_yoy,Cost pressure,Producer prices high,Normal
+2016-05-01,ppi_high,0.0,ppi_yoy,Cost pressure,Producer prices high,Normal
+2016-06-01,ppi_high,0.0,ppi_yoy,Cost pressure,Producer prices high,Normal
+2016-07-01,ppi_high,0.0,ppi_yoy,Cost pressure,Producer prices high,Normal
+2016-08-01,ppi_high,0.0,ppi_yoy,Cost pressure,Producer prices high,Normal
+2016-09-01,ppi_high,0.0,ppi_yoy,Cost pressure,Producer prices high,Normal
+2016-10-01,ppi_high,0.0,ppi_yoy,Cost pressure,Producer prices high,Normal
+2016-11-01,ppi_high,0.0,ppi_yoy,Cost pressure,Producer prices high,Normal
+2016-12-01,ppi_high,1.0,ppi_yoy,Cost pressure,Producer prices high,Above usual range
+2017-01-01,ppi_high,1.0,ppi_yoy,Cost pressure,Producer prices high,Above usual range
+2017-02-01,ppi_high,1.0,ppi_yoy,Cost pressure,Producer prices high,Above usual range
+2017-03-01,ppi_high,1.0,ppi_yoy,Cost pressure,Producer prices high,Above usual range
+2017-04-01,ppi_high,1.0,ppi_yoy,Cost pressure,Producer prices high,Above usual range
+2017-05-01,ppi_high,1.0,ppi_yoy,Cost pressure,Producer prices high,Above usual range
+2017-06-01,ppi_high,1.0,ppi_yoy,Cost pressure,Producer prices high,Above usual range
+2017-07-01,ppi_high,1.0,ppi_yoy,Cost pressure,Producer prices high,Above usual range
+2017-08-01,ppi_high,1.0,ppi_yoy,Cost pressure,Producer prices high,Above usual range
+2017-09-01,ppi_high,0.0,ppi_yoy,Cost pressure,Producer prices high,Normal
+2017-10-01,ppi_high,0.0,ppi_yoy,Cost pressure,Producer prices high,Normal
+2017-11-01,ppi_high,0.0,ppi_yoy,Cost pressure,Producer prices high,Normal
+2017-12-01,ppi_high,0.0,ppi_yoy,Cost pressure,Producer prices high,Normal
+2018-01-01,ppi_high,0.0,ppi_yoy,Cost pressure,Producer prices high,Normal
+2018-02-01,ppi_high,0.0,ppi_yoy,Cost pressure,Producer prices high,Normal
+2018-03-01,ppi_high,0.0,ppi_yoy,Cost pressure,Producer prices high,Normal
+2018-04-01,ppi_high,0.0,ppi_yoy,Cost pressure,Producer prices high,Normal
+2018-05-01,ppi_high,0.0,ppi_yoy,Cost pressure,Producer prices high,Normal
+2018-06-01,ppi_high,0.0,ppi_yoy,Cost pressure,Producer prices high,Normal
+2018-07-01,ppi_high,0.0,ppi_yoy,Cost pressure,Producer prices high,Normal
+2018-08-01,ppi_high,0.0,ppi_yoy,Cost pressure,Producer prices high,Normal
+2018-09-01,ppi_high,0.0,ppi_yoy,Cost pressure,Producer prices high,Normal
+2018-10-01,ppi_high,0.0,ppi_yoy,Cost pressure,Producer prices high,Normal
+2018-11-01,ppi_high,0.0,ppi_yoy,Cost pressure,Producer prices high,Normal
+2018-12-01,ppi_high,0.0,ppi_yoy,Cost pressure,Producer prices high,Normal
+2019-01-01,ppi_high,0.0,ppi_yoy,Cost pressure,Producer prices high,Normal
+2019-02-01,ppi_high,0.0,ppi_yoy,Cost pressure,Producer prices high,Normal
+2019-03-01,ppi_high,0.0,ppi_yoy,Cost pressure,Producer prices high,Normal
+2019-04-01,ppi_high,0.0,ppi_yoy,Cost pressure,Producer prices high,Normal
+2019-05-01,ppi_high,0.0,ppi_yoy,Cost pressure,Producer prices high,Normal
+2019-06-01,ppi_high,0.0,ppi_yoy,Cost pressure,Producer prices high,Normal
+2019-07-01,ppi_high,0.0,ppi_yoy,Cost pressure,Producer prices high,Normal
+2019-08-01,ppi_high,0.0,ppi_yoy,Cost pressure,Producer prices high,Normal
+2019-09-01,ppi_high,0.0,ppi_yoy,Cost pressure,Producer prices high,Normal
+2019-10-01,ppi_high,0.0,ppi_yoy,Cost pressure,Producer prices high,Normal
+2019-11-01,ppi_high,0.0,ppi_yoy,Cost pressure,Producer prices high,Normal
+2019-12-01,ppi_high,0.0,ppi_yoy,Cost pressure,Producer prices high,Normal
+2020-01-01,ppi_high,0.0,ppi_yoy,Cost pressure,Producer prices high,Normal
+2020-02-01,ppi_high,0.0,ppi_yoy,Cost pressure,Producer prices high,Normal
+2020-03-01,ppi_high,0.0,ppi_yoy,Cost pressure,Producer prices high,Normal
+2020-04-01,ppi_high,0.0,ppi_yoy,Cost pressure,Producer prices high,Normal
+2020-05-01,ppi_high,0.0,ppi_yoy,Cost pressure,Producer prices high,Normal
+2020-06-01,ppi_high,0.0,ppi_yoy,Cost pressure,Producer prices high,Normal
+2020-07-01,ppi_high,0.0,ppi_yoy,Cost pressure,Producer prices high,Normal
+2020-08-01,ppi_high,0.0,ppi_yoy,Cost pressure,Producer prices high,Normal
+2020-09-01,ppi_high,0.0,ppi_yoy,Cost pressure,Producer prices high,Normal
+2020-10-01,ppi_high,0.0,ppi_yoy,Cost pressure,Producer prices high,Normal
+2020-11-01,ppi_high,0.0,ppi_yoy,Cost pressure,Producer prices high,Normal
+2020-12-01,ppi_high,0.0,ppi_yoy,Cost pressure,Producer prices high,Normal
+2021-01-01,ppi_high,0.0,ppi_yoy,Cost pressure,Producer prices high,Normal
+2021-02-01,ppi_high,0.0,ppi_yoy,Cost pressure,Producer prices high,Normal
+2021-03-01,ppi_high,0.0,ppi_yoy,Cost pressure,Producer prices high,Normal
+2021-04-01,ppi_high,1.0,ppi_yoy,Cost pressure,Producer prices high,Above usual range
+2021-05-01,ppi_high,1.0,ppi_yoy,Cost pressure,Producer prices high,Above usual range
+2021-06-01,ppi_high,1.0,ppi_yoy,Cost pressure,Producer prices high,Above usual range
+2021-07-01,ppi_high,1.0,ppi_yoy,Cost pressure,Producer prices high,Above usual range
+2021-08-01,ppi_high,1.0,ppi_yoy,Cost pressure,Producer prices high,Above usual range
+2021-09-01,ppi_high,1.0,ppi_yoy,Cost pressure,Producer prices high,Above usual range
+2021-10-01,ppi_high,1.0,ppi_yoy,Cost pressure,Producer prices high,Above usual range
+2021-11-01,ppi_high,1.0,ppi_yoy,Cost pressure,Producer prices high,Above usual range
+2021-12-01,ppi_high,0.0,ppi_yoy,Cost pressure,Producer prices high,Normal
+2022-01-01,ppi_high,0.0,ppi_yoy,Cost pressure,Producer prices high,Normal
+2022-02-01,ppi_high,0.0,ppi_yoy,Cost pressure,Producer prices high,Normal
+2022-03-01,ppi_high,1.0,ppi_yoy,Cost pressure,Producer prices high,Above usual range
+2022-04-01,ppi_high,0.0,ppi_yoy,Cost pressure,Producer prices high,Normal
+2022-05-01,ppi_high,0.0,ppi_yoy,Cost pressure,Producer prices high,Normal
+2022-06-01,ppi_high,0.0,ppi_yoy,Cost pressure,Producer prices high,Normal
+2022-07-01,ppi_high,0.0,ppi_yoy,Cost pressure,Producer prices high,Normal
+2022-08-01,ppi_high,0.0,ppi_yoy,Cost pressure,Producer prices high,Normal
+2022-09-01,ppi_high,0.0,ppi_yoy,Cost pressure,Producer prices high,Normal
+2022-10-01,ppi_high,0.0,ppi_yoy,Cost pressure,Producer prices high,Normal
+2022-11-01,ppi_high,0.0,ppi_yoy,Cost pressure,Producer prices high,Normal
+2022-12-01,ppi_high,0.0,ppi_yoy,Cost pressure,Producer prices high,Normal
+2023-01-01,ppi_high,0.0,ppi_yoy,Cost pressure,Producer prices high,Normal
+2023-02-01,ppi_high,0.0,ppi_yoy,Cost pressure,Producer prices high,Normal
+2023-03-01,ppi_high,0.0,ppi_yoy,Cost pressure,Producer prices high,Normal
+2023-04-01,ppi_high,0.0,ppi_yoy,Cost pressure,Producer prices high,Normal
+2023-05-01,ppi_high,0.0,ppi_yoy,Cost pressure,Producer prices high,Normal
+2023-06-01,ppi_high,0.0,ppi_yoy,Cost pressure,Producer prices high,Normal
+2023-07-01,ppi_high,0.0,ppi_yoy,Cost pressure,Producer prices high,Normal
+2023-08-01,ppi_high,0.0,ppi_yoy,Cost pressure,Producer prices high,Normal
+2023-09-01,ppi_high,0.0,ppi_yoy,Cost pressure,Producer prices high,Normal
+2023-10-01,ppi_high,0.0,ppi_yoy,Cost pressure,Producer prices high,Normal
+2023-11-01,ppi_high,0.0,ppi_yoy,Cost pressure,Producer prices high,Normal
+2023-12-01,ppi_high,0.0,ppi_yoy,Cost pressure,Producer prices high,Normal
+2024-01-01,ppi_high,0.0,ppi_yoy,Cost pressure,Producer prices high,Normal
+2024-02-01,ppi_high,0.0,ppi_yoy,Cost pressure,Producer prices high,Normal
+2024-03-01,ppi_high,0.0,ppi_yoy,Cost pressure,Producer prices high,Normal
+2024-04-01,ppi_high,0.0,ppi_yoy,Cost pressure,Producer prices high,Normal
+2024-05-01,ppi_high,0.0,ppi_yoy,Cost pressure,Producer prices high,Normal
+2024-06-01,ppi_high,0.0,ppi_yoy,Cost pressure,Producer prices high,Normal
+2024-07-01,ppi_high,0.0,ppi_yoy,Cost pressure,Producer prices high,Normal
+2024-08-01,ppi_high,0.0,ppi_yoy,Cost pressure,Producer prices high,Normal
+2024-09-01,ppi_high,0.0,ppi_yoy,Cost pressure,Producer prices high,Normal
+2024-10-01,ppi_high,0.0,ppi_yoy,Cost pressure,Producer prices high,Normal
+2024-11-01,ppi_high,0.0,ppi_yoy,Cost pressure,Producer prices high,Normal
+2024-12-01,ppi_high,0.0,ppi_yoy,Cost pressure,Producer prices high,Normal
+2025-01-01,ppi_high,0.0,ppi_yoy,Cost pressure,Producer prices high,Normal
+2025-02-01,ppi_high,0.0,ppi_yoy,Cost pressure,Producer prices high,Normal
+2025-03-01,ppi_high,0.0,ppi_yoy,Cost pressure,Producer prices high,Normal
+2025-04-01,ppi_high,0.0,ppi_yoy,Cost pressure,Producer prices high,Normal
+2025-05-01,ppi_high,0.0,ppi_yoy,Cost pressure,Producer prices high,Normal
+2025-06-01,ppi_high,0.0,ppi_yoy,Cost pressure,Producer prices high,Normal
+2025-07-01,ppi_high,0.0,ppi_yoy,Cost pressure,Producer prices high,Normal
+2025-08-01,ppi_high,0.0,ppi_yoy,Cost pressure,Producer prices high,Normal
+2025-09-01,ppi_high,0.0,ppi_yoy,Cost pressure,Producer prices high,Normal
+2025-10-01,ppi_high,0.0,ppi_yoy,Cost pressure,Producer prices high,Normal
+2025-11-01,ppi_high,0.0,ppi_yoy,Cost pressure,Producer prices high,Normal
+2025-12-01,ppi_high,0.0,ppi_yoy,Cost pressure,Producer prices high,Normal
+2026-01-01,ppi_high,0.0,ppi_yoy,Cost pressure,Producer prices high,Normal
+2026-02-01,ppi_high,0.0,ppi_yoy,Cost pressure,Producer prices high,Normal
+2026-03-01,ppi_high,0.0,ppi_yoy,Cost pressure,Producer prices high,Normal
+2026-04-01,ppi_high,0.0,ppi_yoy,Cost pressure,Producer prices high,Normal
+2026-05-01,ppi_high,0.0,ppi_yoy,Cost pressure,Producer prices high,Normal
+2026-06-01,ppi_high,0.0,ppi_yoy,Cost pressure,Producer prices high,Normal
+2026-07-01,ppi_high,0.0,ppi_yoy,Cost pressure,Producer prices high,Normal
+2026-08-01,ppi_high,0.0,ppi_yoy,Cost pressure,Producer prices high,Normal
+2026-09-01,ppi_high,1.0,ppi_yoy,Cost pressure,Producer prices high,Above usual range
+2026-10-01,ppi_high,,ppi_yoy,Cost pressure,Producer prices high,Not yet published
+2014-01-01,usdmyr_high,1.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Above usual range
+2014-02-01,usdmyr_high,1.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Above usual range
+2014-03-01,usdmyr_high,1.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Above usual range
+2014-04-01,usdmyr_high,1.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Above usual range
+2014-05-01,usdmyr_high,1.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Above usual range
+2014-06-01,usdmyr_high,0.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Normal
+2014-07-01,usdmyr_high,0.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Normal
+2014-08-01,usdmyr_high,0.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Normal
+2014-09-01,usdmyr_high,0.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Normal
+2014-10-01,usdmyr_high,0.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Normal
+2014-11-01,usdmyr_high,0.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Normal
+2014-12-01,usdmyr_high,1.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Above usual range
+2015-01-01,usdmyr_high,1.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Above usual range
+2015-02-01,usdmyr_high,1.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Above usual range
+2015-03-01,usdmyr_high,1.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Above usual range
+2015-04-01,usdmyr_high,1.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Above usual range
+2015-05-01,usdmyr_high,1.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Above usual range
+2015-06-01,usdmyr_high,1.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Above usual range
+2015-07-01,usdmyr_high,1.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Above usual range
+2015-08-01,usdmyr_high,1.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Above usual range
+2015-09-01,usdmyr_high,1.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Above usual range
+2015-10-01,usdmyr_high,1.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Above usual range
+2015-11-01,usdmyr_high,1.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Above usual range
+2015-12-01,usdmyr_high,1.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Above usual range
+2016-01-01,usdmyr_high,1.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Above usual range
+2016-02-01,usdmyr_high,0.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Normal
+2016-03-01,usdmyr_high,0.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Normal
+2016-04-01,usdmyr_high,0.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Normal
+2016-05-01,usdmyr_high,0.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Normal
+2016-06-01,usdmyr_high,0.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Normal
+2016-07-01,usdmyr_high,0.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Normal
+2016-08-01,usdmyr_high,0.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Normal
+2016-09-01,usdmyr_high,0.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Normal
+2016-10-01,usdmyr_high,0.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Normal
+2016-11-01,usdmyr_high,0.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Normal
+2016-12-01,usdmyr_high,0.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Normal
+2017-01-01,usdmyr_high,0.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Normal
+2017-02-01,usdmyr_high,0.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Normal
+2017-03-01,usdmyr_high,0.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Normal
+2017-04-01,usdmyr_high,0.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Normal
+2017-05-01,usdmyr_high,0.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Normal
+2017-06-01,usdmyr_high,0.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Normal
+2017-07-01,usdmyr_high,0.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Normal
+2017-08-01,usdmyr_high,0.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Normal
+2017-09-01,usdmyr_high,0.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Normal
+2017-10-01,usdmyr_high,0.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Normal
+2017-11-01,usdmyr_high,0.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Normal
+2017-12-01,usdmyr_high,0.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Normal
+2018-01-01,usdmyr_high,0.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Normal
+2018-02-01,usdmyr_high,0.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Normal
+2018-03-01,usdmyr_high,0.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Normal
+2018-04-01,usdmyr_high,0.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Normal
+2018-05-01,usdmyr_high,0.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Normal
+2018-06-01,usdmyr_high,0.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Normal
+2018-07-01,usdmyr_high,0.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Normal
+2018-08-01,usdmyr_high,0.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Normal
+2018-09-01,usdmyr_high,0.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Normal
+2018-10-01,usdmyr_high,0.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Normal
+2018-11-01,usdmyr_high,0.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Normal
+2018-12-01,usdmyr_high,0.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Normal
+2019-01-01,usdmyr_high,0.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Normal
+2019-02-01,usdmyr_high,0.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Normal
+2019-03-01,usdmyr_high,0.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Normal
+2019-04-01,usdmyr_high,0.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Normal
+2019-05-01,usdmyr_high,0.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Normal
+2019-06-01,usdmyr_high,0.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Normal
+2019-07-01,usdmyr_high,0.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Normal
+2019-08-01,usdmyr_high,0.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Normal
+2019-09-01,usdmyr_high,0.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Normal
+2019-10-01,usdmyr_high,0.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Normal
+2019-11-01,usdmyr_high,0.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Normal
+2019-12-01,usdmyr_high,0.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Normal
+2020-01-01,usdmyr_high,0.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Normal
+2020-02-01,usdmyr_high,0.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Normal
+2020-03-01,usdmyr_high,0.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Normal
+2020-04-01,usdmyr_high,0.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Normal
+2020-05-01,usdmyr_high,0.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Normal
+2020-06-01,usdmyr_high,0.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Normal
+2020-07-01,usdmyr_high,0.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Normal
+2020-08-01,usdmyr_high,0.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Normal
+2020-09-01,usdmyr_high,0.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Normal
+2020-10-01,usdmyr_high,0.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Normal
+2020-11-01,usdmyr_high,0.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Normal
+2020-12-01,usdmyr_high,0.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Normal
+2021-01-01,usdmyr_high,0.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Normal
+2021-02-01,usdmyr_high,0.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Normal
+2021-03-01,usdmyr_high,0.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Normal
+2021-04-01,usdmyr_high,0.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Normal
+2021-05-01,usdmyr_high,0.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Normal
+2021-06-01,usdmyr_high,0.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Normal
+2021-07-01,usdmyr_high,0.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Normal
+2021-08-01,usdmyr_high,0.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Normal
+2021-09-01,usdmyr_high,0.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Normal
+2021-10-01,usdmyr_high,0.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Normal
+2021-11-01,usdmyr_high,0.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Normal
+2021-12-01,usdmyr_high,0.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Normal
+2022-01-01,usdmyr_high,0.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Normal
+2022-02-01,usdmyr_high,0.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Normal
+2022-03-01,usdmyr_high,0.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Normal
+2022-04-01,usdmyr_high,0.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Normal
+2022-05-01,usdmyr_high,1.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Above usual range
+2022-06-01,usdmyr_high,1.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Above usual range
+2022-07-01,usdmyr_high,1.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Above usual range
+2022-08-01,usdmyr_high,1.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Above usual range
+2022-09-01,usdmyr_high,1.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Above usual range
+2022-10-01,usdmyr_high,1.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Above usual range
+2022-11-01,usdmyr_high,1.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Above usual range
+2022-12-01,usdmyr_high,0.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Normal
+2023-01-01,usdmyr_high,0.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Normal
+2023-02-01,usdmyr_high,0.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Normal
+2023-03-01,usdmyr_high,1.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Above usual range
+2023-04-01,usdmyr_high,0.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Normal
+2023-05-01,usdmyr_high,0.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Normal
+2023-06-01,usdmyr_high,0.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Normal
+2023-07-01,usdmyr_high,0.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Normal
+2023-08-01,usdmyr_high,0.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Normal
+2023-09-01,usdmyr_high,0.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Normal
+2023-10-01,usdmyr_high,0.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Normal
+2023-11-01,usdmyr_high,0.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Normal
+2023-12-01,usdmyr_high,0.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Normal
+2024-01-01,usdmyr_high,1.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Above usual range
+2024-02-01,usdmyr_high,1.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Above usual range
+2024-03-01,usdmyr_high,0.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Normal
+2024-04-01,usdmyr_high,1.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Above usual range
+2024-05-01,usdmyr_high,0.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Normal
+2024-06-01,usdmyr_high,0.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Normal
+2024-07-01,usdmyr_high,0.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Normal
+2024-08-01,usdmyr_high,0.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Normal
+2024-09-01,usdmyr_high,0.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Normal
+2024-10-01,usdmyr_high,0.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Normal
+2024-11-01,usdmyr_high,0.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Normal
+2024-12-01,usdmyr_high,0.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Normal
+2025-01-01,usdmyr_high,0.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Normal
+2025-02-01,usdmyr_high,0.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Normal
+2025-03-01,usdmyr_high,0.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Normal
+2025-04-01,usdmyr_high,0.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Normal
+2025-05-01,usdmyr_high,0.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Normal
+2025-06-01,usdmyr_high,0.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Normal
+2025-07-01,usdmyr_high,0.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Normal
+2025-08-01,usdmyr_high,0.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Normal
+2025-09-01,usdmyr_high,0.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Normal
+2025-10-01,usdmyr_high,0.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Normal
+2025-11-01,usdmyr_high,0.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Normal
+2025-12-01,usdmyr_high,0.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Normal
+2026-01-01,usdmyr_high,0.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Normal
+2026-02-01,usdmyr_high,0.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Normal
+2026-03-01,usdmyr_high,0.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Normal
+2026-04-01,usdmyr_high,0.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Normal
+2026-05-01,usdmyr_high,0.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Normal
+2026-06-01,usdmyr_high,0.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Normal
+2026-07-01,usdmyr_high,0.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Normal
+2026-08-01,usdmyr_high,0.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Normal
+2026-09-01,usdmyr_high,0.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Normal
+2026-10-01,usdmyr_high,0.0,usdmyr_yoy,Cost pressure,Ringgit weak (USD/MYR high),Normal
+2014-01-01,ipi_low,,ipi_yoy,Growth slowdown,Industrial production low,Not yet published
+2014-02-01,ipi_low,,ipi_yoy,Growth slowdown,Industrial production low,Not yet published
+2014-03-01,ipi_low,,ipi_yoy,Growth slowdown,Industrial production low,Not yet published
+2014-04-01,ipi_low,,ipi_yoy,Growth slowdown,Industrial production low,Not yet published
+2014-05-01,ipi_low,,ipi_yoy,Growth slowdown,Industrial production low,Not yet published
+2014-06-01,ipi_low,,ipi_yoy,Growth slowdown,Industrial production low,Not yet published
+2014-07-01,ipi_low,,ipi_yoy,Growth slowdown,Industrial production low,Not yet published
+2014-08-01,ipi_low,,ipi_yoy,Growth slowdown,Industrial production low,Not yet published
+2014-09-01,ipi_low,,ipi_yoy,Growth slowdown,Industrial production low,Not yet published
+2014-10-01,ipi_low,,ipi_yoy,Growth slowdown,Industrial production low,Not yet published
+2014-11-01,ipi_low,,ipi_yoy,Growth slowdown,Industrial production low,Not yet published
+2014-12-01,ipi_low,,ipi_yoy,Growth slowdown,Industrial production low,Not yet published
+2015-01-01,ipi_low,,ipi_yoy,Growth slowdown,Industrial production low,Not yet published
+2015-02-01,ipi_low,,ipi_yoy,Growth slowdown,Industrial production low,Not yet published
+2015-03-01,ipi_low,,ipi_yoy,Growth slowdown,Industrial production low,Not yet published
+2015-04-01,ipi_low,,ipi_yoy,Growth slowdown,Industrial production low,Not yet published
+2015-05-01,ipi_low,,ipi_yoy,Growth slowdown,Industrial production low,Not yet published
+2015-06-01,ipi_low,,ipi_yoy,Growth slowdown,Industrial production low,Not yet published
+2015-07-01,ipi_low,,ipi_yoy,Growth slowdown,Industrial production low,Not yet published
+2015-08-01,ipi_low,,ipi_yoy,Growth slowdown,Industrial production low,Not yet published
+2015-09-01,ipi_low,,ipi_yoy,Growth slowdown,Industrial production low,Not yet published
+2015-10-01,ipi_low,,ipi_yoy,Growth slowdown,Industrial production low,Not yet published
+2015-11-01,ipi_low,,ipi_yoy,Growth slowdown,Industrial production low,Not yet published
+2015-12-01,ipi_low,,ipi_yoy,Growth slowdown,Industrial production low,Not yet published
+2016-01-01,ipi_low,0.0,ipi_yoy,Growth slowdown,Industrial production low,Normal
+2016-02-01,ipi_low,0.0,ipi_yoy,Growth slowdown,Industrial production low,Normal
+2016-03-01,ipi_low,0.0,ipi_yoy,Growth slowdown,Industrial production low,Normal
+2016-04-01,ipi_low,0.0,ipi_yoy,Growth slowdown,Industrial production low,Normal
+2016-05-01,ipi_low,0.0,ipi_yoy,Growth slowdown,Industrial production low,Normal
+2016-06-01,ipi_low,0.0,ipi_yoy,Growth slowdown,Industrial production low,Normal
+2016-07-01,ipi_low,0.0,ipi_yoy,Growth slowdown,Industrial production low,Normal
+2016-08-01,ipi_low,0.0,ipi_yoy,Growth slowdown,Industrial production low,Normal
+2016-09-01,ipi_low,0.0,ipi_yoy,Growth slowdown,Industrial production low,Normal
+2016-10-01,ipi_low,0.0,ipi_yoy,Growth slowdown,Industrial production low,Normal
+2016-11-01,ipi_low,0.0,ipi_yoy,Growth slowdown,Industrial production low,Normal
+2016-12-01,ipi_low,0.0,ipi_yoy,Growth slowdown,Industrial production low,Normal
+2017-01-01,ipi_low,0.0,ipi_yoy,Growth slowdown,Industrial production low,Normal
+2017-02-01,ipi_low,0.0,ipi_yoy,Growth slowdown,Industrial production low,Normal
+2017-03-01,ipi_low,0.0,ipi_yoy,Growth slowdown,Industrial production low,Normal
+2017-04-01,ipi_low,0.0,ipi_yoy,Growth slowdown,Industrial production low,Normal
+2017-05-01,ipi_low,0.0,ipi_yoy,Growth slowdown,Industrial production low,Normal
+2017-06-01,ipi_low,0.0,ipi_yoy,Growth slowdown,Industrial production low,Normal
+2017-07-01,ipi_low,0.0,ipi_yoy,Growth slowdown,Industrial production low,Normal
+2017-08-01,ipi_low,0.0,ipi_yoy,Growth slowdown,Industrial production low,Normal
+2017-09-01,ipi_low,0.0,ipi_yoy,Growth slowdown,Industrial production low,Normal
+2017-10-01,ipi_low,0.0,ipi_yoy,Growth slowdown,Industrial production low,Normal
+2017-11-01,ipi_low,0.0,ipi_yoy,Growth slowdown,Industrial production low,Normal
+2017-12-01,ipi_low,0.0,ipi_yoy,Growth slowdown,Industrial production low,Normal
+2018-01-01,ipi_low,0.0,ipi_yoy,Growth slowdown,Industrial production low,Normal
+2018-02-01,ipi_low,0.0,ipi_yoy,Growth slowdown,Industrial production low,Normal
+2018-03-01,ipi_low,0.0,ipi_yoy,Growth slowdown,Industrial production low,Normal
+2018-04-01,ipi_low,0.0,ipi_yoy,Growth slowdown,Industrial production low,Normal
+2018-05-01,ipi_low,0.0,ipi_yoy,Growth slowdown,Industrial production low,Normal
+2018-06-01,ipi_low,0.0,ipi_yoy,Growth slowdown,Industrial production low,Normal
+2018-07-01,ipi_low,0.0,ipi_yoy,Growth slowdown,Industrial production low,Normal
+2018-08-01,ipi_low,0.0,ipi_yoy,Growth slowdown,Industrial production low,Normal
+2018-09-01,ipi_low,0.0,ipi_yoy,Growth slowdown,Industrial production low,Normal
+2018-10-01,ipi_low,0.0,ipi_yoy,Growth slowdown,Industrial production low,Normal
+2018-11-01,ipi_low,0.0,ipi_yoy,Growth slowdown,Industrial production low,Normal
+2018-12-01,ipi_low,0.0,ipi_yoy,Growth slowdown,Industrial production low,Normal
+2019-01-01,ipi_low,0.0,ipi_yoy,Growth slowdown,Industrial production low,Normal
+2019-02-01,ipi_low,1.0,ipi_yoy,Growth slowdown,Industrial production low,Above usual range
+2019-03-01,ipi_low,0.0,ipi_yoy,Growth slowdown,Industrial production low,Normal
+2019-04-01,ipi_low,0.0,ipi_yoy,Growth slowdown,Industrial production low,Normal
+2019-05-01,ipi_low,0.0,ipi_yoy,Growth slowdown,Industrial production low,Normal
+2019-06-01,ipi_low,0.0,ipi_yoy,Growth slowdown,Industrial production low,Normal
+2019-07-01,ipi_low,1.0,ipi_yoy,Growth slowdown,Industrial production low,Above usual range
+2019-08-01,ipi_low,1.0,ipi_yoy,Growth slowdown,Industrial production low,Above usual range
+2019-09-01,ipi_low,1.0,ipi_yoy,Growth slowdown,Industrial production low,Above usual range
+2019-10-01,ipi_low,1.0,ipi_yoy,Growth slowdown,Industrial production low,Above usual range
+2019-11-01,ipi_low,0.0,ipi_yoy,Growth slowdown,Industrial production low,Normal
+2019-12-01,ipi_low,1.0,ipi_yoy,Growth slowdown,Industrial production low,Above usual range
+2020-01-01,ipi_low,1.0,ipi_yoy,Growth slowdown,Industrial production low,Above usual range
+2020-02-01,ipi_low,0.0,ipi_yoy,Growth slowdown,Industrial production low,Normal
+2020-03-01,ipi_low,1.0,ipi_yoy,Growth slowdown,Industrial production low,Above usual range
+2020-04-01,ipi_low,1.0,ipi_yoy,Growth slowdown,Industrial production low,Above usual range
+2020-05-01,ipi_low,1.0,ipi_yoy,Growth slowdown,Industrial production low,Above usual range
+2020-06-01,ipi_low,1.0,ipi_yoy,Growth slowdown,Industrial production low,Above usual range
+2020-07-01,ipi_low,0.0,ipi_yoy,Growth slowdown,Industrial production low,Normal
+2020-08-01,ipi_low,1.0,ipi_yoy,Growth slowdown,Industrial production low,Above usual range
+2020-09-01,ipi_low,0.0,ipi_yoy,Growth slowdown,Industrial production low,Normal
+2020-10-01,ipi_low,1.0,ipi_yoy,Growth slowdown,Industrial production low,Above usual range
+2020-11-01,ipi_low,1.0,ipi_yoy,Growth slowdown,Industrial production low,Above usual range
+2020-12-01,ipi_low,0.0,ipi_yoy,Growth slowdown,Industrial production low,Normal
+2021-01-01,ipi_low,0.0,ipi_yoy,Growth slowdown,Industrial production low,Normal
+2021-02-01,ipi_low,0.0,ipi_yoy,Growth slowdown,Industrial production low,Normal
+2021-03-01,ipi_low,0.0,ipi_yoy,Growth slowdown,Industrial production low,Normal
+2021-04-01,ipi_low,0.0,ipi_yoy,Growth slowdown,Industrial production low,Normal
+2021-05-01,ipi_low,0.0,ipi_yoy,Growth slowdown,Industrial production low,Normal
+2021-06-01,ipi_low,0.0,ipi_yoy,Growth slowdown,Industrial production low,Normal
+2021-07-01,ipi_low,1.0,ipi_yoy,Growth slowdown,Industrial production low,Above usual range
+2021-08-01,ipi_low,1.0,ipi_yoy,Growth slowdown,Industrial production low,Above usual range
+2021-09-01,ipi_low,0.0,ipi_yoy,Growth slowdown,Industrial production low,Normal
+2021-10-01,ipi_low,0.0,ipi_yoy,Growth slowdown,Industrial production low,Normal
+2021-11-01,ipi_low,0.0,ipi_yoy,Growth slowdown,Industrial production low,Normal
+2021-12-01,ipi_low,0.0,ipi_yoy,Growth slowdown,Industrial production low,Normal
+2022-01-01,ipi_low,0.0,ipi_yoy,Growth slowdown,Industrial production low,Normal
+2022-02-01,ipi_low,0.0,ipi_yoy,Growth slowdown,Industrial production low,Normal
+2022-03-01,ipi_low,0.0,ipi_yoy,Growth slowdown,Industrial production low,Normal
+2022-04-01,ipi_low,0.0,ipi_yoy,Growth slowdown,Industrial production low,Normal
+2022-05-01,ipi_low,0.0,ipi_yoy,Growth slowdown,Industrial production low,Normal
+2022-06-01,ipi_low,0.0,ipi_yoy,Growth slowdown,Industrial production low,Normal
+2022-07-01,ipi_low,0.0,ipi_yoy,Growth slowdown,Industrial production low,Normal
+2022-08-01,ipi_low,0.0,ipi_yoy,Growth slowdown,Industrial production low,Normal
+2022-09-01,ipi_low,0.0,ipi_yoy,Growth slowdown,Industrial production low,Normal
+2022-10-01,ipi_low,0.0,ipi_yoy,Growth slowdown,Industrial production low,Normal
+2022-11-01,ipi_low,0.0,ipi_yoy,Growth slowdown,Industrial production low,Normal
+2022-12-01,ipi_low,0.0,ipi_yoy,Growth slowdown,Industrial production low,Normal
+2023-01-01,ipi_low,0.0,ipi_yoy,Growth slowdown,Industrial production low,Normal
+2023-02-01,ipi_low,0.0,ipi_yoy,Growth slowdown,Industrial production low,Normal
+2023-03-01,ipi_low,0.0,ipi_yoy,Growth slowdown,Industrial production low,Normal
+2023-04-01,ipi_low,1.0,ipi_yoy,Growth slowdown,Industrial production low,Above usual range
+2023-05-01,ipi_low,0.0,ipi_yoy,Growth slowdown,Industrial production low,Normal
+2023-06-01,ipi_low,1.0,ipi_yoy,Growth slowdown,Industrial production low,Above usual range
+2023-07-01,ipi_low,0.0,ipi_yoy,Growth slowdown,Industrial production low,Normal
+2023-08-01,ipi_low,0.0,ipi_yoy,Growth slowdown,Industrial production low,Normal
+2023-09-01,ipi_low,0.0,ipi_yoy,Growth slowdown,Industrial production low,Normal
+2023-10-01,ipi_low,0.0,ipi_yoy,Growth slowdown,Industrial production low,Normal
+2023-11-01,ipi_low,0.0,ipi_yoy,Growth slowdown,Industrial production low,Normal
+2023-12-01,ipi_low,0.0,ipi_yoy,Growth slowdown,Industrial production low,Normal
+2024-01-01,ipi_low,0.0,ipi_yoy,Growth slowdown,Industrial production low,Normal
+2024-02-01,ipi_low,0.0,ipi_yoy,Growth slowdown,Industrial production low,Normal
+2024-03-01,ipi_low,0.0,ipi_yoy,Growth slowdown,Industrial production low,Normal
+2024-04-01,ipi_low,0.0,ipi_yoy,Growth slowdown,Industrial production low,Normal
+2024-05-01,ipi_low,0.0,ipi_yoy,Growth slowdown,Industrial production low,Normal
+2024-06-01,ipi_low,0.0,ipi_yoy,Growth slowdown,Industrial production low,Normal
+2024-07-01,ipi_low,0.0,ipi_yoy,Growth slowdown,Industrial production low,Normal
+2024-08-01,ipi_low,0.0,ipi_yoy,Growth slowdown,Industrial production low,Normal
+2024-09-01,ipi_low,0.0,ipi_yoy,Growth slowdown,Industrial production low,Normal
+2024-10-01,ipi_low,0.0,ipi_yoy,Growth slowdown,Industrial production low,Normal
+2024-11-01,ipi_low,0.0,ipi_yoy,Growth slowdown,Industrial production low,Normal
+2024-12-01,ipi_low,0.0,ipi_yoy,Growth slowdown,Industrial production low,Normal
+2025-01-01,ipi_low,0.0,ipi_yoy,Growth slowdown,Industrial production low,Normal
+2025-02-01,ipi_low,0.0,ipi_yoy,Growth slowdown,Industrial production low,Normal
+2025-03-01,ipi_low,0.0,ipi_yoy,Growth slowdown,Industrial production low,Normal
+2025-04-01,ipi_low,0.0,ipi_yoy,Growth slowdown,Industrial production low,Normal
+2025-05-01,ipi_low,0.0,ipi_yoy,Growth slowdown,Industrial production low,Normal
+2025-06-01,ipi_low,0.0,ipi_yoy,Growth slowdown,Industrial production low,Normal
+2025-07-01,ipi_low,0.0,ipi_yoy,Growth slowdown,Industrial production low,Normal
+2025-08-01,ipi_low,0.0,ipi_yoy,Growth slowdown,Industrial production low,Normal
+2025-09-01,ipi_low,0.0,ipi_yoy,Growth slowdown,Industrial production low,Normal
+2025-10-01,ipi_low,0.0,ipi_yoy,Growth slowdown,Industrial production low,Normal
+2025-11-01,ipi_low,0.0,ipi_yoy,Growth slowdown,Industrial production low,Normal
+2025-12-01,ipi_low,0.0,ipi_yoy,Growth slowdown,Industrial production low,Normal
+2026-01-01,ipi_low,0.0,ipi_yoy,Growth slowdown,Industrial production low,Normal
+2026-02-01,ipi_low,0.0,ipi_yoy,Growth slowdown,Industrial production low,Normal
+2026-03-01,ipi_low,0.0,ipi_yoy,Growth slowdown,Industrial production low,Normal
+2026-04-01,ipi_low,0.0,ipi_yoy,Growth slowdown,Industrial production low,Normal
+2026-05-01,ipi_low,0.0,ipi_yoy,Growth slowdown,Industrial production low,Normal
+2026-06-01,ipi_low,0.0,ipi_yoy,Growth slowdown,Industrial production low,Normal
+2026-07-01,ipi_low,0.0,ipi_yoy,Growth slowdown,Industrial production low,Normal
+2026-08-01,ipi_low,0.0,ipi_yoy,Growth slowdown,Industrial production low,Normal
+2026-09-01,ipi_low,0.0,ipi_yoy,Growth slowdown,Industrial production low,Normal
+2026-10-01,ipi_low,,ipi_yoy,Growth slowdown,Industrial production low,Not yet published
+2014-01-01,exports_low,0.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Normal
+2014-02-01,exports_low,0.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Normal
+2014-03-01,exports_low,0.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Normal
+2014-04-01,exports_low,0.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Normal
+2014-05-01,exports_low,0.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Normal
+2014-06-01,exports_low,0.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Normal
+2014-07-01,exports_low,0.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Normal
+2014-08-01,exports_low,0.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Normal
+2014-09-01,exports_low,0.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Normal
+2014-10-01,exports_low,0.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Normal
+2014-11-01,exports_low,0.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Normal
+2014-12-01,exports_low,0.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Normal
+2015-01-01,exports_low,0.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Normal
+2015-02-01,exports_low,1.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Above usual range
+2015-03-01,exports_low,0.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Normal
+2015-04-01,exports_low,1.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Above usual range
+2015-05-01,exports_low,1.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Above usual range
+2015-06-01,exports_low,0.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Normal
+2015-07-01,exports_low,0.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Normal
+2015-08-01,exports_low,0.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Normal
+2015-09-01,exports_low,0.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Normal
+2015-10-01,exports_low,0.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Normal
+2015-11-01,exports_low,0.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Normal
+2015-12-01,exports_low,0.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Normal
+2016-01-01,exports_low,0.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Normal
+2016-02-01,exports_low,0.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Normal
+2016-03-01,exports_low,0.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Normal
+2016-04-01,exports_low,0.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Normal
+2016-05-01,exports_low,0.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Normal
+2016-06-01,exports_low,0.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Normal
+2016-07-01,exports_low,0.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Normal
+2016-08-01,exports_low,0.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Normal
+2016-09-01,exports_low,0.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Normal
+2016-10-01,exports_low,1.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Above usual range
+2016-11-01,exports_low,0.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Normal
+2016-12-01,exports_low,0.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Normal
+2017-01-01,exports_low,0.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Normal
+2017-02-01,exports_low,0.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Normal
+2017-03-01,exports_low,0.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Normal
+2017-04-01,exports_low,0.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Normal
+2017-05-01,exports_low,0.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Normal
+2017-06-01,exports_low,0.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Normal
+2017-07-01,exports_low,0.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Normal
+2017-08-01,exports_low,0.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Normal
+2017-09-01,exports_low,0.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Normal
+2017-10-01,exports_low,0.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Normal
+2017-11-01,exports_low,0.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Normal
+2017-12-01,exports_low,0.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Normal
+2018-01-01,exports_low,0.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Normal
+2018-02-01,exports_low,0.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Normal
+2018-03-01,exports_low,0.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Normal
+2018-04-01,exports_low,0.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Normal
+2018-05-01,exports_low,0.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Normal
+2018-06-01,exports_low,0.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Normal
+2018-07-01,exports_low,0.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Normal
+2018-08-01,exports_low,0.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Normal
+2018-09-01,exports_low,0.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Normal
+2018-10-01,exports_low,0.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Normal
+2018-11-01,exports_low,0.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Normal
+2018-12-01,exports_low,0.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Normal
+2019-01-01,exports_low,0.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Normal
+2019-02-01,exports_low,1.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Above usual range
+2019-03-01,exports_low,0.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Normal
+2019-04-01,exports_low,0.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Normal
+2019-05-01,exports_low,0.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Normal
+2019-06-01,exports_low,0.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Normal
+2019-07-01,exports_low,0.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Normal
+2019-08-01,exports_low,0.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Normal
+2019-09-01,exports_low,1.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Above usual range
+2019-10-01,exports_low,1.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Above usual range
+2019-11-01,exports_low,1.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Above usual range
+2019-12-01,exports_low,0.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Normal
+2020-01-01,exports_low,0.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Normal
+2020-02-01,exports_low,0.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Normal
+2020-03-01,exports_low,1.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Above usual range
+2020-04-01,exports_low,1.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Above usual range
+2020-05-01,exports_low,1.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Above usual range
+2020-06-01,exports_low,0.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Normal
+2020-07-01,exports_low,0.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Normal
+2020-08-01,exports_low,0.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Normal
+2020-09-01,exports_low,0.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Normal
+2020-10-01,exports_low,0.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Normal
+2020-11-01,exports_low,0.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Normal
+2020-12-01,exports_low,0.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Normal
+2021-01-01,exports_low,0.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Normal
+2021-02-01,exports_low,0.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Normal
+2021-03-01,exports_low,0.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Normal
+2021-04-01,exports_low,0.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Normal
+2021-05-01,exports_low,0.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Normal
+2021-06-01,exports_low,0.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Normal
+2021-07-01,exports_low,0.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Normal
+2021-08-01,exports_low,0.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Normal
+2021-09-01,exports_low,0.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Normal
+2021-10-01,exports_low,0.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Normal
+2021-11-01,exports_low,0.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Normal
+2021-12-01,exports_low,0.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Normal
+2022-01-01,exports_low,0.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Normal
+2022-02-01,exports_low,0.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Normal
+2022-03-01,exports_low,0.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Normal
+2022-04-01,exports_low,0.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Normal
+2022-05-01,exports_low,0.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Normal
+2022-06-01,exports_low,0.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Normal
+2022-07-01,exports_low,0.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Normal
+2022-08-01,exports_low,0.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Normal
+2022-09-01,exports_low,0.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Normal
+2022-10-01,exports_low,0.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Normal
+2022-11-01,exports_low,0.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Normal
+2022-12-01,exports_low,0.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Normal
+2023-01-01,exports_low,0.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Normal
+2023-02-01,exports_low,0.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Normal
+2023-03-01,exports_low,0.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Normal
+2023-04-01,exports_low,1.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Above usual range
+2023-05-01,exports_low,0.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Normal
+2023-06-01,exports_low,1.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Above usual range
+2023-07-01,exports_low,1.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Above usual range
+2023-08-01,exports_low,1.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Above usual range
+2023-09-01,exports_low,1.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Above usual range
+2023-10-01,exports_low,0.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Normal
+2023-11-01,exports_low,0.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Normal
+2023-12-01,exports_low,0.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Normal
+2024-01-01,exports_low,0.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Normal
+2024-02-01,exports_low,0.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Normal
+2024-03-01,exports_low,0.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Normal
+2024-04-01,exports_low,0.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Normal
+2024-05-01,exports_low,0.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Normal
+2024-06-01,exports_low,0.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Normal
+2024-07-01,exports_low,0.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Normal
+2024-08-01,exports_low,0.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Normal
+2024-09-01,exports_low,0.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Normal
+2024-10-01,exports_low,0.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Normal
+2024-11-01,exports_low,0.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Normal
+2024-12-01,exports_low,0.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Normal
+2025-01-01,exports_low,0.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Normal
+2025-02-01,exports_low,0.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Normal
+2025-03-01,exports_low,0.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Normal
+2025-04-01,exports_low,0.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Normal
+2025-05-01,exports_low,0.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Normal
+2025-06-01,exports_low,0.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Normal
+2025-07-01,exports_low,0.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Normal
+2025-08-01,exports_low,0.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Normal
+2025-09-01,exports_low,0.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Normal
+2025-10-01,exports_low,0.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Normal
+2025-11-01,exports_low,0.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Normal
+2025-12-01,exports_low,0.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Normal
+2026-01-01,exports_low,0.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Normal
+2026-02-01,exports_low,0.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Normal
+2026-03-01,exports_low,0.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Normal
+2026-04-01,exports_low,0.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Normal
+2026-05-01,exports_low,0.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Normal
+2026-06-01,exports_low,0.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Normal
+2026-07-01,exports_low,0.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Normal
+2026-08-01,exports_low,0.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Normal
+2026-09-01,exports_low,0.0,exports_rm_mil_yoy,Growth slowdown,Exports low,Normal
+2026-10-01,exports_low,,exports_rm_mil_yoy,Growth slowdown,Exports low,Not yet published
+2014-01-01,leading_low,0.0,leading_index_yoy,Growth slowdown,Leading Index low,Normal
+2014-02-01,leading_low,0.0,leading_index_yoy,Growth slowdown,Leading Index low,Normal
+2014-03-01,leading_low,1.0,leading_index_yoy,Growth slowdown,Leading Index low,Above usual range
+2014-04-01,leading_low,0.0,leading_index_yoy,Growth slowdown,Leading Index low,Normal
+2014-05-01,leading_low,0.0,leading_index_yoy,Growth slowdown,Leading Index low,Normal
+2014-06-01,leading_low,0.0,leading_index_yoy,Growth slowdown,Leading Index low,Normal
+2014-07-01,leading_low,0.0,leading_index_yoy,Growth slowdown,Leading Index low,Normal
+2014-08-01,leading_low,0.0,leading_index_yoy,Growth slowdown,Leading Index low,Normal
+2014-09-01,leading_low,0.0,leading_index_yoy,Growth slowdown,Leading Index low,Normal
+2014-10-01,leading_low,0.0,leading_index_yoy,Growth slowdown,Leading Index low,Normal
+2014-11-01,leading_low,0.0,leading_index_yoy,Growth slowdown,Leading Index low,Normal
+2014-12-01,leading_low,0.0,leading_index_yoy,Growth slowdown,Leading Index low,Normal
+2015-01-01,leading_low,0.0,leading_index_yoy,Growth slowdown,Leading Index low,Normal
+2015-02-01,leading_low,0.0,leading_index_yoy,Growth slowdown,Leading Index low,Normal
+2015-03-01,leading_low,0.0,leading_index_yoy,Growth slowdown,Leading Index low,Normal
+2015-04-01,leading_low,0.0,leading_index_yoy,Growth slowdown,Leading Index low,Normal
+2015-05-01,leading_low,1.0,leading_index_yoy,Growth slowdown,Leading Index low,Above usual range
+2015-06-01,leading_low,0.0,leading_index_yoy,Growth slowdown,Leading Index low,Normal
+2015-07-01,leading_low,0.0,leading_index_yoy,Growth slowdown,Leading Index low,Normal
+2015-08-01,leading_low,1.0,leading_index_yoy,Growth slowdown,Leading Index low,Above usual range
+2015-09-01,leading_low,1.0,leading_index_yoy,Growth slowdown,Leading Index low,Above usual range
+2015-10-01,leading_low,1.0,leading_index_yoy,Growth slowdown,Leading Index low,Above usual range
+2015-11-01,leading_low,1.0,leading_index_yoy,Growth slowdown,Leading Index low,Above usual range
+2015-12-01,leading_low,1.0,leading_index_yoy,Growth slowdown,Leading Index low,Above usual range
+2016-01-01,leading_low,1.0,leading_index_yoy,Growth slowdown,Leading Index low,Above usual range
+2016-02-01,leading_low,1.0,leading_index_yoy,Growth slowdown,Leading Index low,Above usual range
+2016-03-01,leading_low,1.0,leading_index_yoy,Growth slowdown,Leading Index low,Above usual range
+2016-04-01,leading_low,1.0,leading_index_yoy,Growth slowdown,Leading Index low,Above usual range
+2016-05-01,leading_low,0.0,leading_index_yoy,Growth slowdown,Leading Index low,Normal
+2016-06-01,leading_low,0.0,leading_index_yoy,Growth slowdown,Leading Index low,Normal
+2016-07-01,leading_low,1.0,leading_index_yoy,Growth slowdown,Leading Index low,Above usual range
+2016-08-01,leading_low,0.0,leading_index_yoy,Growth slowdown,Leading Index low,Normal
+2016-09-01,leading_low,0.0,leading_index_yoy,Growth slowdown,Leading Index low,Normal
+2016-10-01,leading_low,1.0,leading_index_yoy,Growth slowdown,Leading Index low,Above usual range
+2016-11-01,leading_low,1.0,leading_index_yoy,Growth slowdown,Leading Index low,Above usual range
+2016-12-01,leading_low,0.0,leading_index_yoy,Growth slowdown,Leading Index low,Normal
+2017-01-01,leading_low,0.0,leading_index_yoy,Growth slowdown,Leading Index low,Normal
+2017-02-01,leading_low,0.0,leading_index_yoy,Growth slowdown,Leading Index low,Normal
+2017-03-01,leading_low,0.0,leading_index_yoy,Growth slowdown,Leading Index low,Normal
+2017-04-01,leading_low,0.0,leading_index_yoy,Growth slowdown,Leading Index low,Normal
+2017-05-01,leading_low,0.0,leading_index_yoy,Growth slowdown,Leading Index low,Normal
+2017-06-01,leading_low,0.0,leading_index_yoy,Growth slowdown,Leading Index low,Normal
+2017-07-01,leading_low,0.0,leading_index_yoy,Growth slowdown,Leading Index low,Normal
+2017-08-01,leading_low,0.0,leading_index_yoy,Growth slowdown,Leading Index low,Normal
+2017-09-01,leading_low,0.0,leading_index_yoy,Growth slowdown,Leading Index low,Normal
+2017-10-01,leading_low,0.0,leading_index_yoy,Growth slowdown,Leading Index low,Normal
+2017-11-01,leading_low,0.0,leading_index_yoy,Growth slowdown,Leading Index low,Normal
+2017-12-01,leading_low,0.0,leading_index_yoy,Growth slowdown,Leading Index low,Normal
+2018-01-01,leading_low,0.0,leading_index_yoy,Growth slowdown,Leading Index low,Normal
+2018-02-01,leading_low,0.0,leading_index_yoy,Growth slowdown,Leading Index low,Normal
+2018-03-01,leading_low,0.0,leading_index_yoy,Growth slowdown,Leading Index low,Normal
+2018-04-01,leading_low,0.0,leading_index_yoy,Growth slowdown,Leading Index low,Normal
+2018-05-01,leading_low,0.0,leading_index_yoy,Growth slowdown,Leading Index low,Normal
+2018-06-01,leading_low,0.0,leading_index_yoy,Growth slowdown,Leading Index low,Normal
+2018-07-01,leading_low,0.0,leading_index_yoy,Growth slowdown,Leading Index low,Normal
+2018-08-01,leading_low,0.0,leading_index_yoy,Growth slowdown,Leading Index low,Normal
+2018-09-01,leading_low,1.0,leading_index_yoy,Growth slowdown,Leading Index low,Above usual range
+2018-10-01,leading_low,1.0,leading_index_yoy,Growth slowdown,Leading Index low,Above usual range
+2018-11-01,leading_low,1.0,leading_index_yoy,Growth slowdown,Leading Index low,Above usual range
+2018-12-01,leading_low,1.0,leading_index_yoy,Growth slowdown,Leading Index low,Above usual range
+2019-01-01,leading_low,0.0,leading_index_yoy,Growth slowdown,Leading Index low,Normal
+2019-02-01,leading_low,1.0,leading_index_yoy,Growth slowdown,Leading Index low,Above usual range
+2019-03-01,leading_low,0.0,leading_index_yoy,Growth slowdown,Leading Index low,Normal
+2019-04-01,leading_low,0.0,leading_index_yoy,Growth slowdown,Leading Index low,Normal
+2019-05-01,leading_low,0.0,leading_index_yoy,Growth slowdown,Leading Index low,Normal
+2019-06-01,leading_low,0.0,leading_index_yoy,Growth slowdown,Leading Index low,Normal
+2019-07-01,leading_low,0.0,leading_index_yoy,Growth slowdown,Leading Index low,Normal
+2019-08-01,leading_low,0.0,leading_index_yoy,Growth slowdown,Leading Index low,Normal
+2019-09-01,leading_low,0.0,leading_index_yoy,Growth slowdown,Leading Index low,Normal
+2019-10-01,leading_low,0.0,leading_index_yoy,Growth slowdown,Leading Index low,Normal
+2019-11-01,leading_low,0.0,leading_index_yoy,Growth slowdown,Leading Index low,Normal
+2019-12-01,leading_low,0.0,leading_index_yoy,Growth slowdown,Leading Index low,Normal
+2020-01-01,leading_low,0.0,leading_index_yoy,Growth slowdown,Leading Index low,Normal
+2020-02-01,leading_low,0.0,leading_index_yoy,Growth slowdown,Leading Index low,Normal
+2020-03-01,leading_low,1.0,leading_index_yoy,Growth slowdown,Leading Index low,Above usual range
+2020-04-01,leading_low,1.0,leading_index_yoy,Growth slowdown,Leading Index low,Above usual range
+2020-05-01,leading_low,0.0,leading_index_yoy,Growth slowdown,Leading Index low,Normal
+2020-06-01,leading_low,0.0,leading_index_yoy,Growth slowdown,Leading Index low,Normal
+2020-07-01,leading_low,0.0,leading_index_yoy,Growth slowdown,Leading Index low,Normal
+2020-08-01,leading_low,0.0,leading_index_yoy,Growth slowdown,Leading Index low,Normal
+2020-09-01,leading_low,0.0,leading_index_yoy,Growth slowdown,Leading Index low,Normal
+2020-10-01,leading_low,0.0,leading_index_yoy,Growth slowdown,Leading Index low,Normal
+2020-11-01,leading_low,0.0,leading_index_yoy,Growth slowdown,Leading Index low,Normal
+2020-12-01,leading_low,0.0,leading_index_yoy,Growth slowdown,Leading Index low,Normal
+2021-01-01,leading_low,0.0,leading_index_yoy,Growth slowdown,Leading Index low,Normal
+2021-02-01,leading_low,0.0,leading_index_yoy,Growth slowdown,Leading Index low,Normal
+2021-03-01,leading_low,0.0,leading_index_yoy,Growth slowdown,Leading Index low,Normal
+2021-04-01,leading_low,0.0,leading_index_yoy,Growth slowdown,Leading Index low,Normal
+2021-05-01,leading_low,0.0,leading_index_yoy,Growth slowdown,Leading Index low,Normal
+2021-06-01,leading_low,0.0,leading_index_yoy,Growth slowdown,Leading Index low,Normal
+2021-07-01,leading_low,1.0,leading_index_yoy,Growth slowdown,Leading Index low,Above usual range
+2021-08-01,leading_low,1.0,leading_index_yoy,Growth slowdown,Leading Index low,Above usual range
+2021-09-01,leading_low,0.0,leading_index_yoy,Growth slowdown,Leading Index low,Normal
+2021-10-01,leading_low,0.0,leading_index_yoy,Growth slowdown,Leading Index low,Normal
+2021-11-01,leading_low,0.0,leading_index_yoy,Growth slowdown,Leading Index low,Normal
+2021-12-01,leading_low,0.0,leading_index_yoy,Growth slowdown,Leading Index low,Normal
+2022-01-01,leading_low,0.0,leading_index_yoy,Growth slowdown,Leading Index low,Normal
+2022-02-01,leading_low,0.0,leading_index_yoy,Growth slowdown,Leading Index low,Normal
+2022-03-01,leading_low,0.0,leading_index_yoy,Growth slowdown,Leading Index low,Normal
+2022-04-01,leading_low,0.0,leading_index_yoy,Growth slowdown,Leading Index low,Normal
+2022-05-01,leading_low,0.0,leading_index_yoy,Growth slowdown,Leading Index low,Normal
+2022-06-01,leading_low,0.0,leading_index_yoy,Growth slowdown,Leading Index low,Normal
+2022-07-01,leading_low,0.0,leading_index_yoy,Growth slowdown,Leading Index low,Normal
+2022-08-01,leading_low,0.0,leading_index_yoy,Growth slowdown,Leading Index low,Normal
+2022-09-01,leading_low,0.0,leading_index_yoy,Growth slowdown,Leading Index low,Normal
+2022-10-01,leading_low,0.0,leading_index_yoy,Growth slowdown,Leading Index low,Normal
+2022-11-01,leading_low,0.0,leading_index_yoy,Growth slowdown,Leading Index low,Normal
+2022-12-01,leading_low,0.0,leading_index_yoy,Growth slowdown,Leading Index low,Normal
+2023-01-01,leading_low,0.0,leading_index_yoy,Growth slowdown,Leading Index low,Normal
+2023-02-01,leading_low,0.0,leading_index_yoy,Growth slowdown,Leading Index low,Normal
+2023-03-01,leading_low,0.0,leading_index_yoy,Growth slowdown,Leading Index low,Normal
+2023-04-01,leading_low,1.0,leading_index_yoy,Growth slowdown,Leading Index low,Above usual range
+2023-05-01,leading_low,0.0,leading_index_yoy,Growth slowdown,Leading Index low,Normal
+2023-06-01,leading_low,1.0,leading_index_yoy,Growth slowdown,Leading Index low,Above usual range
+2023-07-01,leading_low,0.0,leading_index_yoy,Growth slowdown,Leading Index low,Normal
+2023-08-01,leading_low,0.0,leading_index_yoy,Growth slowdown,Leading Index low,Normal
+2023-09-01,leading_low,0.0,leading_index_yoy,Growth slowdown,Leading Index low,Normal
+2023-10-01,leading_low,0.0,leading_index_yoy,Growth slowdown,Leading Index low,Normal
+2023-11-01,leading_low,0.0,leading_index_yoy,Growth slowdown,Leading Index low,Normal
+2023-12-01,leading_low,0.0,leading_index_yoy,Growth slowdown,Leading Index low,Normal
+2024-01-01,leading_low,0.0,leading_index_yoy,Growth slowdown,Leading Index low,Normal
+2024-02-01,leading_low,0.0,leading_index_yoy,Growth slowdown,Leading Index low,Normal
+2024-03-01,leading_low,0.0,leading_index_yoy,Growth slowdown,Leading Index low,Normal
+2024-04-01,leading_low,0.0,leading_index_yoy,Growth slowdown,Leading Index low,Normal
+2024-05-01,leading_low,0.0,leading_index_yoy,Growth slowdown,Leading Index low,Normal
+2024-06-01,leading_low,0.0,leading_index_yoy,Growth slowdown,Leading Index low,Normal
+2024-07-01,leading_low,0.0,leading_index_yoy,Growth slowdown,Leading Index low,Normal
+2024-08-01,leading_low,0.0,leading_index_yoy,Growth slowdown,Leading Index low,Normal
+2024-09-01,leading_low,0.0,leading_index_yoy,Growth slowdown,Leading Index low,Normal
+2024-10-01,leading_low,0.0,leading_index_yoy,Growth slowdown,Leading Index low,Normal
+2024-11-01,leading_low,0.0,leading_index_yoy,Growth slowdown,Leading Index low,Normal
+2024-12-01,leading_low,0.0,leading_index_yoy,Growth slowdown,Leading Index low,Normal
+2025-01-01,leading_low,0.0,leading_index_yoy,Growth slowdown,Leading Index low,Normal
+2025-02-01,leading_low,0.0,leading_index_yoy,Growth slowdown,Leading Index low,Normal
+2025-03-01,leading_low,0.0,leading_index_yoy,Growth slowdown,Leading Index low,Normal
+2025-04-01,leading_low,0.0,leading_index_yoy,Growth slowdown,Leading Index low,Normal
+2025-05-01,leading_low,0.0,leading_index_yoy,Growth slowdown,Leading Index low,Normal
+2025-06-01,leading_low,0.0,leading_index_yoy,Growth slowdown,Leading Index low,Normal
+2025-07-01,leading_low,0.0,leading_index_yoy,Growth slowdown,Leading Index low,Normal
+2025-08-01,leading_low,0.0,leading_index_yoy,Growth slowdown,Leading Index low,Normal
+2025-09-01,leading_low,0.0,leading_index_yoy,Growth slowdown,Leading Index low,Normal
+2025-10-01,leading_low,0.0,leading_index_yoy,Growth slowdown,Leading Index low,Normal
+2025-11-01,leading_low,0.0,leading_index_yoy,Growth slowdown,Leading Index low,Normal
+2025-12-01,leading_low,0.0,leading_index_yoy,Growth slowdown,Leading Index low,Normal
+2026-01-01,leading_low,0.0,leading_index_yoy,Growth slowdown,Leading Index low,Normal
+2026-02-01,leading_low,0.0,leading_index_yoy,Growth slowdown,Leading Index low,Normal
+2026-03-01,leading_low,0.0,leading_index_yoy,Growth slowdown,Leading Index low,Normal
+2026-04-01,leading_low,0.0,leading_index_yoy,Growth slowdown,Leading Index low,Normal
+2026-05-01,leading_low,0.0,leading_index_yoy,Growth slowdown,Leading Index low,Normal
+2026-06-01,leading_low,0.0,leading_index_yoy,Growth slowdown,Leading Index low,Normal
+2026-07-01,leading_low,0.0,leading_index_yoy,Growth slowdown,Leading Index low,Normal
+2026-08-01,leading_low,0.0,leading_index_yoy,Growth slowdown,Leading Index low,Normal
+2026-09-01,leading_low,,leading_index_yoy,Growth slowdown,Leading Index low,Not yet published
+2026-10-01,leading_low,,leading_index_yoy,Growth slowdown,Leading Index low,Not yet published
