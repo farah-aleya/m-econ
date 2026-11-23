@@ -2,6 +2,7 @@ daily_1200 columns: ['date', 'rate_type', 'USD', 'EUR', 'JPY', 'GBP', 'SGD', 'AU
 USD/MYR source: data.gov.my exchangerates_daily_1200; last month 2026-11-01
 monthly_master: (202, 25), 2010-01-01 to 2026-10-01
 fuel_monthly: (115, 10), 2017-04-01 to 2026-10-01 (context only)
+state_inflation: 16 states, 2011-01-01 to 2026-10-01; latest Oct 2026: lowest Sarawak 0.6%, highest Negeri Sembilan 2.6%, gap 2.0 pp (average gap since 2015: 2.6 pp)
 GDP splice check: 8 overlapping quarters, mean abs gap = 0.15 pp
 GDP growth back-extended with 2010-base series: 2011-01-01 to 2015-10-01 (20 quarters)
 quarterly_master: (63, 28), 2011-01-01 to 2026-07-01

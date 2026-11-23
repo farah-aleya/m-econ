@@ -1,0 +1,22 @@
+setup,target,model,n_test,MAE,RMSE,directional_accuracy,mae_vs_naive_pct,beats_naive_10pct
+A1,GDP growth (with IPI),Naive,18,1.689,2.563,,0.0,n/a
+A1,GDP growth (with IPI),AR(1),18,1.786,3.0,55.556,-5.728,No
+A1,GDP growth (with IPI),MLR,18,3.028,5.667,61.111,-79.289,No
+A1,GDP growth (with IPI),LASSO,18,2.132,3.405,50.0,-26.241,No
+A1,GDP growth (with IPI),Regression tree,18,2.786,4.114,44.444,-64.954,No
+A1,GDP growth (with IPI),Random Forest,18,2.216,3.364,50.0,-31.208,No
+A1,GDP growth (with IPI),Average (MLR+RF),18,2.006,2.791,61.111,-18.792,No
+A2,GDP growth (with Coincident Index),Naive,18,1.689,2.563,,0.0,n/a
+A2,GDP growth (with Coincident Index),AR(1),18,1.499,2.665,61.111,11.222,Yes
+A2,GDP growth (with Coincident Index),MLR,18,1.991,2.708,66.667,-17.882,No
+A2,GDP growth (with Coincident Index),LASSO,18,1.982,3.034,66.667,-17.327,No
+A2,GDP growth (with Coincident Index),Regression tree,18,2.526,4.76,61.111,-49.56,No
+A2,GDP growth (with Coincident Index),Random Forest,18,1.778,2.982,61.111,-5.285,No
+A2,GDP growth (with Coincident Index),Average (MLR+RF),18,1.121,1.393,72.222,33.638,Yes
+B,CPI inflation,Naive,57,0.168,0.248,,0.0,n/a
+B,CPI inflation,AR(1),57,0.165,0.256,49.123,1.947,No
+B,CPI inflation,MLR,57,0.216,0.275,54.386,-28.482,No
+B,CPI inflation,LASSO,57,0.276,0.368,50.877,-63.695,No
+B,CPI inflation,Regression tree,57,0.567,0.867,40.351,-236.657,No
+B,CPI inflation,Random Forest,57,0.439,0.58,49.123,-160.926,No
+B,CPI inflation,Average (MLR+RF),57,0.314,0.406,50.877,-86.636,No

@@ -15,5 +15,7 @@ opr,"Overnight Policy Rate, level at month end, %",BNM OPR Decisions & Statement
 gdp_real_rm_mil / gdp_yoy,Real GDP at constant 2015 prices and YoY %; YoY before 2016 Q1 from the 2010-base series,OpenDOSM gdp_qtr_real; DOSM StatsDW (2010 prices) before 2016,Q,GDP target
 gdp_yoy_source,Which official series each GDP growth value comes from,Derived,Q,Audit trail
 covid_dummy,1 for 2020 Q1 to 2021 Q4,Derived,Q,Structural break control
+state cpi_yoy / food_yoy / transport_yoy,"CPI inflation by state: headline, food (division 01) and transport (division 07), YoY %",OpenDOSM cpi_state_inflation,"M, 16 states","Geospatial view (dashboard map), not a model input"
+lat / lon,"Latitude and longitude of each state capital, used to place states on the map",Team (public coordinates),n/a,Map location
 fuel_ron95_market / fuel_ron97 / fuel_diesel_peninsular / fuel_diesel_east,"Pump prices, RM per litre, monthly average of weekly prices (RON95 market price is the unsubsidised price from 30 Sep 2025)",data.gov.my fuelprice,M (from weekly),"Context only, not a model input"
 fuel_ron95_budi95 / fuel_ron95_skps / fuel_diesel_skds / fuel_diesel_budi,"Subsidised pump prices under BUDI95, SKPS, SKDS and BUDI Diesel, RM per litre",data.gov.my fuelprice,M (from weekly),"Context only, not a model input"

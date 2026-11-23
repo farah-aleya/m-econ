@@ -1,0 +1,84 @@
+=== ROLLING-ORIGIN EVALUATION (one-step-ahead, expanding window) ===
+
+A1: GDP growth (with IPI) | sample 2016-07 to 2026-04 (40 rows) | test origins 2022-01 to 2026-04 (18 forecasts)
+   Naive              MAE  1.69  RMSE  2.56  DA   n/a  vs Naive  +0.0%
+   AR(1)              MAE  1.79  RMSE  3.00  DA   56%  vs Naive  -5.7%
+   MLR                MAE  3.03  RMSE  5.67  DA   61%  vs Naive -79.3%
+   LASSO              MAE  2.13  RMSE  3.40  DA   50%  vs Naive -26.2%
+   Regression tree    MAE  2.79  RMSE  4.11  DA   44%  vs Naive -65.0%
+   Random Forest      MAE  2.22  RMSE  3.36  DA   50%  vs Naive -31.2%
+   Average (MLR+RF)   MAE  2.01  RMSE  2.79  DA   61%  vs Naive -18.8%
+
+A2: GDP growth (with Coincident Index) | sample 2011-10 to 2026-04 (59 rows) | test origins 2022-01 to 2026-04 (18 forecasts)
+   Naive              MAE  1.69  RMSE  2.56  DA   n/a  vs Naive  +0.0%
+   AR(1)              MAE  1.50  RMSE  2.67  DA   61%  vs Naive +11.2%
+   MLR                MAE  1.99  RMSE  2.71  DA   67%  vs Naive -17.9%
+   LASSO              MAE  1.98  RMSE  3.03  DA   67%  vs Naive -17.3%
+   Regression tree    MAE  2.53  RMSE  4.76  DA   61%  vs Naive -49.6%
+   Random Forest      MAE  1.78  RMSE  2.98  DA   61%  vs Naive  -5.3%
+   Average (MLR+RF)   MAE  1.12  RMSE  1.39  DA   72%  vs Naive +33.6%
+
+B: CPI inflation | sample 2016-05 to 2026-09 (125 rows) | test origins 2022-01 to 2026-09 (57 forecasts)
+   Naive              MAE  0.17  RMSE  0.25  DA   n/a  vs Naive  +0.0%
+   AR(1)              MAE  0.17  RMSE  0.26  DA   49%  vs Naive  +1.9%
+   MLR                MAE  0.22  RMSE  0.28  DA   54%  vs Naive -28.5%
+   LASSO              MAE  0.28  RMSE  0.37  DA   51%  vs Naive -63.7%
+   Regression tree    MAE  0.57  RMSE  0.87  DA   40%  vs Naive -236.7%
+   Random Forest      MAE  0.44  RMSE  0.58  DA   49%  vs Naive -160.9%
+   Average (MLR+RF)   MAE  0.31  RMSE  0.41  DA   51%  vs Naive -86.6%
+
+Best model by test MAE:
+   B: AR(1) (MAE 0.17, +1.9% vs Naive) -> Objective 3 target (>= 10%) NOT met
+   A2: Average (MLR+RF) (MAE 1.12, +33.6% vs Naive) -> Objective 3 target (>= 10%) MET
+   A1: AR(1) (MAE 1.79, -5.7% vs Naive) -> Objective 3 target (>= 10%) NOT met
+
+Overfitting check (train MAE on final fit vs test MAE):
+   A1 Regression tree  train 2.32  test 2.79
+   A1 Random Forest    train 1.67  test 2.22
+   A2 Regression tree  train 1.43  test 2.53
+   A2 Random Forest    train 1.32  test 1.78
+   B Regression tree  train 0.40  test 0.57
+   B Random Forest    train 0.31  test 0.44
+
+MLR final equations (full sample): see processed/mlr_summary_<setup>.txt
+   A1: inputs ['opr_L1', 'covid'], adj R2 0.45, F p = 0.0000
+   A2: inputs ['gdp_yoy_L0', 'coincident_index_yoy_L3', 'opr_L2', 'covid'], adj R2 0.75, F p = 0.0000
+   B: inputs ['cpi_yoy_L0', 'cpi_yoy_L1', 'ppi_yoy_L0', 'ipi_yoy_L1'], adj R2 0.89, F p = 0.0000
+
+Top 3 inputs by Random Forest importance:
+   A1: Industrial production (lag 0) 0.11, Exports (lag 0) 0.06, COVID dummy 0.05
+   A2: GDP growth (own) (lag 0) 0.10, COVID dummy 0.08, Exports (lag 0) 0.07
+   B: CPI inflation (own) (lag 0) 0.33, CPI inflation (own) (lag 1) 0.11, PPI (lag 0) 0.10
+LASSO inputs kept (non-zero):
+   A1: none (intercept only)
+   A2: GDP growth (own) (lag 0), GDP growth (own) (lag 1), Coincident Index (lag 3), OPR (lag 1), OPR (lag 2), Exports (lag 2), COVID dummy
+   B: CPI inflation (own) (lag 0), PPI (lag 0), Industrial production (lag 1), Industrial production (lag 2), COVID dummy
+
+=== LATEST FORECASTS ===
+   A1 GDP growth (with IPI): 2026 Q4 = 4.6% (80%: 2.8 to 6.3; 95%: -2.0 to 11.2) by AR(1); latest actual 5.5%
+   A2 GDP growth (with Coincident Index): 2026 Q4 = 6.5% (80%: 4.8 to 8.2; 95%: 4.3 to 8.7) by Average (MLR+RF); latest actual 5.5%
+   B: inputs not yet published for Oct 2026 (ppi_yoy_L0); models refitted without them
+   B CPI inflation: Nov 2026 = 1.9% (80%: 1.7 to 2.1; 95%: 1.4 to 2.4) by AR(1); latest actual 1.9%
+
+=== SCENARIOS (effect on the next-period forecast, MLR with the shocked input added) ===
+   A2 GDP growth (with Coincident Index): Brent coef 0.0152 (p = 0.221), USD/MYR coef 0.0337 (p = 0.420)
+      Brent +20%                           +0.43 pp (95%: -0.25 to +1.10)
+      Brent -20%                           -0.43 pp (95%: -1.10 to +0.25)
+      Ringgit 10% weaker (USD/MYR +10%)    +0.32 pp (95%: -0.46 to +1.11)
+      Brent +20% and ringgit 10% weaker    +0.75 pp (95%: -0.48 to +1.98)
+   B CPI inflation: Brent coef 0.0020 (p = 0.451), USD/MYR coef 0.0003 (p = 0.973)
+      Brent +20%                           +0.07 pp (95%: -0.11 to +0.24)
+      Brent -20%                           -0.07 pp (95%: -0.24 to +0.11)
+      Ringgit 10% weaker (USD/MYR +10%)    +0.00 pp (95%: -0.17 to +0.18)
+      Brent +20% and ringgit 10% weaker    +0.07 pp (95%: -0.23 to +0.37)
+   Benchmark: Majuca (2020) finds a 1% Brent rise lifts the level of real GDP by about 0.042% and consumer prices by about 0.014%.
+
+=== EARLY WARNING ===
+   False alarm rate, cost pressure: 1.5% of 66 calm months
+   False alarm rate, growth slowdown: 4.5% of 66 calm months
+   2014 to 2015 oil fall          growth slowdown  hit Yes  first May 2015  lead 10 months after start
+   2017 producer price spike      cost pressure    hit Yes  first Dec 2016  lead at start
+   2020 to 2021 COVID-19          growth slowdown  hit Yes  first Sep 2019  lead 6 months before
+   2021 to 2022 commodity surge   cost pressure    hit Yes  first Apr 2021  lead 2 months before
+   2026 oil shock                 cost pressure    hit Yes  first Sep 2026  lead 6 months after start
+   Current status: cost pressure ON in Sep 2026 (2/3 indicators); growth slowdown off in Aug 2026 (0/3). Months shown are the latest with all three inputs published.

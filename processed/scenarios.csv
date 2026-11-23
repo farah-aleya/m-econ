@@ -1,0 +1,9 @@
+setup,target,scenario,effect_pp,lo95,hi95,brent_coef,brent_p,usdmyr_coef,usdmyr_p,origin
+A2,GDP growth (with Coincident Index),Brent +20%,0.4257,-0.2482,1.0997,0.0152,0.2212,0.0337,0.4202,2026-07-01
+A2,GDP growth (with Coincident Index),Brent -20%,-0.4257,-1.0997,0.2482,0.0152,0.2212,0.0337,0.4202,2026-07-01
+A2,GDP growth (with Coincident Index),Ringgit 10% weaker (USD/MYR +10%),0.3247,-0.4585,1.1079,0.0152,0.2212,0.0337,0.4202,2026-07-01
+A2,GDP growth (with Coincident Index),Brent +20% and ringgit 10% weaker,0.7504,-0.4786,1.9794,0.0152,0.2212,0.0337,0.4202,2026-07-01
+B,CPI inflation,Brent +20%,0.0674,-0.1072,0.242,0.002,0.4508,0.0003,0.9725,2026-09-01
+B,CPI inflation,Brent -20%,-0.0674,-0.242,0.1072,0.002,0.4508,0.0003,0.9725,2026-09-01
+B,CPI inflation,Ringgit 10% weaker (USD/MYR +10%),0.0031,-0.1708,0.1769,0.002,0.4508,0.0003,0.9725,2026-09-01
+B,CPI inflation,Brent +20% and ringgit 10% weaker,0.0705,-0.2272,0.3681,0.002,0.4508,0.0003,0.9725,2026-09-01

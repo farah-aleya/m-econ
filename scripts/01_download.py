@@ -2,9 +2,11 @@
 M-ECON | Step 1: download raw data and write an inspection report.
 Run from the project root:  python scripts/01_download.py
 Outputs: raw/<dataset>.parquet  and  raw/inspect_report.txt
+Download only some datasets:  python scripts/01_download.py cpi_state_inflation
 """
 import io
 import datetime as dt
+import sys
 from pathlib import Path
 
 import pandas as pd
@@ -27,6 +29,9 @@ DATASETS = {
                             "https://storage.dosm.gov.my/economic/economic_indicators.parquet"],
     "trade_sitc_1d": ["https://storage.dosm.gov.my/trade/trade_sitc_1d.parquet"],
     "interestrates": ["https://storage.data.gov.my/finsector/interestrates.parquet"],
+    # state-level CPI inflation (16 states), used for the geospatial view
+    "cpi_state_inflation": ["https://storage.dosm.gov.my/cpi/cpi_2d_state_inflation.parquet",
+                            "https://storage.dosm.gov.my/cpi/cpi_state_inflation.parquet"],
 }
 
 API = "https://api.data.gov.my/data-catalogue"
@@ -75,7 +80,10 @@ def describe(name, df, source):
 def main():
     stamp = dt.datetime.now().strftime("%Y-%m-%d %H:%M")
     report = [f"M-ECON raw data inspection report  |  retrieved {stamp}"]
+    only = sys.argv[1:]                       # optional: names of datasets to download
     for name, urls in DATASETS.items():
+        if only and name not in only:
+            continue
         df, src = try_parquet(urls)
         if df is None:
             df, src = try_api(name)
@@ -92,12 +100,19 @@ def main():
         p = RAW / f
         report.append(f"\nmanual file {f}: {'FOUND' if p.exists() else 'not found yet'}")
         if p.exists() and p.suffix == ".csv":
-            report.append(pd.read_csv(p).head(5).to_string())
+            try:
+                report.append(pd.read_csv(p).head(5).to_string())
+            except Exception:   # e.g. BIS file has metadata lines above the header
+                report.append(p.read_text(encoding="utf-8-sig", errors="ignore")[:600])
         if p.exists() and p.suffix == ".xlsx":
             xl = pd.ExcelFile(p)
             report.append(f"sheets: {xl.sheet_names}")
 
-    (RAW / "inspect_report.txt").write_text("\n".join(report), encoding="utf-8")
+    if only:                                  # partial run: append to the existing report
+        with open(RAW / "inspect_report.txt", "a", encoding="utf-8") as fh:
+            fh.write("\n" + "\n".join(report))
+    else:
+        (RAW / "inspect_report.txt").write_text("\n".join(report), encoding="utf-8")
     print(f"\nReport written to {RAW / 'inspect_report.txt'}")
 
 

@@ -1,0 +1,34 @@
+MLR for setup B: CPI inflation
+======================================================================
+Step 1-2. Candidate inputs: cpi_yoy_L0, cpi_yoy_L1, ppi_yoy_L0, ppi_yoy_L1, ppi_yoy_L3, neer_broad_yoy_L0, neer_broad_yoy_L1, neer_broad_yoy_L3, ipi_yoy_L1, ipi_yoy_L2, ipi_yoy_L4, covid
+Backward elimination (least significant first):
+   removed ipi_yoy_L2 (p = 0.537); R2 before = 0.906
+   removed ipi_yoy_L4 (p = 0.507); R2 before = 0.905
+   removed neer_broad_yoy_L3 (p = 0.397); R2 before = 0.905
+   removed ppi_yoy_L3 (p = 0.389); R2 before = 0.904
+   removed covid (p = 0.152); R2 before = 0.904
+   removed neer_broad_yoy_L0 (p = 0.094); R2 before = 0.902
+   removed neer_broad_yoy_L1 (p = 0.602); R2 before = 0.900
+   removed ppi_yoy_L1 (VIF = 13.8); R2 before = 0.899
+Final inputs (4): cpi_yoy_L0, cpi_yoy_L1, ppi_yoy_L0, ipi_yoy_L1
+
+Step 3. Estimated equation (least squares):
+   cpi_yoy(t+1) = 0.230 + 1.227 cpi_yoy_L0 - 0.354 cpi_yoy_L1 + 0.036 ppi_yoy_L0 - 0.022 ipi_yoy_L1
+
+Step 4. Standard error of estimate = 0.521
+        R2 = 0.892, adjusted R2 = 0.888, n = 125
+
+Step 5. t-tests (alpha = 0.05, critical |t| = t(0.025, 120) = 1.980):
+   cpi_yoy_L0                 coef    1.227  t =   14.43  p = 0.0000  significant
+   cpi_yoy_L1                 coef   -0.354  t =   -4.40  p = 0.0000  significant
+   ppi_yoy_L0                 coef    0.036  t =    3.14  p = 0.0021  significant
+   ipi_yoy_L1                 coef   -0.022  t =   -2.56  p = 0.0118  significant
+Step 6. F-test: F = 247.16 vs critical F(0.05, 4, 120) = 2.45 -> reject H0: the model is significant
+
+Step 7. Assumption checks:
+   Multicollinearity: max VIF = 8.02 (rule: < 10)
+   Independence of residuals: Durbin-Watson = 1.87 (about 2 means no autocorrelation)
+   Normality of residuals: Shapiro-Wilk p = 0.000 (not normal at 5%)
+   Constant variance: Breusch-Pagan p = 0.243 (constant at 5%)
+   Outliers: 2 standardised residuals above 3 (2020-03, 2021-03); kept, not deleted
+   Linearity: see residual plot in outputs/figures/fig_mlr_diagnostics.png

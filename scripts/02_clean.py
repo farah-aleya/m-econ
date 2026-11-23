@@ -6,7 +6,9 @@ Outputs: processed/monthly_master.csv, processed/quarterly_master.csv,
          processed/missing_audit.csv, processed/stationarity.csv,
          processed/data_dictionary.csv, processed/run_log.txt
          processed/fuel_monthly.csv (context only, not a model input)
-         outputs/powerbi_monthly.csv, outputs/powerbi_quarterly.csv, outputs/powerbi_events.csv
+         processed/state_inflation.csv, outputs/figures/fig_state_inflation.png
+         outputs/powerbi_monthly.csv, outputs/powerbi_quarterly.csv, outputs/powerbi_events.csv,
+         outputs/powerbi_state_inflation.csv (with state coordinates for the map)
 """
 import io
 import re
@@ -172,6 +174,74 @@ if FUEL_FILE.exists():
 else:
     log("raw/fuelprice.csv not found: fuel prices skipped")
 
+# ------------------------------------------------------------------ state CPI inflation (geospatial view)
+# Source: OpenDOSM cpi_state_inflation (16 states, monthly, by MCOICOP division). Context and dashboard
+# map only, not a model input. Coordinates are the state capitals, used to place each state on the map.
+STATE_COORDS = {   # state: (capital, latitude, longitude)
+    "Johor": ("Johor Bahru", 1.4927, 103.7414), "Kedah": ("Alor Setar", 6.1248, 100.3678),
+    "Kelantan": ("Kota Bharu", 6.1254, 102.2381), "Melaka": ("Melaka", 2.1896, 102.2501),
+    "Negeri Sembilan": ("Seremban", 2.7297, 101.9381), "Pahang": ("Kuantan", 3.8077, 103.3260),
+    "Pulau Pinang": ("George Town", 5.4141, 100.3288), "Perak": ("Ipoh", 4.5975, 101.0901),
+    "Perlis": ("Kangar", 6.4414, 100.1986), "Selangor": ("Shah Alam", 3.0733, 101.5185),
+    "Terengganu": ("Kuala Terengganu", 5.3302, 103.1408), "Sabah": ("Kota Kinabalu", 5.9804, 116.0735),
+    "Sarawak": ("Kuching", 1.5533, 110.3592), "W.P. Kuala Lumpur": ("Kuala Lumpur", 3.1390, 101.6869),
+    "W.P. Labuan": ("Labuan", 5.2831, 115.2308), "W.P. Putrajaya": ("Putrajaya", 2.9264, 101.6964),
+}
+def norm_state(x):
+    k = str(x).strip().lower().replace("wilayah persekutuan", "w.p.").replace("w. p.", "w.p.")
+    k = k.replace("penang", "pulau pinang").replace("malacca", "melaka")
+    for name in STATE_COORDS:
+        n = name.lower()
+        if k == n or k == n.replace("w.p. ", "") or k.endswith(n.replace("w.p. ", "")):
+            return name
+    return None
+STATE_FILE = RAW / "cpi_state_inflation.parquet"
+state_wide = None
+if STATE_FILE.exists():
+    st = pd.read_parquet(STATE_FILE)
+    st["date"] = ms(st["date"])
+    st["state_std"] = st["state"].map(norm_state)
+    unmatched = sorted(set(st.loc[st["state_std"].isna(), "state"].astype(str)))
+    if unmatched:
+        log(f"Rows not used for the map (not one of the 16 states): {unmatched}")
+    st = st.dropna(subset=["state_std"])
+    keep = {"overall": "cpi_yoy", "01": "food_yoy", "07": "transport_yoy"}   # MCOICOP divisions
+    st = st[st["division"].astype(str).isin(keep)]
+    state_wide = (st.pivot_table(index=["state_std", "date"], columns="division", values="inflation_yoy")
+                    .rename(columns=keep).reset_index().rename(columns={"state_std": "state"}))
+    state_wide = state_wide[state_wide["date"] <= END]
+    state_wide[["capital", "lat", "lon"]] = pd.DataFrame(
+        [STATE_COORDS[s] for s in state_wide["state"]], index=state_wide.index)
+    vcols = [c for c in ("cpi_yoy", "food_yoy", "transport_yoy") if c in state_wide]
+    state_wide[vcols] = state_wide[vcols].round(2)
+    state_wide.to_csv(PROC / "state_inflation.csv", index=False)
+    last = state_wide["date"].max()
+    snap = state_wide[state_wide["date"] == last].sort_values("cpi_yoy")
+    spread = state_wide.groupby("date")["cpi_yoy"].agg(lambda v: v.max() - v.min())
+    log(f"state_inflation: {state_wide['state'].nunique()} states, {state_wide['date'].min().date()} to {last.date()}; "
+        f"latest {last:%b %Y}: lowest {snap.iloc[0]['state']} {snap.iloc[0]['cpi_yoy']:.1f}%, "
+        f"highest {snap.iloc[-1]['state']} {snap.iloc[-1]['cpi_yoy']:.1f}%, "
+        f"gap {spread.loc[last]:.1f} pp (average gap since 2015: {spread.loc['2015':].mean():.1f} pp)")
+    # figure: latest-month inflation by state, with the national rate
+    import matplotlib
+    matplotlib.use("Agg")
+    import matplotlib.pyplot as plt
+    (OUT / "figures").mkdir(exist_ok=True)
+    plt.rcParams["font.family"] = "Times New Roman"
+    fig, ax = plt.subplots(figsize=(7.5, 5.2))
+    ax.barh(snap["state"], snap["cpi_yoy"], color="#1f4e79")
+    nat = monthly["cpi_yoy"].get(last)
+    if pd.notna(nat):
+        ax.axvline(nat, color="#c55a11", lw=1.5, ls="--", label=f"Malaysia {nat:.1f}%")
+        ax.legend(frameon=False, loc="lower right")
+    for y, v in enumerate(snap["cpi_yoy"]):
+        ax.text(v + (0.03 if v >= 0 else -0.03), y, f"{v:.1f}", va="center", ha="left" if v >= 0 else "right", fontsize=9)
+    ax.set_xlabel(f"Headline CPI inflation, YoY %, {last:%B %Y}")
+    ax.spines[["top", "right"]].set_visible(False)
+    fig.tight_layout(); fig.savefig(OUT / "figures" / "fig_state_inflation.png", dpi=200); plt.close(fig)
+else:
+    log("raw/cpi_state_inflation.parquet not found: run  python scripts/01_download.py cpi_state_inflation")
+
 # ------------------------------------------------------------------ quarterly master
 gdp = rp("gdp_qtr_real"); gdp["date"] = ms(gdp["date"])
 q = pd.DataFrame({
@@ -288,6 +358,8 @@ DD = [
  ("gdp_real_rm_mil / gdp_yoy", "Real GDP at constant 2015 prices and YoY %; YoY before 2016 Q1 from the 2010-base series", "OpenDOSM gdp_qtr_real; DOSM StatsDW (2010 prices) before 2016", "Q", "GDP target"),
  ("gdp_yoy_source", "Which official series each GDP growth value comes from", "Derived", "Q", "Audit trail"),
  ("covid_dummy", "1 for 2020 Q1 to 2021 Q4", "Derived", "Q", "Structural break control"),
+ ("state cpi_yoy / food_yoy / transport_yoy", "CPI inflation by state: headline, food (division 01) and transport (division 07), YoY %", "OpenDOSM cpi_state_inflation", "M, 16 states", "Geospatial view (dashboard map), not a model input"),
+ ("lat / lon", "Latitude and longitude of each state capital, used to place states on the map", "Team (public coordinates)", "n/a", "Map location"),
  ("fuel_ron95_market / fuel_ron97 / fuel_diesel_peninsular / fuel_diesel_east", "Pump prices, RM per litre, monthly average of weekly prices (RON95 market price is the unsubsidised price from 30 Sep 2025)", "data.gov.my fuelprice", "M (from weekly)", "Context only, not a model input"),
  ("fuel_ron95_budi95 / fuel_ron95_skps / fuel_diesel_skds / fuel_diesel_budi", "Subsidised pump prices under BUDI95, SKPS, SKDS and BUDI Diesel, RM per litre", "data.gov.my fuelprice", "M (from weekly)", "Context only, not a model input"),
 ]
@@ -316,6 +388,8 @@ EVENTS = [
  ("2026-07-01", "Subsidised diesel for individuals (BUDI Diesel, RM2.10/litre) begins", "Fuel"),
 ]
 pd.DataFrame(EVENTS, columns=["date", "event", "category"]).to_csv(OUT / "powerbi_events.csv", index=False)
+if state_wide is not None:
+    state_wide.to_csv(OUT / "powerbi_state_inflation.csv", index=False)
 
 (PROC / "run_log.txt").write_text("\n".join(LOG), encoding="utf-8")
 print("\nDone. See processed/ and outputs/.")

@@ -29,25 +29,37 @@ PAPERS = [
     ("07_Cham_et_al_2024_ML_CPI_Malaysia.pdf", "Malaysia: ML for CPI forecasting (UKM JQMA)",
      ["https://ukm.my/jqma/wp-content/uploads/2024/11/Paper_14.pdf",
       "http://journalarticle.ukm.my/25186/1/199-214%20Paper.pdf"]),
-    ("08_Jasni_et_al_2022_DOSM_nowcasting_GDP_ML.pdf", "Malaysia: DOSM ML nowcasting poster",
-     ["https://v1.dosm.gov.my/v1/uploads/files/4_Portal%20Content/2_%20Statistics/MyStats/2022/Poster/SITI%20KHADIJAH%20JASNI_CORE%20TEAM_DOSM.pdf"]),
     ("09_Majuca_2020_AMRO_oil_prices_Malaysia.pdf", "Malaysia: oil price effects (already cited)",
      ["https://amro-asia.org/wp-content/uploads/2020/04/Impact-of-Oil-Prices-on-Malaysia_final.pdf"]),
+    # --- added 23 Nov: support for LASSO and forecast averaging (12 is reserved for Duasa 2010) ---
+    ("13_Smeekes_Wijler_2018_Penalized_regression_macro_forecasting.pdf",
+     "LASSO/Ridge: penalized regression for macro forecasting (accepted version)",
+     ["https://cris.maastrichtuniversity.nl/ws/files/53572602/Smeekes_2018_Macroeconomic_forecasting_using_penalized_regression_methods.pdf",
+      "https://cris.maastrichtuniversity.nl/ws/files/5783492/RM16039.pdf"]),
+    ("14_Clemen_1989_Combining_forecasts_review.pdf",
+     "Forecast averaging: review showing combining improves accuracy",
+     ["https://people.duke.edu/~clemen/bio/Published%20Papers/13.CombiningReview-Clemen-IJOF-89.pdf"]),
+    ("15_Tibshirani_1996_Lasso.pdf",
+     "LASSO: original method paper",
+     ["https://sites.stat.washington.edu/courses/stat527/s13/readings/j_royal_stat_soc_b1996.pdf",
+      "https://ledaliang.github.io/journalclub/_static/tibshirani/tibshirani.pdf"]),
 ]
 
 LIBRARY_ONLY = [
+    ("Bates & Granger (1969). The combination of forecasts. Journal of the Operational Research Society, 20(4), 451-468. "
+     "https://doi.org/10.1057/jors.1969.103", "Forecast averaging: original paper"),
+    ("Stock & Watson (2004). Combination forecasts of output growth in a seven-country data set. "
+     "Journal of Forecasting, 23(6), 405-430. https://doi.org/10.1002/for.928", "Forecast averaging for GDP growth"),
+    ("LASSO Regression in Consumer Price Index Malaysia (UTHM). Record: https://libmast.utm.my/Record/uthm.eprints-2614",
+     "LASSO, Malaysian CPI (check authors and year)"),
     ("Duasa, Ahmad, Ibrahim & Zainal (2010). Forecasting inflation in Malaysia. Journal of Forecasting, 29(6), 573-594.",
      "Model 2, Malaysian evidence"),
-    ("Bergmeir & Benitez (2012). On the use of cross-validation for time series predictor evaluation. "
-     "Information Sciences, 191, 192-213. https://doi.org/10.1016/j.ins.2011.12.028", "Time-ordered validation"),
-    ("Baharumshah, Soon & Wohar (2017). International Review of Economics & Finance, 51, 245-257.", "Already cited"),
-    ("Ahmed & Wadud (2011). Energy Policy, 39(12), 8062-8069.", "Already cited"),
 ]
 
 ok, failed = [], []
 for name, why, urls in PAPERS:
     dest = OUT / name
-    if dest.exists():
+    if dest.exists() or list(OUT.glob(name[:3] + "*")):   # already downloaded (or renamed)
         ok.append(name); continue
     for url in urls:
         try:

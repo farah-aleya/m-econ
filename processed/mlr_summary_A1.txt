@@ -1,0 +1,34 @@
+MLR for setup A1: GDP growth (with IPI)
+======================================================================
+Step 1-2. Candidate inputs: gdp_yoy_L0, gdp_yoy_L1, ipi_index_yoy_L0, ipi_index_yoy_L1, ipi_index_yoy_L2, opr_L0, opr_L1, opr_L2, exports_rm_mil_yoy_L0, exports_rm_mil_yoy_L1, exports_rm_mil_yoy_L2, covid
+Backward elimination (least significant first):
+   removed exports_rm_mil_yoy_L1 (p = 0.916); R2 before = 0.716
+   removed exports_rm_mil_yoy_L0 (p = 0.468); R2 before = 0.716
+   removed exports_rm_mil_yoy_L2 (p = 0.503); R2 before = 0.711
+   removed opr_L2 (p = 0.329); R2 before = 0.706
+   removed ipi_index_yoy_L1 (p = 0.131); R2 before = 0.697
+   removed gdp_yoy_L1 (p = 0.409); R2 before = 0.673
+   removed opr_L0 (p = 0.177); R2 before = 0.666
+   removed ipi_index_yoy_L2 (p = 0.096); R2 before = 0.647
+   removed gdp_yoy_L0 (VIF = 24.7); R2 before = 0.616
+   removed ipi_index_yoy_L0 (p = 0.419); R2 before = 0.491
+Final inputs (2): opr_L1, covid
+
+Step 3. Estimated equation (least squares):
+   gdp_yoy(t+1) = 23.608 - 6.375 opr_L1 - 10.656 covid
+
+Step 4. Standard error of estimate = 3.699
+        R2 = 0.482, adjusted R2 = 0.454, n = 40
+
+Step 5. t-tests (alpha = 0.05, critical |t| = t(0.025, 37) = 2.026):
+   opr_L1                     coef   -6.375  t =   -4.47  p = 0.0001  significant
+   covid                      coef  -10.656  t =   -5.75  p = 0.0000  significant
+Step 6. F-test: F = 17.20 vs critical F(0.05, 2, 37) = 3.25 -> reject H0: the model is significant
+
+Step 7. Assumption checks:
+   Multicollinearity: max VIF = 1.61 (rule: < 10)
+   Independence of residuals: Durbin-Watson = 2.20 (about 2 means no autocorrelation)
+   Normality of residuals: Shapiro-Wilk p = 0.000 (not normal at 5%)
+   Constant variance: Breusch-Pagan p = 0.009 (not constant at 5%)
+   Outliers: 1 standardised residuals above 3 (2021-01); kept, not deleted
+   Linearity: see residual plot in outputs/figures/fig_mlr_diagnostics.png
