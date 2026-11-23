@@ -273,6 +273,7 @@ EVENTS = [
  ("2024-06-10", "Diesel subsidy rationalisation (Peninsular)", "Fuel"),
  ("2025-07-01", "SST expansion", "Tax"),
  ("2025-09-30", "RON95 targeted subsidy (BUDI95) begins", "Fuel"),
+ ("2026-07-01", "Subsidised diesel for individuals (BUDI Diesel, RM2.10/litre) begins", "Fuel"),
 ]
 pd.DataFrame(EVENTS, columns=["date", "event", "category"]).to_csv(OUT / "powerbi_events.csv", index=False)
 
