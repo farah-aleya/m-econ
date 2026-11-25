@@ -1,0 +1,37 @@
+M-ECON | Power BI handover (from Farah, data and modelling lead)
+Date: 25 Nov 2026 | Deadline: 29 Nov 2026, 11:59 pm
+
+WHAT IS IN THIS ZIP
+- MDIT.pbix ............ the dashboard file (continue from this one)
+- outputs/powerbi_*.csv  19 data tables loaded in Power BI (do not rename)
+- powerbi/MECON_theme.json ...... theme (View > Themes > Browse)
+- powerbi/backgrounds/ .......... 6 page backgrounds (Format page > Canvas background, Fill, 0% transparency)
+- powerbi/previews/ ............. same layouts with every card labelled with X, Y, W, H
+- powerbi/MECON_measures.dax .... all measures (already inside the .pbix; reference only)
+- powerbi/POWERBI_BUILD_GUIDE.md  page-by-page build steps
+- processed/findings_models.txt . forecasts, accuracy, early warning, scenario numbers
+- processed/findings_text.txt ... BNM statement tone results
+- outputs/figures/ .............. report figures (match styles and captions)
+- PROJECT SUBMISSION GUIDELINES/  submission rules for the dashboard zip
+
+DONE
+- Data model: 19 tables, Calendar (marked as date table), 9 relationships, 68 measures in _Measures
+- 6 pages with backgrounds and top menu (page navigator + M-ECON text)
+- Home: hero text, 4 KPI cards, main GDP/inflation chart with policy events, early-warning table, BNM tone chart
+- GDP: title, model dropdown, 4 KPI cards, actual vs forecast chart, model accuracy bars, top 5 drivers
+- Inflation: copied from GDP, page filter setup = B, AR(1) selected, cards 1-2 done (check cards 3-4)
+
+TO DO
+1. Inflation: card 3 = Inflation Model MAE (3 decimals), card 4 = Inflation Gain Text; optional coral colours
+2. Drivers & States: state bubble map (lat/lon, size State CPI Latest, tooltip page), correlation heatmap (Corr, sample = ex-COVID), tone vs OPR chart
+3. Early Warning: 2 status cards, indicator table, signal timeline (Cost Count / Growth Count, constant line at 2), back-test table
+4. Scenarios: Brent and ringgit slider slicers, effect cards, tested scenarios bar chart with 95% error bars, Scenario Sentence card
+5. Export: File > Export > PDF -> "Data Product.pdf"; screenshot each page (Home = report Figure 11)
+6. README.txt; zip as FOREFRONT_Datathon2026_dashboard.zip (Data Product.pdf + .pbix + CSV + README.txt)
+
+RULES / NOTES
+- Measures that mention Calendar inside ALL() need quotes: 'Calendar'
+- The model dropdowns on GDP and Inflation are NOT synced on purpose (best model differs)
+- New Card visual has no Action: use an invisible blank button if a card must be clickable
+- Page backgrounds were designed by the team as PNG images; all visuals on top are live Power BI visuals (say this in README)
+- If data is updated: run scripts 01 to 07 in order, then Power BI > Refresh

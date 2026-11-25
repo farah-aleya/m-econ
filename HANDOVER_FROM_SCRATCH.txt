@@ -1,0 +1,37 @@
+M-ECON | Power BI dashboard, build from scratch
+From: Farah (data and modelling lead) | 25 Nov 2026 | Deadline: 29 Nov 2026, 11:59 pm
+
+START HERE
+1. Open powerbi/POWERBI_BUILD_GUIDE.md (in VS Code press Ctrl+Shift+V for the readable view).
+2. Follow Parts A to D in order (file, data, model, pages and menu). About 1.5 hours.
+3. Then build the 6 pages (Home, GDP, Inflation, Drivers & States, Early Warning, Scenarios).
+4. Finish with Part F (export Data Product.pdf, README.txt, final zip).
+
+WHAT IS IN THIS ZIP
+- outputs/powerbi_*.csv ......... 19 data tables (do not rename the files)
+- powerbi/MECON_theme.json ...... theme (View > Themes > Browse for themes)
+- powerbi/backgrounds/ .......... 6 page backgrounds (menu bar and cards already drawn)
+- powerbi/previews/ ............. same layouts with every card labelled with X, Y, W, H
+- powerbi/MECON_measures.dax .... 3 tables + 68 measures, ONE PER LINE, paste one at a time
+- powerbi/POWERBI_BUILD_GUIDE.md  step-by-step guide, including fixes for known problems
+- processed/findings_models.txt . correct forecast, accuracy, early-warning, scenario numbers (check your cards against these)
+- processed/findings_text.txt ... BNM statement tone results
+- outputs/figures/ .............. report figures (match styles and captions)
+- PROJECT SUBMISSION GUIDELINES/  what the final dashboard zip must contain
+
+NUMBERS YOUR DASHBOARD SHOULD SHOW (quick check)
+- GDP forecast 2026 Q4: 6.5% (80% range 4.8% to 8.2%), model Average (MLR+RF), MAE 1.12, +33.6% vs naive
+- Inflation forecast Nov 2026: 1.9% (80% range 1.7% to 2.1%), model AR(1), MAE 0.165, +1.9% vs naive
+- Cost pressure: ON (Sep 2026, 2 of 3 indicators) | Growth slowdown: OFF (Aug 2026)
+
+KNOWN PROBLEMS (all fixed in the guide)
+- Variables table loads its header as data: Transform data > Use First Row as Headers
+- Power BI adds wrong automatic relationships: delete all except Variables -> Monthly / Quarterly, then add the 7 Calendar links (One to many, Single)
+- Mark as date table: turn the toggle On first
+- 'Calendar' needs quotes inside DAX (already done in the file)
+- Background image fit: Fill, transparency 0%
+- New Card: no Reference labels, no Action; rename the field for the label
+- Home main chart: Calendar[Date] with X-axis type Continuous (no scrollbar)
+- Copying GDP page to Inflation: choose Don't sync
+
+QUESTIONS: ask Farah. Data and models come from scripts 01 to 07 (do not edit the CSV files by hand).
