@@ -1,193 +1,267 @@
-# M-ECON Power BI build guide
+# M-ECON Power BI build guide (from scratch)
 
-Website-style dashboard: dark top menu, white rounded cards, teal (GDP), coral (inflation), amber and violet highlights, red/green alerts.
+Website-style dashboard: dark top menu, white rounded cards, teal = GDP, coral = inflation, amber = selected or highlight, violet = models, red/green = alerts.
 
-Files in this folder:
-- `MECON_theme.json`: colours, fonts, card and table styles
-- `backgrounds/bg_*.png`: one page background each (menu bar, cards, shadows already drawn)
-- `previews/preview_*.png`: the same layout with every card labelled and its X, Y, W, H
-- `MECON_measures.dax`: all measures and helper tables, ready to paste
+Time needed: about 4 to 5 hours. Save often (Ctrl+S).
 
-Rule for every visual: **turn off its background and border** (the theme already does this), then set **X, Y, W, H** from the preview image (Format > General > Properties > Size and position). The visual then sits exactly inside its white card.
+## Files you need
+
+| File | What it is |
+|---|---|
+| `outputs/powerbi_*.csv` (19 files) | All dashboard data |
+| `powerbi/MECON_theme.json` | Colours and fonts |
+| `powerbi/backgrounds/bg_*.png` | One page background each (menu bar, cards and shadows already drawn) |
+| `powerbi/previews/preview_*.png` | Same layouts with every card labelled with X, Y, W, H |
+| `powerbi/MECON_measures.dax` | All measures, one per line |
+
+**Golden rule for every visual:** turn its background and border off, then type its X, Y, W, H from the preview image in **Format > General > Properties > Size / Position**. It then sits exactly inside its white card.
 
 ---
 
-## Step 0. Prepare data (once)
+## Part A. New file, page size, theme
 
-1. Run `python scripts/07_powerbi_extras.py`. It adds 9 small CSV files to `outputs/`.
-2. You now have 19 `powerbi_*.csv` files in `outputs/`.
+1. Power BI Desktop > **Blank report**. Save as `FOREFRONT_Datathon2026_dashboard.pbix` in the project folder.
+2. **View > Themes** > small down arrow > **Browse for themes** > `powerbi/MECON_theme.json`.
+3. Click empty canvas > **Format page** (Visualizations pane, 2nd icon) > **Canvas settings**: Type **16:9** (1280 × 720), Vertical alignment **Top**.
 
-## Step 1. New report, page size, theme
+## Part B. Load the 19 CSV files
 
-1. Power BI Desktop > Blank report. Save as `FOREFRONT_Datathon2026_dashboard.pbix`.
-2. View > Themes > Browse for themes > `MECON_theme.json`.
-3. Format page (click empty canvas) > Canvas settings: Type **16:9**, 1280 x 720. Vertical alignment **Top**.
+1. **Home > Get data > Text/CSV**, load each file in `outputs/`.
+2. Rename each table (double-click it in the Data pane):
 
-## Step 2. Load the data
+| File | Table name | | File | Table name |
+|---|---|---|---|---|
+| powerbi_monthly.csv | Monthly | | powerbi_early_warning.csv | EarlyWarning |
+| powerbi_quarterly.csv | Quarterly | | powerbi_ew_indicators.csv | EWIndicators |
+| powerbi_variables.csv | Variables | | powerbi_ew_status.csv | EWStatus |
+| powerbi_forecasts.csv | Forecasts | | powerbi_backtest.csv | Backtest |
+| powerbi_predictions.csv | Predictions | | powerbi_events.csv | Events |
+| powerbi_model_results.csv | ModelResults | | powerbi_scenarios.csv | Scenarios |
+| powerbi_fan.csv | Fan | | powerbi_scenario_slider.csv | ScenarioSlider |
+| powerbi_importance.csv | Importance | | powerbi_state_inflation.csv | StateInflation |
+| powerbi_corr.csv | Corr | | powerbi_mpc_tone.csv | MPCTone |
+| powerbi_top_predictors.csv | TopPredictors | | | |
 
-Home > Get data > Text/CSV, load each file, then **rename the table** (double-click in the Data pane):
+### Fix: Variables table header
+Power BI loads its header row as data (columns show as Column1 to Column5).
+1. **Home > Transform data**. Click **Variables** on the left.
+2. If **Applied steps** shows "Changed Type", click the **X** next to it.
+3. **Transform** tab > **Use First Row as Headers**. Columns become variable, label, unit, role, group.
+4. **Home > Close & Apply**.
 
-| File | Table name |
-|---|---|
-| powerbi_monthly.csv | Monthly |
-| powerbi_quarterly.csv | Quarterly |
-| powerbi_variables.csv | Variables |
-| powerbi_forecasts.csv | Forecasts |
-| powerbi_predictions.csv | Predictions |
-| powerbi_model_results.csv | ModelResults |
-| powerbi_fan.csv | Fan |
-| powerbi_importance.csv | Importance |
-| powerbi_corr.csv | Corr |
-| powerbi_top_predictors.csv | TopPredictors |
-| powerbi_early_warning.csv | EarlyWarning |
-| powerbi_ew_indicators.csv | EWIndicators |
-| powerbi_ew_status.csv | EWStatus |
-| powerbi_backtest.csv | Backtest |
-| powerbi_events.csv | Events |
-| powerbi_scenarios.csv | Scenarios |
-| powerbi_scenario_slider.csv | ScenarioSlider |
-| powerbi_state_inflation.csv | StateInflation |
-| powerbi_mpc_tone.csv | MPCTone |
+### Check data types (Table view, the grid icon on the left)
+Click each column below > **Column tools > Data type**:
+- **Date:** `date` in Monthly, Quarterly, Events, MPCTone, EarlyWarning, EWIndicators, StateInflation, Fan; `origin` and `forecast_for` in Forecasts; `origin` and `target_date` in Predictions; `as_of` in EWStatus; `origin` in Scenarios.
+- **True/False:** `selected` in Forecasts.
+- **Whole number:** `flag` in EWIndicators. Its blanks must stay blank (October 2026 PPI shows blank "Not yet published", not 0).
 
-Checks in Power Query (Transform data) before Close & Apply:
-- Every `date`, `origin`, `forecast_for`, `target_date`, `as_of` column = **Date** type.
-- `Forecasts[selected]` = **True/False**.
-- `EWIndicators[flag]`: blanks must stay blank (do not replace with 0).
+### Sort the heatmap lags correctly
+Corr table > click `lag_label` > **Column tools > Sort by column > lag**. Otherwise "12 m" sorts before "2 m".
 
-## Step 3. Model
+## Part C. Model
 
-1. Home > Enter data > leave empty, name it `_Measures`. All measures go here.
-2. Modeling > New table: paste **Calendar**, **Brent Shock**, **Ringgit Shock** from `MECON_measures.dax`.
-3. Calendar: Table tools > Mark as date table > Date.
-4. Model view, drag to create relationships (single direction, Calendar on the 1 side):
-   - Calendar[Date] → Monthly[date], Quarterly[date], Events[date], MPCTone[date], EarlyWarning[date], EWIndicators[date], StateInflation[date]
-   - Variables[variable] → Monthly[variable], Quarterly[variable]
-5. Modeling > New measure: paste every measure from `MECON_measures.dax` (one at a time, select `_Measures` as home table).
-6. Hide helper columns you will not use (right-click > Hide in report view) to keep the field list clean.
+### C1. Helper tables
+1. **Home > Enter data**, leave empty, name it `_Measures`, **Load**.
+2. **Modeling > New table**, paste each and press Enter (the first 3 lines of `MECON_measures.dax`):
+   - `Calendar = ...`
+   - `Brent Shock = GENERATESERIES ( -30, 30, 5 )`
+   - `Ringgit Shock = GENERATESERIES ( -10, 10, 1 )`
+3. Click **Calendar** > **Table tools > Mark as date table** > turn the toggle **On** > choose **Date** > **Save**.
 
-## Step 4. Six pages and the background
+### C2. Relationships (Model view, 3rd icon on the left)
+1. **First delete Power BI's automatic links.** Click each line and press Delete, keeping only Variables → Monthly and Variables → Quarterly. Typical wrong ones: ScenarioSlider to Fan, Forecasts, ModelResults and Scenarios; EWStatus to EWIndicators and Backtest.
+2. Drag `Calendar[Date]` onto `date` in each of: **Monthly, Quarterly, Events, MPCTone, EarlyWarning, EWIndicators, StateInflation**.
+3. In every window set **Cardinality: One to many (1:\*)** and **Cross-filter: Single**. EarlyWarning, Events and MPCTone open as One to one / Both: change them.
+4. If missing, drag `Variables[variable]` onto `Monthly[variable]` and `Quarterly[variable]`.
+5. Check: **9 lines** in total. `_Measures`, Brent Shock and Ringgit Shock have **no** lines.
 
-1. Create 6 pages, named exactly: **Home, GDP, Inflation, Drivers & States, Early Warning, Scenarios**.
-2. On each page: Format page > Canvas background > Image > choose the matching `bg_*.png`, **Image fit: Fit**, **Transparency 0%**.
-3. Page header text (all pages except Home): Insert > Text box at X 44, Y 88, W 400, H 34, page name in Segoe UI Bold 16, colour #1B2A41.
+### C3. Measures
+1. Report view > click `_Measures` > **Modeling > New measure**.
+2. Paste **one line** from `MECON_measures.dax` (each measure is one line), press Enter.
+3. Repeat for all measures. Check the **Home table** box says `_Measures`.
+4. When done: right-click `Column1` in `_Measures` > **Delete from model**.
+5. A red underline under `Calendar` means it needs quotes: `'Calendar'` (already fixed in the file).
 
-## Step 5. Top menu (on every page)
+## Part D. Pages, backgrounds, menu
 
-1. Insert > Buttons > Navigator > **Page navigator**. Position X 456, Y 14, W 800, H 36.
-2. Format > Style:
-   - Default: fill #0B1F3A, text #BEC8D7, Segoe UI 10, no border, shape **Pill**.
-   - Hover: fill #16365F, text white.
-   - Selected: fill #00A6A6, text white, bold.
-3. Text box "M-ECON" at X 64, Y 18, W 160, H 30: white, Segoe UI Bold 16.
-4. Copy the navigator and the M-ECON text box, then paste them on every page (Ctrl+C, Ctrl+V keeps the position).
+### D1. Pages
+1. Rename Page 1 to **Home**.
+2. For the others: right-click **Home** > **Duplicate page**, rename: **GDP, Inflation, Drivers & States, Early Warning, Scenarios**.
+3. On each page: click empty canvas > **Format page > Canvas background** > Image **X** (remove old) > **Browse** > matching `bg_*.png`, **Image fit: Fill**, **Transparency: 0%**. (Fill or Fit both work; **Normal** shows only a corner.)
 
-## Step 6. KPI cards (the coloured-bar cards)
+### D2. Top menu (build on Home, then copy)
+1. **Insert > Buttons > Navigator > Page navigator.** General: Height **40**, Width **800**, Horizontal **456**, Vertical **12**.
+2. Visual > **Shape: Pill**.
+3. Visual > **Style** > Apply settings to **Default**: Text Segoe UI 10 colour `#BEC8D7`; Fill On `#0B1F3A`; Border Off.
+4. Apply settings to **Selected**: Text white, bold; Fill `#00A6A6`.
+5. **Insert > Text box** "M-ECON": Segoe UI Bold 16, white; Height 30, Width 160, Horizontal 64, Vertical 18; Background Off.
+6. Select both (Ctrl+click) > Ctrl+C > paste (Ctrl+V) on every other page.
 
-Use **Card (new)** visual for every KPI box. Settings:
-- Callout value: measure (for example `GDP Forecast Text`), Segoe UI Semibold 28, colour = the card accent.
-- Reference label: a subtitle measure (for example `GDP Subtitle`), font 9, colour #6B7A90.
-- Category label: on, as the card title, font 10, #6B7A90.
-- Card background and border: off. Turn off the visual header.
+### D3. Page titles (all pages except Home)
+Text box at Horizontal 44, Vertical 88, Width 400, Height 34. Segoe UI Bold 16, colour `#1B2A41`, Background Off.
 
-Status colours: Callout value > Color > fx > Format style **Field value** > the colour measure (for example `Cost Status Colour`). The card turns red when ON and green when OFF.
+## Part E. KPI card recipe (used on every page)
+
+1. **Card** visual (the "123" icon). Drag one measure into **Value**.
+2. General: size and position from the preview; **Background Off**, **Border Off**, **Header icons Off**.
+3. Visual > **Callout > Values**: Segoe UI Semibold, size 28 (24 if the box is 100 tall), colour = the card's bar colour.
+4. Visual > **Cards > Background Off** (removes the inner white box).
+5. Label: Build visual > right-click the field > **Rename for this visual** > type the label.
+6. Status colour (red/green): Callout > Values > colour **fx** > **Field value** > the colour measure.
+7. **Do not use Reference labels**: they squeeze the card. The New Card has no Action, so cards are not clickable (the top menu covers navigation).
+8. Fastest: build one card, then Ctrl+C / Ctrl+V and change field, label, colour and Horizontal.
 
 ---
 
 ## Page 1. Home
 
-Hero text (inside the dark band): text box X 48, Y 82, W 700, H 70.
-- Line 1: "Malaysia Economic Pulse" white, Segoe UI Bold 20
-- Line 2: "GDP and inflation forecasts, early warning and scenarios from official data" #C8E1E6, size 10.
+- **Hero text** (text box): line 1 "Malaysia Economic Pulse" Segoe UI Bold 20 white; line 2 "GDP and inflation forecasts, early warning and scenarios from official data" size 10 colour `#C8E1E6`. Height 70, Width 700, Horizontal 48, Vertical 82, Background Off.
 
-| Card | Visual | Fields |
-|---|---|---|
-| K1 | Card (new) | Value `GDP Forecast Text`, reference `GDP Change Text`, label "GDP growth, " & period (use `GDP Forecast Period`) |
-| K2 | Card (new) | Value `Inflation Forecast Text`, reference `Inside BNM Range` |
-| K3 | Card (new) | Value `Cost Status`, colour `Cost Status Colour`, reference `Cost Detail` |
-| K4 | Card (new) | Value `Growth Status`, colour `Growth Status Colour`, reference `Growth Detail` |
-| C1 | Line and clustered column chart | X `Calendar[Date]` (Year > Quarter levels), Lines: `GDP Growth` (teal), `CPI Inflation Q` (coral); Columns: `Event Marker` (amber, 40% transparency); Tooltip: `Event Names`. Title "GDP growth and inflation, 2011 to 2026". Add a **slicer** for Calendar[Date] (Between style) inside the card at the bottom. |
-| C2 | Table | `EWIndicators[signal]`, `EWIndicators[indicator]`, `Indicator Status`, `Indicator Month`. Conditional formatting > Font colour for `Indicator Status` = field value `Indicator Status Colour`. Title "Early-warning indicators" |
-| C3 | Column chart | X `MPCTone[date]`, Y `MPCTone[tone_rel]`, column colour fx = `Tone Bar Colour`. Title from `Tone Subtitle` (Title > fx). Filter visual: date after 1 Jan 2022 |
+| Card | Measure | Label | Colour | H / W / X / Y |
+|---|---|---|---|---|
+| K1 | GDP Forecast Text | GDP growth, next quarter | `#00A6A6` | 110 / 296 / 24 / 166 |
+| K2 | Inflation Forecast Text | Inflation, next month | `#FF6B4A` | 110 / 296 / 336 / 166 |
+| K3 | Cost Status | Cost-pressure signal | fx Cost Status Colour | 110 / 296 / 648 / 166 |
+| K4 | Growth Status | Growth-slowdown signal | fx Growth Status Colour | 110 / 296 / 960 / 166 |
 
-Interaction: click K3 or K4 → go to Early Warning. Select the card > Format > Action: On, Type **Page navigation**, Destination Early Warning. Same for K1 → GDP, K2 → Inflation.
+**C1 main chart:** Line and clustered column chart (2nd row, last icon). H 404, W 808, X 24, Y 292.
+- X-axis `Calendar[Date]` (choose Date, not hierarchy); Visual > X-axis > **Type: Continuous** (Quarter causes a scrollbar).
+- Column y-axis `Event Marker`, renamed "Policy event": colour `#F5B700`, transparency 50%.
+- Line y-axis `GDP Growth` (renamed "GDP growth", `#00A6A6`) and `CPI Inflation Q` (renamed "CPI inflation", `#FF6B4A`), width 2.5.
+- Tooltips `Event Names`.
+- Y-axis Off (and its title Off); secondary y-axis title Off.
+- Title "GDP growth and inflation (% YoY), 2011 to 2026", left.
+
+**C2 table:** Table visual. H 196, W 408, X 848, Y 292.
+- Columns `EWIndicators[indicator]` (Indicator), `Indicator Status` (Status), `Indicator Month` (Month).
+- Totals Off; Values and Column headers font 10; Grid row padding 5.
+- Status > Conditional formatting > Font colour > Field value > `Indicator Status Colour`.
+- Title "Early-warning indicators (latest month)".
+
+**C3 tone chart:** Clustered column chart. H 196, W 408, X 848, Y 500.
+- X `MPCTone[date]`, Y `MPCTone[tone_rel]` (Average).
+- Visual filter: date on or after 1/1/2022.
+- Columns colour fx > Field value > `Tone Bar Colour`. Axis titles Off.
+- Title fx > Field value > `Tone Subtitle`.
 
 ## Page 2. GDP
 
-Header slicers (X 900, Y 86, W 340, H 38): **Tile slicer** on `Predictions[model]`, single select, filter the page to `Predictions[setup] = A2` (Filters pane > this page).
+- **Page filters** (Filters pane > Filters on this page): `Predictions[setup]`, `ModelResults[setup]`, `Importance[setup]`, each = **A2**.
+- **Title:** "GDP growth forecast".
+- **Model dropdown:** Slicer on `Predictions[model]`. Style Dropdown, Single select On, header Off. H 34, W 300, X 940, Y 88. Select **Average (MLR+RF)**.
 
-| Card | Visual | Fields |
-|---|---|---|
-| K1 | Card (new) | `GDP Forecast Text`, reference `GDP Forecast Period` |
-| K2 | Card (new) | `GDP Range 80`, reference "95% range 4.3% to 8.7%" (text) |
-| K3 | Card (new) | `GDP Model MAE` (format 0.00 "pp"), reference `GDP Model` |
-| K4 | Card (new) | `GDP Gain Text`, reference "Target: at least 10% better than naive ✔" |
-| C1 (view 1) | Line chart | X `Predictions[target_date]`, Y `Predictions[actual]` (navy, 3 px) and `Predictions[forecast]` (teal, markers on). Title fx = `Test Chart Title` |
-| C1 (view 2) | Line chart | Table Fan, filter setup = A2. X `Fan[date]`, Y `actual` (navy) and `forecast` (teal, dashed). Analytics > Error bars on `forecast`: upper `hi80`, lower `lo80`, style **Band**, teal 80% transparency |
-| C2 | Bar chart | Y `ModelResults[model]`, X `ModelResults[MAE]`, filter setup = A2, sort ascending. Bars fx = `Model Bar Colour`. Analytics: constant line at the Naive MAE 1.69, label "Naive" |
-| C3 | Bar chart | Y `Importance[input]`, X `Importance[rf_permutation_importance]`, filter setup = A2, Top N 8 by value. Colour teal |
+| Card | Measure | Label | Colour / format | X (Y 146, H 100, W 296) |
+|---|---|---|---|---|
+| K1 | GDP Forecast Text | Forecast, 2026 Q4 | `#00A6A6`, size 24 | 24 |
+| K2 | GDP Range 80 | 80% forecast range | `#00A6A6`, size 20 | 336 |
+| K3 | GDP Model MAE | Test error (MAE, pp), Avg model | `#6C5CE7`, units None, 2 decimals | 648 |
+| K4 | GDP Gain Text | Better than naive (target 10%) | `#F5B700` | 960 |
 
-**Toggle between view 1 and view 2 (bookmarks):**
-1. Place both C1 charts in the same position. View > Selection pane, Bookmarks pane.
-2. Hide view 2, add bookmark "GDP test" (Data off, Display on, Current page). Hide view 1, show view 2, add bookmark "GDP forecast".
-3. Insert > Buttons > Navigator > **Bookmark navigator** (only these two bookmarks; make a group in Bookmarks pane) at X 600, Y 270, W 220, H 28. Selected = teal, default = #EEF2F8.
+**C1:** Line chart. H 434, W 808, X 24, Y 262.
+- X `Predictions[target_date]` (date, not hierarchy). Y `actual` and `forecast` (both Average), renamed Actual and Forecast.
+- Lines: Actual `#0B1F3A` width 3; Forecast `#00A6A6` width 2.5; Markers On size 4. Axis titles Off.
+- Title fx > Field value > `Test Chart Title`.
 
-## Page 3. Inflation
+**C2:** Clustered bar chart. H 212, W 408, X 848, Y 262.
+- Y `ModelResults[model]`, X `MAE` (Average). Sort axis by Average of MAE, ascending.
+- Y-axis font 8, title Off; X-axis Off; Inner padding 10%; Data labels On, 2 decimals.
+- Bars colour fx > Field value > `Model Bar Colour`.
+- Title "Test error by model (MAE, lower is better)".
 
-Copy the GDP page (right-click tab > Duplicate) and change:
-- Page filter `Predictions[setup] = B`, `Fan[setup] = B`, `ModelResults[setup] = B`.
-- K1 `Inflation Forecast Text`, K2 `Inflation Range 80`, K3 `Inflation Model MAE` (0.000 "pp"), K4 `Latest PPI CPI Gap Text` with label "Producer minus consumer prices".
-- Colours: coral instead of teal.
-- C2: Line chart, X `Calendar[Date]` (Month), `PPI Inflation` (amber) and `CPI Inflation` (coral). Title "Producer prices lead consumer prices".
-- C3: Line chart, X `Calendar[Date]` (Month), `RON95 Price`, `RON95 BUDI95 Price`, `Diesel Price`; Columns `Event Marker` with tooltip `Event Names` (Line and clustered column chart). Filter date from 2017.
+**C3:** Clustered bar chart. H 206, W 408, X 848, Y 490.
+- Y `Importance[input]`, X `rf_permutation_importance` (Sum).
+- Visual filter on input: Top N, Top 5, by value rf_permutation_importance. Sort descending.
+- X-axis Off; Y-axis max width 45%; Data labels 3 decimals; colour `#00A6A6`.
+- Title "Top 5 drivers (Random Forest importance)".
+
+## Page 3. Inflation (copy of GDP)
+
+1. On Inflation, delete its navigator and M-ECON text.
+2. On GDP: Ctrl+A, Ctrl+C. On Inflation: Ctrl+V. When asked **Sync visuals**, choose **Don't sync**.
+3. Page filters: the three setup filters = **B**.
+4. Dropdown: pick **AR(1)**. Title: "Inflation forecast".
+5. Cards:
+
+| Card | Measure | Label | Format |
+|---|---|---|---|
+| K1 | Inflation Forecast Text | Forecast, Nov 2026 | `#FF6B4A` |
+| K2 | Inflation Range 80 | 80% forecast range | `#FF6B4A` |
+| K3 | Inflation Model MAE | Test error (MAE, pp), AR(1) | 3 decimals |
+| K4 | Inflation Gain Text | Better than naive (target 10%, not met) | `#F5B700` |
+
+6. Optional: Forecast line and driver bars `#FF6B4A`.
 
 ## Page 4. Drivers & States
 
-| Card | Visual | Fields |
-|---|---|---|
-| C1 | **Azure map** (or Map) | Latitude `StateInflation[lat]`, Longitude `[lon]`, Size `State CPI Latest`, Legend none, Tooltips `state`, `State CPI Latest`, `State Food Latest`, `State Transport Latest`. Bubble colour: fx gradient teal (low) to coral (high). Title "Inflation by state, latest month" |
-| C2 | Matrix | Rows `Corr[label]`, Columns `Corr[lag_label]`, Values `Corr[pearson_r]` (Average, 2 decimals). Filter `Corr[sample] = ex-COVID`. Background colour fx: Gradient, min -1 teal #00A6A6, center 0 white, max 1 coral #FF6B4A. Tile slicer `Corr[target]` above it (X 1060, Y 150, W 190, H 28) |
-| C3 | Line and clustered column chart | X `MPCTone[date]`, Columns `MPCTone[tone_rel]` (colour fx `Tone Bar Colour`), Line `MPCTone[opr]` (navy, secondary axis). Title "BNM statement tone (bars) and the OPR (line)" |
+Title "Drivers and state inflation".
 
-Map tip: if the map is blank, File > Options > Security > tick "Use Map and Filled Map visuals".
+**C1 state map:** Map (or Azure map). H 550, W 616, X 24, Y 146.
+- Location `StateInflation[state]`, Latitude `lat` (Average), Longitude `lon` (Average), Bubble size `State CPI Latest`.
+- Tooltips `State CPI Latest`, `State Food Latest`, `State Transport Latest`.
+- Bubble colour fx: gradient by `State CPI Latest`, low `#00A6A6`, high `#FF6B4A`.
+- Title "Inflation by state, latest month".
+- If the map is blank: File > Options and settings > Options > Security > tick "Use Map and Filled Map visuals".
 
-State tooltip page (hover effect):
-1. New page "State tip", Page information > **Allow use as tooltip** on, canvas Tooltip size.
-2. Card `state` (first), small line chart of `StateInflation[cpi_yoy]` over `date` (coral).
-3. On the map: Format > Tooltips > Type **Report page** > State tip. Hide the State tip page.
+**C2 correlation heatmap:** Matrix. H 270, W 600, X 656, Y 146.
+- Rows `Corr[label]`, Columns `Corr[lag_label]`, Values `pearson_r` (Average, 2 decimals).
+- Visual filter `Corr[sample]` = **ex-COVID**.
+- Tile slicer on `Corr[target]` (single select) at H 28, W 190, X 1060, Y 150.
+- Cell elements > Background colour fx > Gradient, add a middle colour: min -1 `#00A6A6`, center 0 white, max 1 `#FF6B4A`.
+- Totals Off. Title "Correlation with the target, by lag".
+
+**C3 tone vs OPR:** Line and clustered column chart. H 264, W 600, X 656, Y 432.
+- X `MPCTone[date]` (Continuous). Column `tone_rel` (Average), colour fx `Tone Bar Colour`. Line `opr` (Average), `#0B1F3A`.
+- Title "BNM statement tone (bars) and the OPR (line)".
 
 ## Page 5. Early Warning
 
-| Card | Visual | Fields |
-|---|---|---|
-| K1 | Card (new) | `Cost Status`, colour `Cost Status Colour`, reference `Cost Detail`, label "Cost pressure" |
-| K2 | Card (new) | `Growth Status`, colour `Growth Status Colour`, reference `Growth Detail`, label "Growth slowdown" |
-| C1 | Table | Same as Home C2 (copy it). Add a tile slicer on `EWIndicators[signal]` |
-| C2 | Area chart | X `EarlyWarning[date]`, Y `Cost Count` (coral) and `Growth Count` (violet), 60% transparency. Analytics: constant line at **2**, red dashed, label "Signal ON". Title "How many indicators are flashing (0 to 3)" |
-| C3 | Table | `Backtest[episode]`, `signal`, `first_signal`, `lead_time`, `hit`. Conditional icons on `hit` (green tick) |
+Title "Early warning".
+
+| Card | Measure | Label | Colour | H / W / X / Y |
+|---|---|---|---|---|
+| K1 | Cost Status | Cost pressure | fx Cost Status Colour | 150 / 400 / 24 / 146 |
+| K2 | Growth Status | Growth slowdown | fx Growth Status Colour | 150 / 400 / 24 / 312 |
+
+Optional: small text cards under each with `Cost Detail` / `Growth Detail` (size 10, grey).
+
+**C1:** Copy the Home indicator table. H 218, W 400, X 24, Y 478.
+
+**C2 timeline:** Area chart. H 330, W 816, X 440, Y 146.
+- X `EarlyWarning[date]` (Continuous). Y `Cost Count` (`#FF6B4A`) and `Growth Count` (`#6C5CE7`), transparency 60%.
+- Analytics (magnifying glass icon) > **Constant line** value **2**, red, dashed, label "Signal ON".
+- Title "How many indicators are flashing (0 to 3)".
+
+**C3 back-test:** Table. H 204, W 816, X 440, Y 492.
+- Columns `Backtest[episode]`, `signal`, `first_signal`, `lead_time`, `false_alarm_rate_pct`.
+- Title "Back-test: five past episodes (all flagged)".
 
 ## Page 6. Scenarios
 
-| Card | Visual | Fields |
-|---|---|---|
-| C1 | 2 slicers + text | Slicer `'Brent Shock'[Value]` style **Single value slider** at X 44, Y 200, W 320, H 70, header "Oil price shock (%)". Slicer `'Ringgit Shock'[Value]` at X 44, Y 300, W 320, H 70, header "Ringgit weaker by (%)". Text box below: "Drag the sliders. Effects come from the fitted MLR models (Section 4.7 of the report)." |
-| K1 | Card (new) | `GDP Effect Text`, colour fx `GDP Effect Colour`, reference `GDP After Shock Text` |
-| K2 | Card (new) | `Inflation Effect Text`, colour fx `Inflation Effect Colour`, reference `Inflation After Shock Text` |
-| C2 | Clustered bar chart | Y `Scenarios[scenario]`, X `Scenarios[effect_pp]`, Legend `Scenarios[setup]` (A2 teal, B coral). Analytics > Error bars: upper `hi95`, lower `lo95`. Title "Tested scenarios with 95% intervals (all include zero)" |
-| C3 | Card (new) or text | `Scenario Sentence`, font 11, wrap on. Add a small amber label text "MODEL PROJECTION, NOT DATA" at the top |
+Title "Scenarios".
+
+**C1 control panel:**
+- Slicer on `'Brent Shock'[Value]`. Slicer settings > Style **Single value** (slider), header "Oil price shock (%)". H 70, W 320, X 44, Y 200.
+- Slicer on `'Ringgit Shock'[Value]`, Single value, header "Ringgit weaker by (%)". H 70, W 320, X 44, Y 300.
+- Text box below: "Drag the sliders. Effects come from the fitted regression models (report Section 4.7)."
+
+| Card | Measure | Label | Colour | H / W / X / Y |
+|---|---|---|---|---|
+| K1 | GDP Effect Text | Effect on GDP growth, next quarter | fx GDP Effect Colour | 150 / 420 / 400 / 146 |
+| K2 | Inflation Effect Text | Effect on inflation, next month | fx Inflation Effect Colour | 150 / 420 / 836 / 146 |
+
+**C2 tested scenarios:** Clustered bar chart. H 250, W 856, X 400, Y 312.
+- Y `Scenarios[scenario]`, X `effect_pp` (Sum), Legend `setup` (A2 `#00A6A6`, B `#FF6B4A`).
+- Analytics > **Error bars**: Upper `hi95`, Lower `lo95` (Sum).
+- Title "Tested scenarios with 95% intervals (all include zero)".
+
+**C3 plain language:** Card with `Scenario Sentence`, callout size 11, wrap on. H 118, W 856, X 400, Y 578. Add a small amber text box "MODEL PROJECTION, NOT DATA" at the top of the card.
 
 ---
 
-## Step 7. Finishing touches (website feel)
+## Part F. Finishing and export
 
-- Visual header: off for KPI cards; on for charts (lets judges use Focus mode).
-- Consistent titles: 12 pt Segoe UI Semibold, sentence case, no full stop.
-- Number formats: one decimal for %, two for pp effects.
-- Edit interactions (Format > Edit interactions): on Home, the date slicer filters C1 only.
-- Sync slicers: View > Sync slicers, sync the date slicer across Home, Inflation and Drivers & States.
-- Mobile layout (optional): View > Mobile layout, place the four Home KPIs and C1.
-
-## Step 8. Export for submission
-
-1. File > Export > **Export to PDF** → rename to `Data Product.pdf`.
-2. Screenshot each page (Windows + Shift + S) and send them to Farah for the report (Figure 11 = Home).
-3. Zip `FOREFRONT_Datathon2026_dashboard.zip` with: `Data Product.pdf`, the `.pbix`, the `outputs/powerbi_*.csv` files and `README.txt`.
+1. Click every page in reading mode (Ctrl+click on the menu) and check that nothing is cut off.
+2. Save. **File > Export > Export to PDF** → rename `Data Product.pdf`.
+3. Screenshot each page (Windows + Shift + S). Home = report Figure 11.
+4. Write `README.txt`: purpose, pages, data sources, how to refresh (run scripts 01 to 07, then Power BI > Refresh), and this line: "Page backgrounds (menu bar and card layout) were designed by the team as PNG images; all visuals are live Power BI visuals."
+5. Zip `FOREFRONT_Datathon2026_dashboard.zip`: `Data Product.pdf`, the `.pbix`, the `powerbi_*.csv` files and `README.txt`.

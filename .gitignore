@@ -19,3 +19,6 @@ Thumbs.db
 
 # Downloaded BNM statement pages (re-created by scripts/06_text.py)
 raw/mpc/
+
+# Handover zips
+*.zip
